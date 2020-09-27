@@ -1,0 +1,187 @@
+##grflangid 0x01
+STR_GRF_NAME :UK SR EMUs (1937-1969) v1.53
+STR_GRF_DESC :A set containing the UK classes from 410 to 418, with the addition of the class 404. Graphics and code by {BLUE}Gwyd{}
+STR_GRF_NAME_2 :SEv2
+STR_GRF_DESC_2 :{ORANGE}Southern EMUs v2 r1{} {SILVER}Electric trains (and some others) from South East of the UK. {}Graphics and code by {BLUE}Gwyd {}{SILVER}Released 25/12/19
+#/*ignore*/
+STR_411_SUBTYPE_BRG :Class 411 BR Green (4-CEP)
+STR_411_SUBTYPE_BRGY :Class 411 BR Green with Yellow Panel (4-CEP)
+STR_411_SUBTYPE_BRBG :Class 411 BR Blue & GRAY (4-CEP)
+STR_411_SUBTYPE_LSE :Class 411 London & South East "Jaffa Cake" (4-CEP)
+STR_411_SUBTYPE_NSE :Class 411 Network SouthEast (4-CEP)
+STR_411_SUBTYPE_NS3 :Class 411 Network SouthEast 3 car (3-CEP)
+STR_411_SUBTYPE_SWT :Class 411 South West Trains (4-CEP)
+STR_411_SUBTYPE_ESW :Class 411 Ex-South West Trains (4-CEP)
+STR_411_SUBTYPE_CNX :Class 411 Connex (4-CEP)
+STR_411_SUBTYPE_CN3 :Class 411 Connex 3 car (3-CEP)
+STR_BEP_SUBTYPE_BRG :Class 410 BR Green (4-BEP)
+STR_BEP_SUBTYPE_BRGY :Class 410 BR Green with Yellow Panel (4-BEP)
+STR_BEP_SUBTYPE_BRBG :Class 412 BR Blue & GRAY (4-BEP)
+STR_BEP_SUBTYPE_LSE :Class 412 London & South East "Jaffa Cake" (4-BEP)
+STR_BEP_SUBTYPE_NSE :Class 412 Network SouthEast (4-BEP)
+STR_BEP_SUBTYPE_SWT :Class 412 South West Trains (4-BEP)
+STR_BEP_SUBTYPE_ESW :Class 412 Ex-South West Trains (4-BEP)
+STR_CEP_CANNOT_START :Your train is too long! Max 12 cars.
+STR_CEP_CANNOT_ATTACH_OTHER :You can only attach to other CEPs/BEPs/EPBs...
+STR_CEP_NAME :Class 411 (4-CEP/3-CEP)
+STR_CEP_ADDITIONAL_TEXT :Class 411, used for express passenger. Avaliable in {GREEN}BR Green{}, {BLUE}BR Blue/GRAY{}, {BROWN}London & South East{}, {RED}Network SouthEast{}, {ORANGE}South West Trains{} & {YELLOW}Connex{}.
+STR_BEP_NAME :Class 412/410 (4-BEP)
+STR_BEP_ADDITIONAL_TEXT :Class 410/412, used for express passenger, and has a buffet. Avaliable in {GREEN}BR Green{}, {BLUE}BR Blue/GRAY{}, {BROWN}London & South East{}, {RED}Network SouthEast{} & {ORANGE}South West Trains{}.
+STR_415_SUBTYPE_BRG:    BR Green (Class 415/4-EPB)
+STR_415_SUBTYPE_BRGY:   BR Green with Yellow Panel (Class 415/4-EPB)
+STR_415_SUBTYPE_BRB:    BR Blue (Class 415/4-EPB)
+STR_413_SUBTYPE_BRB:    BR Blue (Class 413/4-CAP)
+STR_415_SUBTYPE_BRBG:   BR Blue/GRAY (Class 415/4-EPB)
+STR_413_SUBTYPE_BRBG:   BR Blue/GRAY (Class 413/4-CAP)
+STR_415_SUBTYPE_NSE:    Network SouthEast (Class 415/4-EPB)
+STR_413_SUBTYPE_NSE:    Network SouthEast (Class 413/4-CAP)
+
+STR_416_SUBTYPE_BRG:    BR Green (Class 416/2-EPB)
+STR_414_SUBTYPE_BRG:    BR Green (Class 414/2-HAP)
+STR_416_SUBTYPE_BRGY:   BR Green with Yellow Panel (Class 416/2-EPB)
+STR_414_SUBTYPE_BRGY:   BR Green with Yellow Panel (Class 414/2-HAP)
+STR_416_SUBTYPE_BRB:    BR Blue (Class 416/2-EPB)
+STR_414_SUBTYPE_BRB:    BR Blue (Class 414/2-HAP)
+STR_418_SUBTYPE_BRB:    BR Blue (Class 418/2-SAP)
+STR_416_SUBTYPE_BRBG:   BR Blue GRAY (Class 416/2-EPB)
+STR_414_SUBTYPE_BRBG:   BR Blue GRAY (Class 414/2-HAP)
+STR_418_SUBTYPE_BRBG:   BR Blue GRAY (Class 418/2-SAP)
+STR_416_SUBTYPE_NSE:    Network SouthEast (Class 416/2-EPB)
+STR_414_SUBTYPE_NSE:    Network SouthEast (Class 414/2-HAP)
+STR_418_SUBTYPE_NSE:    Network SouthEast (Class 418/2-SAP)
+
+STR_EPB_CANNOT_START:   Your train is too long! Maximum 12 cars.
+STR_EPB_CANNOT_ATTACH_OTHER:   You can only attach to other EPB/CEP EMUs!
+
+STR_4CAREPB_NAME:   4-EPB/4-CAP (4 car units)
+STR_4CAREPB_ADDITIONAL_TEXT: Refitable into variants of {GREEN}BR Green{}, {BLUE}BR Blue{} & {RED}Network SouthEast{}
+
+STR_2CAREPB_NAME:   2-EPB/2-HAP/2-SAP (2 car units)
+STR_2CAREPB_ADDITIONAL_TEXT: Refitable into variants of {GREEN}BR Green{}, {BLUE}BR Blue{} & {RED}Network SouthEast{}
+
+STR_COR_SUBTYPE_BRG :4-COR BR/SR Green 
+STR_BUF_SUBTYPE_BRG :4-BUF BR/SR Green 
+STR_RES_SUBTYPE_BRG :4-RES BR/SR Green 
+STR_GRI_SUBTYPE_BRG :4-GRI BR/SR Green 
+STR_COR_SUBTYPE_BRGY :4-COR BR Green with Yellow panel
+STR_BUF_SUBTYPE_BRGY :4-BUF BR Green with Yellow panel
+STR_RES_SUBTYPE_BRGY :4-RES BR Green with Yellow panel
+STR_GRI_SUBTYPE_BRGY :4-GRI BR Green with Yellow panel
+STR_COR_SUBTYPE_BRB :4-COR BR Blue
+STR_BUF_SUBTYPE_BRB :4-BUF BR Blue
+STR_RES_SUBTYPE_BRB :4-RES BR Blue
+STR_GRI_SUBTYPE_BRB :4-GRI BR Blue
+
+STR_COR_CANNOT_START :Your train is too long! Max 12 cars.
+STR_COR_CANNOT_ATTACH_OTHER :You can only attach to other CORs!
+
+STR_4COR_NAME :4-COR/BUF/GRI/RES (Class 404)
+STR_4COR_ADDITIONAL_TEXT :4 car EMU refitable into variants of {GREEN}BR Green{} & {BLUE}BR Blue{}
+
+STR_6COR_NAME :6-COR (Class 404)
+STR_6COR_ADDITIONAL_TEXT :6 car EMU refitable into variants of {GREEN}BR Green{} & {BLUE}BR Blue{}
+
+STR_205_SUBTYPE_BRG: 3H BR Green
+STR_205_SUBTYPE_BRGY: 3H BR Green with Yellow Panel
+STR_204_SUBTYPE_BRG: 2H BR Green
+STR_204_SUBTYPE_BRGY: 2H BR Green with Yellow Panel
+STR_205_SUBTYPE_BRB: 3H BR Blue
+STR_204_SUBTYPE_BRB: 2H BR Blue
+STR_205_SUBTYPE_BRBG: Class 205 BR Blue/GRAY
+STR_204_SUBTYPE_BRBG: Class 204 BR Blue/GRAY
+STR_205_SUBTYPE_NSE: Class 205 Network SouthEast
+STR_204_SUBTYPE_NSE: Class 204 Network SouthEast
+STR_205_SUBTYPE_CNX: Class 205 Connex
+STR_204_SUBTYPE_CNX: Class 204 Connex
+
+STR_HDEMU_NAME: Class 205/204 (2/3H)
+STR_HDEMU_ADDITIONAL_TEXT: Refitable into variants of {GREEN}BR Green{}, {BLUE}BR Blue{}, {RED}Network SouthEast{} & {YELLOW}Connex{}
+
+
+##
+#/*Stop ignore*/	/*Stop ignore*/		/*Stop ignore*/		/*Stop ignore*/		/*Stop ignore*/		/*Stop ignore*/		/*Stop ignore*/		/*Stop ignore*/		/*Stop ignore*/		/*Stop ignore*/		/*Stop ignore*/		/*Stop ignore*/		/*Stop ignore*/		/*Stop ignore*/
+##
+
+
+STR_PARAM_NAMES:Modern Names
+STR_PARAM_NAMES_DESC:Decide whether older trains display old SR codes or modern TOPs class numbers.
+
+STR_PARAM_ASBESTOS:Asbestos penalty
+STR_PARAM_ASBESTOS_DESC:Some old trains were fitted with asbestos. If this setting is on, then trains with asbestos get a much higher running cost.
+
+#/*Sort by coach number, then alphabetically. Numbers before letters.*/
+STR_NAME_2EPB_B: 2-EPB BR Design
+STR_NAME_HAP_B: 2-HAP BR Design
+STR_NAME_SAP_B: 2-SAP BR Design
+STR_NAME_2EPB_S: 2-EPB SR Design
+STR_NAME_HAP_S: 2-HAP SR Design
+STR_NAME_SAP_S: 2-SAP SR Design
+STR_NAME_CAP: 4-CAP BR Design
+STR_NAME_4EPB_B: 4-EPB BR Design
+STR_NAME_4EPB_S: 4-EPB SR Design
+STR_NAME_CIG_7: 3-CIG & 3-COP
+STR_NAME_BIG: 4-BIG
+STR_NAME_CIG_1: 4-CIG Phase 1
+STR_NAME_CIG_2: 4-CIG Phase 2
+STR_NAME_CIG_G: 4-CIG "Greyhound"
+STR_NAME_VEP: 4-VEP
+STR_NAME_465_0: Class 465/0/1
+STR_NAME_465_2: Class 465/2
+STR_NAME_465_9: Class 465/9
+STR_NAME_466: Class 466
+
+STR_NAME_416_B: Class 416/2
+STR_NAME_414_B: Class 414/2
+STR_NAME_418_B: Class 418/1
+STR_NAME_416_S: Class 416/1
+STR_NAME_414_S: Class 414/1
+STR_NAME_418_S: Class 414/1
+STR_NAME_413: Class 413
+STR_NAME_415_B: Class 415/2
+STR_NAME_415_S: Class 415/1
+STR_NAME_421_1: Class 421/1 and 421/3
+STR_NAME_421_2: Class 421/2 and 421/4
+STR_NAME_421_7: Class 421/7
+STR_NAME_421_G: Class 421/5 and 421/8 "Greyhound"
+STR_NAME_422: Class 422
+STR_NAME_423: Class 423
+
+#/*Descriptions, in same order as the old style names*/
+STR_DESC_2EPB_B: A later design EPB unit, with only 2 cars for increased flexiblity.{}{YELLOW}Used on suburban routes with very frequent stops and high demand.
+STR_DESC_HAP_B: A later deisgn EPB unit, refitted for longer distances, with a toilet and first class{}{DKGREEN}Used on medium to long distance routes with more frequent stops.
+STR_DESC_SAP_B: A later design 2-HAP unit, but with the first class declassified for more urban routes.{}{YELLOW}Used on suburban routes with very frequent stops and high demand.
+STR_DESC_2EPB_S: An earlier design EPB unit, with only 2 cars for increased flexiblity.{}{DKGREEN}Used on medium to long distance routes with more frequent stops.
+STR_DESC_HAP_S: An earlier deisgn EPB unit, refitted for longer distances, with a toilet and first class.{}{DKGREEN}Used on medium to long distance routes with more frequent stops.
+STR_DESC_SAP_S: An earlier design 2-HAP unit, but with the first class declassified for more urban routes.{}{DKGREEN}Used on medium to long distance routes with more frequent stops.
+STR_DESC_CAP: A pair of late design 2-HAP units permanently coupled together, used on a variety of services.{}{GREEN}Used on medium distance routes with lower demand.
+STR_DESC_4EPB_B: The later design of the high capacity suburban slam door EMU. This train was fitted with electro-pneumatic brakes, hence EPB.{}{YELLOW}Used on suburban routes with very frequent stops and high demand.
+STR_DESC_4EPB_S: The earleir design of the high capacity suburban slam door EMU. This train was fitted with electro-pneumatic brakes, hence EPB.{}{YELLOW}Used on suburban routes with very frequent stops and high demand.
+STR_DESC_CIG_7: The 4-CIG design in later years was demoted to lines of lower use and importance, and so had their trailer car removed.{}{GREEN}Used on medium distance routes with lower demand.
+STR_DESC_BIG: Introduced initially on the Brighton Mainline in tanderm with 4-CIGs, but provided a buffet for long distance services.{}{BLUE}Used on medium to long distance routes with infrequent stops.
+STR_DESC_CIG_1: The first batch of 4-CIGs introduced, initially only on the Brighton Mainline. These were low density, but with motor bogies in a centre coach and better riding bogies.{}{BLUE}Used on medium to long distance routes with infrequent stops.
+STR_DESC_CIG_2: The second batch of 4-CIGs introduced, initially used on the London-Portsmouth line. These were low density, but with motor bogies in a centre coach and better riding bogies.{}{BLUE}Used on medium to long distance routes with infrequent stops.
+STR_DESC_CIG_G: Refurbished 4-CIGs with better top end speed performance. These were used on the undulating routes in the south on express services.{}{BLUE}Used on long distance undulating routes.
+STR_DESC_VEP: High desnity EMUs used on medium-long distance services with more frequent stops.{}{DKGREEN}Used on medium to long distance routes with more frequent stops.
+STR_DESC_465_0: Class 465/0/1
+STR_DESC_465_2: Class 465/2
+STR_DESC_465_9: Class 465/9
+STR_DESC_466: Class 466
+
+#/*Sort this list alphabetically*/
+STR_BRB	: {BLUE}British Railway (Rail Blue)
+STR_BRG	: {BLUE}British Railway (Blue & Grey)
+STR_BRG_GAT	: {BLUE}British Railway - CityLink Fittings (Blue & Grey)
+STR_CNG	: {YELLOW}Connex {GRAY}"Ghost"
+STR_CNX	: {YELLOW}Connex
+STR_NSE	: {RED}Network SouthEast
+STR_SEB : {BLUE}SouthEastern (Blue livery)
+STR_SET : {YELLOW}South Easttern Trains (Yellow livery)
+STR_SRG	: {GREEN}British Railway (Southern)
+STR_SRY	: {GREEN}British Railway (Southern) {YELLOW}with Yellow Front
+STR_STN	: {GREEN}Southern
+STR_SWT	: {ORANGE}South West Trains
+STR_SWH	: {ORANGE}South West Trains {GRAY}"Heritage Green"
+
+#/*Coupling Group Names*/
+STR_MK1_EMU_ONLY_COUPLE : This vehicle can only be coupled with other MK1 EMUs!
+STR_NETWORKER_ONLY_COUPLE : This vehicle can only be coupled with other Networkers!

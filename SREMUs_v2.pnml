@@ -1,0 +1,20 @@
+#include "src/header.pnml"
+#include "src/coupling_rules.pnml"
+
+//Train sprites files
+
+#include "src/sprites/EPB.pnml"
+#include "src/sprites/CIG.pnml"
+#include "src/sprites/VEP.pnml"
+#include "src/sprites/Networker.pnml"
+
+//File that links all the sprites files together for reversals
+
+#include "src/sprites/zz_sprite_end.pnml"
+
+//Train items files
+
+#include "src/items/EPB.pnml"
+#include "src/items/CIG.pnml"
+#include "src/items/VEP.pnml"
+#include "src/items/Networker.pnml"

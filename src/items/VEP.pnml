@@ -1,0 +1,133 @@
+switch (FEAT_TRAINS, SELF, sw_VEP_gfx_f, position_in_articulated_veh) {
+	0: return sw_VEP_DTCL;
+	1: return sw_VEP_MBSO;
+	2: return sw_VEP_TSO;
+	3: return sw_VEP_DTCL_R;
+}
+switch (FEAT_TRAINS, PARENT, sw_VEP_gfx, vehicle_is_reversed) {
+	0: return sw_VEP_gfx_f;
+	1: return sw_REV_ID_CHECK;
+}
+switch(FEAT_TRAINS, SELF, sw_VEP_default, [STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100), getbits(extra_callback_info1, 8, 8)]){
+	0: return sw_VEP_gfx;
+	1: return sw_MK1_Headlight_Layer;
+}
+switch (FEAT_TRAINS, SELF, sw_VEP_car_articulated, extra_callback_info1) {
+	1..3: return item_VEP_T;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+switch(FEAT_TRAINS, SELF, sw_VEP_LIVERIES, cargo_subtype){
+	0: sw_livery_BRG;
+	1: sw_livery_BRG_GAT;//4-GAT/Class 427 version
+	2: sw_livery_NSE;
+	3: sw_livery_SWT;
+	4: sw_livery_CNX;
+	5: sw_livery_STN;
+	return CB_RESULT_NO_TEXT;
+}
+switch(FEAT_TRAINS, SELF, sw_VEP_AGE_PERIOD, cargo_subtype){
+	1: 190;//4-GAT/Class 427 version
+	170;
+}
+switch(FEAT_TRAINS, SELF, sw_VEP_CAPACITY, cargo_subtype){
+	1: 65;//4-GAT/Class 427 version
+	70;
+}
+
+
+item (FEAT_TRAINS, item_VEP, 4230) {
+	property {
+		name: 							string(STR_NAME_VEP);
+		climates_available: 			ALL_CLIMATES;
+		introduction_date:				date(1967, 1, 1);
+		model_life:						25;
+		retire_early:					0;
+		vehicle_life:					50;
+		reliability_decay:				2;
+		refittable_cargo_classes:		bitmask(CC_PASSENGERS);
+		cargo_allow_refit:				[PASS, TOUR];
+		loading_speed:					30;
+		cost_factor:					25;
+		running_cost_factor:			15;
+		sprite_id:						SPRITE_ID_NEW_TRAIN;
+		speed:							90 mph;
+		misc_flags:						bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
+		refit_cost:						0;
+		track_type:						SAA3;
+		ai_special_flag:				AI_FLAG_CARGO;
+		power:							1000 hp;
+		running_cost_base:				RUNNING_COST_ELECTRIC;
+		dual_headed:					0;
+		default_cargo_type:				PASS;
+		cargo_capacity:					70;
+		weight:							151 ton;
+		tractive_effort_coefficient:	0.20;
+		air_drag_coefficient:			0.09;
+		length:							8;
+		effect_spawn_model_and_powered:	EFFECT_SPAWN_MODEL_ELECTRIC;
+		bitmask_vehicle_info:			0;
+		cargo_age_period:				170;
+		default_cargo_type:				PASS;
+		engine_class:					ENGINE_CLASS_ELECTRIC;
+	}
+	graphics {
+		default: 							sw_VEP_default;
+		purchase:							sw_VEP_purchase;
+		cargo_subtype_text:					sw_VEP_LIVERIES;
+		running_cost_factor:				return(current_speed == 0 ? 8 : 30) ;
+		articulated_part:					sw_VEP_car_articulated;
+		cargo_age_period:					sw_VEP_AGE_PERIOD;
+		cargo_capacity:						sw_VEP_CAPACITY;
+		can_attach_wagon:					sw_coupling_emu_mk1;
+		additional_text:					string(STR_DESC_VEP);
+	}
+}
+if (param_names == 1){
+item (FEAT_TRAINS, item_VEP, 4230){
+	property{
+		name                           : string(STR_NAME_423) ;
+	}
+}
+}
+
+item (FEAT_TRAINS, item_VEP_T, 4231) {
+	property {
+		name: 							string(STR_NAME_VEP);
+		climates_available: 			NO_CLIMATE;
+		introduction_date:				date(1967, 1, 1);
+		model_life:						34;
+		retire_early:					0;
+		vehicle_life:					40;
+		reliability_decay:				2;
+		refittable_cargo_classes:		bitmask(CC_PASSENGERS);
+		cargo_allow_refit:				[PASS, TOUR];
+		loading_speed:					30;
+		cost_factor:					25;
+		running_cost_factor:			15;
+		sprite_id:						SPRITE_ID_NEW_TRAIN;
+		speed:							90 mph;
+		misc_flags:						bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
+		refit_cost:						0;
+		track_type:						SAA3;
+		ai_special_flag:				AI_FLAG_CARGO;
+		running_cost_base:				RUNNING_COST_ELECTRIC;
+		dual_headed:					0;
+		default_cargo_type:				PASS;
+		cargo_capacity:					70;
+		weight:							0 ton;
+		air_drag_coefficient:			0.09;
+		length:							8;
+		effect_spawn_model_and_powered:	EFFECT_SPAWN_MODEL_ELECTRIC;
+		bitmask_vehicle_info:			0;
+		cargo_age_period:				170;
+		default_cargo_type:				PASS;
+		engine_class:					ENGINE_CLASS_ELECTRIC;
+	}
+	graphics {
+		default: 							sw_VEP_default;
+		purchase:							spriteset_CIG_BRG_PURCHASE;
+		running_cost_factor:				return(current_speed == 0 ? 8 : 30) ;
+		cargo_age_period:					sw_VEP_AGE_PERIOD;
+		cargo_capacity:						sw_VEP_CAPACITY;
+	}
+}

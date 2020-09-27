@@ -1,0 +1,168 @@
+grf{
+    grfid: "GWSE" ;
+    name: string(STR_GRF_NAME_2) ;
+    desc: string(STR_GRF_DESC_2) ;
+    version: 1 ;
+    min_compatible_version: 1 ;
+	param 1{
+		param_names{
+			type    : bool ;
+			name    : string(STR_PARAM_NAMES) ;
+			desc    : string(STR_PARAM_NAMES_DESC) ;
+			bit     : 1 ;
+			def_value : 0 ;
+		}
+		}
+	/*param 2{
+		param_asbestos{
+			type    : bool ;
+			name    : string(STR_PARAM_ASBESTOS) ;
+			desc    : string(STR_PARAM_ASBESTOS_DESC) ;
+			bit     : 1 ;
+			def_value : 0 ;
+		}
+		}*/
+}
+
+train_width_32_px  = 1 ;
+traininfo_y_offset = 2 ;
+
+//Copied from RUKTS
+
+cargotable {
+//Default cargos
+   PASS, MAIL, COAL, FOOD, GOLD, GOOD, GRAI, IORE, LVST, OIL_, PAPR, STEL, VALU, WHEA, WOOD,
+
+//Tropical cargos
+   CORE, DIAM, FRUT, MAIZ, RUBR, WATR, 
+
+//ECS
+   AORE, BDMT, BRCK, CERA, CERE, CMNT, DYES, FERT, FICR, FISH, GLAS, LIME, OLSD, PETR, PLAS, POTA, RFPR, SAND, SULP, TOUR, VEHI, WDPR, WOOL, 
+   
+//FIRS
+   BEAN, BEER, BOOM, CLAY, CASS, COKE, ENSP, EOIL, FMSP, FRVG, GRVL, IRON, METL, MNO2, MILK, MNSP, NICK, NITR, NUTS, PHOS, PIPE, PORE, QLME, RCYC, SASH, SCMT, SGBT, SGCN, SLAG, VBOD, VPTS, JAVA, COPR, SUGR, ZINC,
+   
+   SCRP, //Old scrap metal
+   
+//Nuclear stuff
+	URAN, NWST
+}
+
+railtypetable {
+    RAIL: ["RLOW", "RMED", "RHIG",	"SAAN", "SABN", "SACN", "SBAN", "SBBN", "SBCN", "SCAN", "SCBN", "SCCN", "SDAN", "SDBN"], 
+	ELRL: ["ELOW", "EMED", "EHIG", "HSTR", "SAAE", "SABE", "SACE", 	"SBAE", "SBBE", "SBCE", "SCAE", "SCBE", "SCCE",	"SDAE", "SDBE",	"SEAE", "SEBE"],
+	SAA3: ["3RDR", "3LOW", "3MED", "SAB3", "SAC3", "SBA3", "SBB3", "SBC3", "SCA3", "SCB3", "SCC3"],
+	SAAZ: ["3RDC", "CLOW", "CMED", "SABZ", "SACZ", "SBAZ", "SBBZ", "SBCZ", "SCAZ", "SCBZ", "SCCZ"]
+}
+
+
+//Also copied from RUKTS
+
+template template_purchase(x,y){
+	[ x, y, 79, 12, -39, -8]
+}
+
+template template_8_8_networker(x,y){
+    [ x, y, 8, 24, -3, -12]
+    [ x+10, y, 21, 18, -13, -10]
+    [ x+33, y, 32, 12, -16, -8]
+    [ x+67, y, 21, 18, -6, -10]
+    [ x+90, y, 8, 24, -3, -12]
+    [ x+100, y, 21, 18, -13, -10]
+    [ x+123, y, 32, 12, -16, -8]
+    [ x+157, y, 21, 18, -6, -10]
+}
+
+template template_8_8_networker_reverse(x,y){
+    [ x+90, y, 8, 24, -3, -12]
+    [ x+100, y, 21, 18, -13, -10]
+    [ x+123, y, 32, 12, -16, -8]
+    [ x+157, y, 21, 18, -6, -10]
+    [ x, y, 8, 24, -3, -12]
+    [ x+10, y, 21, 18, -13, -10]
+    [ x+33, y, 32, 12, -16, -8]
+    [ x+67, y, 21, 18, -6, -10]
+}
+
+template template_8_4_networker(x,y){
+    [ x, y, 8, 24, -3, -12]
+    [ x+10, y, 21, 18, -13, -10]
+    [ x+33, y, 32, 12, -16, -8]
+    [ x+67, y, 21, 18, -6, -10]
+}
+
+spriteset(blank, "gfx/New42x.png") {
+    [ 0, 0, 1, 1, 0, 0]
+}
+
+//livery introduction switches
+switch (FEAT_TRAINS, SELF, sw_livery_SRG, current_year > 1946) {
+	1: return string(STR_SRG);
+	return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, sw_livery_SRY, current_year > 1950) {
+	1: return string(STR_SRY);
+	return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, sw_livery_BRB, current_year > 1964) {
+	1: return string(STR_BRB);
+	return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, sw_livery_BRG, current_year > 1964) {
+	1: return string(STR_BRG);
+	return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, sw_livery_BRS, current_year > 1970) {
+	1: return string(STR_BRG);
+	return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, sw_livery_BRG_GAT, current_year > 1978) {
+	1: return string(STR_BRG_GAT);
+	return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, sw_livery_NSE, current_year > 1985) {
+	1: return string(STR_NSE);
+	return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, sw_livery_SWT, current_year > 1995) {
+	1: return string(STR_SWT);
+	return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, sw_livery_CNX, current_year > 1996) {
+	1: return string(STR_CNX);
+	return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, sw_livery_CNG, current_year > 1996) {
+	1: return string(STR_CNG);
+	return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, sw_livery_STN, current_year > 2000) {
+	1: return string(STR_STN);
+	return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, sw_livery_SWH, current_year > 2003) {
+	1: return string(STR_SWH);
+	return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, sw_livery_SET, current_year > 2002) {
+	1: return string(STR_SET);
+	return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, sw_livery_SEB, current_year > 2006) {
+	1: return string(STR_SEB);
+	return CB_RESULT_NO_TEXT;
+}
+	

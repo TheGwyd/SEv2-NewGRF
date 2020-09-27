@@ -1,0 +1,1085 @@
+/*IDs used in this file
+4130 CAP D riving car
+4131 CAP T railing cars
+4140 SR HAP D riving car
+4141 SR HAP T railing cars
+4142 BR HAP D riving car
+4143 BR HAP T railing cars
+4150 SR 4EPB D riving car
+4151 SR 4EPB T railing cars
+4152 BR 4EPB D riving car
+4153 BR 4EPB T railing cars
+4160 SR 2EPB D riving car
+4161 SR 2EPB T railing cars
+4162 BR 2EPB D riving car
+4163 BR 2EPB T railing cars
+4180 SR SAP D riving car
+4181 SR SAP T railing cars
+4182 BR SAP D riving car
+4183 BR SAP T railing cars
+*/
+//SR 4 EPB
+switch (FEAT_TRAINS, SELF, sw_4EPB_S_gfx_f, position_in_articulated_veh) {
+	0: return sw_4EPB_S_DMBS;
+	1: return sw_4EPB_S_TS;
+	2: return sw_4EPB_S_TS;
+	3: return sw_4EPB_S_DMBS_R;
+}
+switch (FEAT_TRAINS, PARENT, sw_4EPB_S_gfx, vehicle_is_reversed) {
+	0: sw_4EPB_S_gfx_f;
+	1: sw_REV_ID_CHECK;
+}
+switch(FEAT_TRAINS, SELF, sw_4EPB_S_default, [STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100), getbits(extra_callback_info1, 8, 8)]){
+	0: return sw_4EPB_S_gfx;
+	1: return sw_MK1_Headlight_Layer;
+}
+switch (FEAT_TRAINS, SELF, sw_4EPB_S_car_articulated, extra_callback_info1) {
+	1..3: return item_4EPB_S_T;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+switch(FEAT_TRAINS, SELF, sw_4EPB_S_LIVERIES, cargo_subtype){
+	0: sw_livery_SRG;
+	1: sw_livery_SRY;
+	2: sw_livery_BRB;
+	3: sw_livery_BRS;
+	4: sw_livery_NSE;
+	return CB_RESULT_NO_TEXT;
+}
+
+item (FEAT_TRAINS, item_4EPB_S, 4150) {
+	property {
+		name: 							string(STR_NAME_4EPB_S);
+		climates_available: 			ALL_CLIMATES;
+		introduction_date:				date(1951, 1, 1);
+		model_life:						15;
+		retire_early:					0;
+		vehicle_life:					50;
+		reliability_decay:				2;
+		refittable_cargo_classes:		bitmask(CC_PASSENGERS);
+		cargo_allow_refit:				[PASS, TOUR];
+		loading_speed:					25;
+		cost_factor:					22;
+		running_cost_factor:			11;
+		sprite_id:						SPRITE_ID_NEW_TRAIN;
+		speed:							75 mph;
+		misc_flags:						bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
+		refit_cost:						0;
+		track_type:						SAA3;
+		ai_special_flag:				AI_FLAG_CARGO;
+		power:							1000 hp;
+		running_cost_base:				RUNNING_COST_ELECTRIC;
+		dual_headed:					0;
+		default_cargo_type:				PASS;
+		cargo_capacity:					95;
+		weight:							135 ton;
+		tractive_effort_coefficient:	0.24;
+		air_drag_coefficient:			0.09;
+		length:							8;
+		effect_spawn_model_and_powered:	EFFECT_SPAWN_MODEL_ELECTRIC;
+		bitmask_vehicle_info:			0;
+		cargo_age_period:				170;
+		default_cargo_type:				PASS;
+		engine_class:					ENGINE_CLASS_ELECTRIC;
+	}
+	graphics {
+		default: 							sw_4EPB_S_default;
+		purchase:							sw_EPB_S_purchase;
+		cargo_subtype_text:					sw_4EPB_S_LIVERIES;
+		running_cost_factor:				return(current_speed == 0 ? 8 : 30) ;
+		articulated_part:					sw_4EPB_S_car_articulated;
+		can_attach_wagon:					sw_coupling_emu_mk1;
+		additional_text:					string(STR_DESC_4EPB_S);
+	}
+}
+if (param_names == 1){
+item (FEAT_TRAINS, item_4EPB_S, 4150){
+	property{
+		name                           : string(STR_NAME_415_S) ;
+	}
+}
+}
+
+item (FEAT_TRAINS, item_4EPB_S_T, 4151) {
+	property {
+		name: 							string(STR_NAME_4EPB_S);
+		climates_available: 			NO_CLIMATE;
+		introduction_date:				date(1951, 1, 1);
+		model_life:						15;
+		retire_early:					0;
+		vehicle_life:					50;
+		reliability_decay:				2;
+		refittable_cargo_classes:		bitmask(CC_PASSENGERS);
+		cargo_allow_refit:				[PASS, TOUR];
+		loading_speed:					25;
+		cost_factor:					22;
+		running_cost_factor:			11;
+		sprite_id:						SPRITE_ID_NEW_TRAIN;
+		speed:							75 mph;
+		misc_flags:						bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
+		refit_cost:						0;
+		track_type:						SAA3;
+		ai_special_flag:				AI_FLAG_CARGO;
+		running_cost_base:				RUNNING_COST_ELECTRIC;
+		dual_headed:					0;
+		default_cargo_type:				PASS;
+		cargo_capacity:					95;
+		weight:							0 ton;
+		air_drag_coefficient:			0.09;
+		length:							8;
+		effect_spawn_model_and_powered:	EFFECT_SPAWN_MODEL_ELECTRIC;
+		bitmask_vehicle_info:			0;
+		cargo_age_period:				170;
+		default_cargo_type:				PASS;
+		engine_class:					ENGINE_CLASS_ELECTRIC;
+	}
+	graphics {
+		default: 							sw_4EPB_S_default;
+		purchase:							sw_EPB_S_purchase;
+		running_cost_factor:				return(current_speed == 0 ? 8 : 30) ;
+	}
+}
+//SR 2 EPB
+switch (FEAT_TRAINS, SELF, sw_2EPB_S_gfx_f, position_in_articulated_veh) {
+	0: return sw_2EPB_S_DMBS;
+	1: return sw_2EPB_S_DTS;
+}
+switch (FEAT_TRAINS, PARENT, sw_2EPB_S_gfx, vehicle_is_reversed) {
+	0: sw_2EPB_S_gfx_f;
+	1: sw_REV_ID_CHECK;
+}
+switch(FEAT_TRAINS, SELF, sw_2EPB_S_default, [STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100), getbits(extra_callback_info1, 8, 8)]){
+	0: return sw_2EPB_S_gfx;
+	1: return sw_MK1_Headlight_Layer;
+}
+switch (FEAT_TRAINS, SELF, sw_2EPB_S_car_articulated, extra_callback_info1) {
+	1: return item_2EPB_S_T;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+switch(FEAT_TRAINS, SELF, sw_2EPB_S_LIVERIES, cargo_subtype){
+	0: sw_livery_SRG;
+	1: sw_livery_SRY;
+	2: sw_livery_BRB;
+	3: sw_livery_BRS;
+	4: sw_livery_NSE;
+	return CB_RESULT_NO_TEXT;
+}
+
+item (FEAT_TRAINS, item_2EPB_S, 4160) {
+	property {
+		name: 							string(STR_NAME_2EPB_S);
+		climates_available: 			ALL_CLIMATES;
+		introduction_date:				date(1953, 1, 1);
+		model_life:						15;
+		retire_early:					0;
+		vehicle_life:					50;
+		reliability_decay:				2;
+		refittable_cargo_classes:		bitmask(CC_PASSENGERS);
+		cargo_allow_refit:				[PASS, TOUR];
+		loading_speed:					25;
+		cost_factor:					11;
+		running_cost_factor:			7;
+		sprite_id:						SPRITE_ID_NEW_TRAIN;
+		speed:							75 mph;
+		misc_flags:						bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
+		refit_cost:						0;
+		track_type:						SAA3;
+		ai_special_flag:				AI_FLAG_CARGO;
+		power:							500 hp;
+		running_cost_base:				RUNNING_COST_ELECTRIC;
+		dual_headed:					0;
+		default_cargo_type:				PASS;
+		cargo_capacity:					95;
+		weight:							70 ton;
+		tractive_effort_coefficient:	0.24;
+		air_drag_coefficient:			0.09;
+		length:							8;
+		effect_spawn_model_and_powered:	EFFECT_SPAWN_MODEL_ELECTRIC;
+		bitmask_vehicle_info:			0;
+		cargo_age_period:				170;
+		default_cargo_type:				PASS;
+		engine_class:					ENGINE_CLASS_ELECTRIC;
+	}
+	graphics {
+		default: 							sw_2EPB_S_default;
+		purchase:							sw_EPB_S_purchase;
+		cargo_subtype_text:					sw_2EPB_S_LIVERIES;
+		running_cost_factor:				return(current_speed == 0 ? 4 : 7) ;
+		articulated_part:					sw_2EPB_S_car_articulated;
+		can_attach_wagon:					sw_coupling_emu_mk1;
+		additional_text:					string(STR_DESC_2EPB_S);
+	}
+}
+if (param_names == 1){
+item (FEAT_TRAINS, item_2EPB_S, 4160){
+	property{
+		name                           : string(STR_NAME_416_S) ;
+	}
+}
+}
+
+item (FEAT_TRAINS, item_2EPB_S_T, 4161) {
+	property {
+		name: 							string(STR_NAME_2EPB_S);
+		climates_available: 			NO_CLIMATE;
+		introduction_date:				date(1953, 1, 1);
+		model_life:						15;
+		retire_early:					0;
+		vehicle_life:					50;
+		reliability_decay:				2;
+		refittable_cargo_classes:		bitmask(CC_PASSENGERS);
+		cargo_allow_refit:				[PASS, TOUR];
+		loading_speed:					25;
+		cost_factor:					11;
+		running_cost_factor:			7;
+		sprite_id:						SPRITE_ID_NEW_TRAIN;
+		speed:							75 mph;
+		misc_flags:						bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
+		refit_cost:						0;
+		track_type:						SAA3;
+		ai_special_flag:				AI_FLAG_CARGO;
+		running_cost_base:				RUNNING_COST_ELECTRIC;
+		dual_headed:					0;
+		default_cargo_type:				PASS;
+		cargo_capacity:					95;
+		weight:							0 ton;
+		air_drag_coefficient:			0.09;
+		length:							8;
+		effect_spawn_model_and_powered:	EFFECT_SPAWN_MODEL_ELECTRIC;
+		bitmask_vehicle_info:			0;
+		cargo_age_period:				170;
+		default_cargo_type:				PASS;
+		engine_class:					ENGINE_CLASS_ELECTRIC;
+	}
+	graphics {
+		default: 							sw_2EPB_S_default;
+		purchase:							sw_EPB_S_purchase;
+		running_cost_factor:				return(current_speed == 0 ? 4 : 7) ;
+	}
+}
+//SR 2 HAP
+switch (FEAT_TRAINS, SELF, sw_HAP_S_gfx_f, position_in_articulated_veh) {
+	0: return sw_2EPB_S_DMBS;
+	1: return sw_HAP_S_DTCL;
+}
+switch (FEAT_TRAINS, PARENT, sw_HAP_S_gfx, vehicle_is_reversed) {
+	0: sw_HAP_S_gfx_f;
+	1: sw_REV_ID_CHECK;
+}
+switch(FEAT_TRAINS, SELF, sw_HAP_S_default, [STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100), getbits(extra_callback_info1, 8, 8)]){
+	0: return sw_HAP_S_gfx;
+	1: return sw_MK1_Headlight_Layer;
+}
+switch (FEAT_TRAINS, SELF, sw_HAP_S_car_articulated, extra_callback_info1) {
+	1: return item_HAP_S_T;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+switch(FEAT_TRAINS, SELF, sw_HAP_S_LIVERIES, cargo_subtype){
+	0: sw_livery_SRG;
+	1: sw_livery_SRY;
+	2: sw_livery_BRB;
+	3: sw_livery_BRS;
+	4: sw_livery_NSE;
+	return CB_RESULT_NO_TEXT;
+}
+
+item (FEAT_TRAINS, item_HAP_S, 4140) {
+	property {
+		name: 							string(STR_NAME_HAP_S);
+		climates_available: 			ALL_CLIMATES;
+		introduction_date:				date(1957, 1, 1);
+		model_life:						15;
+		retire_early:					0;
+		vehicle_life:					50;
+		reliability_decay:				2;
+		refittable_cargo_classes:		bitmask(CC_PASSENGERS);
+		cargo_allow_refit:				[PASS, TOUR];
+		loading_speed:					25;
+		cost_factor:					13;
+		running_cost_factor:			9;
+		sprite_id:						SPRITE_ID_NEW_TRAIN;
+		speed:							75 mph;
+		misc_flags:						bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
+		refit_cost:						0;
+		track_type:						SAA3;
+		ai_special_flag:				AI_FLAG_CARGO;
+		power:							500 hp;
+		running_cost_base:				RUNNING_COST_ELECTRIC;
+		dual_headed:					0;
+		default_cargo_type:				PASS;
+		cargo_capacity:					95;
+		weight:							72 ton;
+		tractive_effort_coefficient:	0.24;
+		air_drag_coefficient:			0.09;
+		length:							8;
+		effect_spawn_model_and_powered:	EFFECT_SPAWN_MODEL_ELECTRIC;
+		bitmask_vehicle_info:			0;
+		cargo_age_period:				190;
+		default_cargo_type:				PASS;
+		engine_class:					ENGINE_CLASS_ELECTRIC;
+	}
+	graphics {
+		default: 							sw_HAP_S_default;
+		purchase:							sw_HAP_S_purchase;
+		cargo_subtype_text:					sw_HAP_S_LIVERIES;
+		running_cost_factor:				return(current_speed == 0 ? 5 : 9) ;
+		articulated_part:					sw_HAP_S_car_articulated;
+		can_attach_wagon:					sw_coupling_emu_mk1;
+		additional_text:					string(STR_DESC_HAP_S);
+	}
+}
+if (param_names == 1){
+item (FEAT_TRAINS, item_HAP_S, 4140){
+	property{
+		name                           : string(STR_NAME_414_S) ;
+	}
+}
+}
+
+item (FEAT_TRAINS, item_HAP_S_T, 4141) {
+	property {
+		name: 							string(STR_NAME_HAP_S);
+		climates_available: 			NO_CLIMATE;
+		introduction_date:				date(1957, 1, 1);
+		model_life:						15;
+		retire_early:					0;
+		vehicle_life:					50;
+		reliability_decay:				2;
+		refittable_cargo_classes:		bitmask(CC_PASSENGERS);
+		cargo_allow_refit:				[PASS, TOUR];
+		loading_speed:					25;
+		cost_factor:					13;
+		running_cost_factor:			9;
+		sprite_id:						SPRITE_ID_NEW_TRAIN;
+		speed:							75 mph;
+		misc_flags:						bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
+		refit_cost:						0;
+		track_type:						SAA3;
+		ai_special_flag:				AI_FLAG_CARGO;
+		running_cost_base:				RUNNING_COST_ELECTRIC;
+		dual_headed:					0;
+		default_cargo_type:				PASS;
+		cargo_capacity:					50;
+		weight:							0 ton;
+		air_drag_coefficient:			0.09;
+		length:							8;
+		effect_spawn_model_and_powered:	EFFECT_SPAWN_MODEL_ELECTRIC;
+		bitmask_vehicle_info:			0;
+		cargo_age_period:				190;
+		default_cargo_type:				PASS;
+		engine_class:					ENGINE_CLASS_ELECTRIC;
+	}
+	graphics {
+		default: 							sw_HAP_S_default;
+		purchase:							sw_HAP_S_purchase;
+		running_cost_factor:				return(current_speed == 0 ? 5 : 9) ;
+	}
+}
+//SR 2 SAP
+switch (FEAT_TRAINS, SELF, sw_SAP_S_gfx_f, position_in_articulated_veh) {
+	0: return sw_2EPB_S_DMBS;
+	1: return sw_SAP_S_DTSL;
+}
+switch (FEAT_TRAINS, PARENT, sw_SAP_S_gfx, vehicle_is_reversed) {
+	0: sw_SAP_S_gfx_f;
+	1: sw_REV_ID_CHECK;
+}
+switch(FEAT_TRAINS, SELF, sw_SAP_S_default, [STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100), getbits(extra_callback_info1, 8, 8)]){
+	0: return sw_SAP_S_gfx;
+	1: return sw_MK1_Headlight_Layer;
+}
+switch (FEAT_TRAINS, SELF, sw_SAP_S_car_articulated, extra_callback_info1) {
+	1: return item_SAP_S_T;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+switch(FEAT_TRAINS, SELF, sw_SAP_S_LIVERIES, cargo_subtype){
+	0: sw_livery_SRG;
+	1: sw_livery_SRY;
+	2: sw_livery_BRB;
+	3: sw_livery_BRS;
+	4: sw_livery_NSE;
+	return CB_RESULT_NO_TEXT;
+}
+
+item (FEAT_TRAINS, item_SAP_S, 4180) {
+	property {
+		name: 							string(STR_NAME_SAP_S);
+		climates_available: 			ALL_CLIMATES;
+		introduction_date:				date(1969, 1, 1);
+		model_life:						15;
+		retire_early:					0;
+		vehicle_life:					50;
+		reliability_decay:				2;
+		refittable_cargo_classes:		bitmask(CC_PASSENGERS);
+		cargo_allow_refit:				[PASS, TOUR];
+		loading_speed:					25;
+		cost_factor:					11;
+		running_cost_factor:			9;
+		sprite_id:						SPRITE_ID_NEW_TRAIN;
+		speed:							75 mph;
+		misc_flags:						bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
+		refit_cost:						0;
+		track_type:						SAA3;
+		ai_special_flag:				AI_FLAG_CARGO;
+		power:							500 hp;
+		running_cost_base:				RUNNING_COST_ELECTRIC;
+		dual_headed:					0;
+		default_cargo_type:				PASS;
+		cargo_capacity:					95;
+		weight:							72 ton;
+		tractive_effort_coefficient:	0.24;
+		air_drag_coefficient:			0.09;
+		length:							8;
+		effect_spawn_model_and_powered:	EFFECT_SPAWN_MODEL_ELECTRIC;
+		bitmask_vehicle_info:			0;
+		cargo_age_period:				180;
+		default_cargo_type:				PASS;
+		engine_class:					ENGINE_CLASS_ELECTRIC;
+	}
+	graphics {
+		default: 							sw_SAP_S_default;
+		purchase:							sw_SAP_S_purchase;
+		cargo_subtype_text:					sw_SAP_S_LIVERIES;
+		running_cost_factor:				return(current_speed == 0 ? 5 : 9) ;
+		articulated_part:					sw_SAP_S_car_articulated;
+		can_attach_wagon:					sw_coupling_emu_mk1;
+		additional_text:					string(STR_DESC_SAP_S);
+	}
+}
+if (param_names == 1){
+item (FEAT_TRAINS, item_SAP_S, 4180){
+	property{
+		name                           : string(STR_NAME_418_S) ;
+	}
+}
+}
+
+item (FEAT_TRAINS, item_SAP_S_T, 4181) {
+	property {
+		name: 							string(STR_NAME_SAP_S);
+		climates_available: 			NO_CLIMATE;
+		introduction_date:				date(1969, 1, 1);
+		model_life:						15;
+		retire_early:					0;
+		vehicle_life:					50;
+		reliability_decay:				2;
+		refittable_cargo_classes:		bitmask(CC_PASSENGERS);
+		cargo_allow_refit:				[PASS, TOUR];
+		loading_speed:					25;
+		cost_factor:					11;
+		running_cost_factor:			9;
+		sprite_id:						SPRITE_ID_NEW_TRAIN;
+		speed:							75 mph;
+		misc_flags:						bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
+		refit_cost:						0;
+		track_type:						SAA3;
+		ai_special_flag:				AI_FLAG_CARGO;
+		running_cost_base:				RUNNING_COST_ELECTRIC;
+		dual_headed:					0;
+		default_cargo_type:				PASS;
+		cargo_capacity:					60;
+		weight:							0 ton;
+		air_drag_coefficient:			0.09;
+		length:							8;
+		effect_spawn_model_and_powered:	EFFECT_SPAWN_MODEL_ELECTRIC;
+		bitmask_vehicle_info:			0;
+		cargo_age_period:				180;
+		default_cargo_type:				PASS;
+		engine_class:					ENGINE_CLASS_ELECTRIC;
+	}
+	graphics {
+		default: 							sw_SAP_S_default;
+		purchase:							sw_SAP_S_purchase;
+		running_cost_factor:				return(current_speed == 0 ? 5 : 9) ;
+	}
+}
+//BR 4 EPB
+switch (FEAT_TRAINS, SELF, sw_4EPB_B_gfx_f, position_in_articulated_veh) {
+	0: return sw_4EPB_B_DMBS;
+	1: return sw_4EPB_B_TS;
+	2: return sw_4EPB_B_TS;
+	3: return sw_4EPB_B_DMBS_R;
+}
+switch (FEAT_TRAINS, PARENT, sw_4EPB_B_gfx, vehicle_is_reversed) {
+	0: sw_4EPB_B_gfx_f;
+	1: sw_REV_ID_CHECK;
+}
+switch(FEAT_TRAINS, SELF, sw_4EPB_B_default, [STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100), getbits(extra_callback_info1, 8, 8)]){
+	0: return sw_4EPB_B_gfx;
+	1: return sw_MK1_Headlight_Layer;
+}
+switch (FEAT_TRAINS, SELF, sw_4EPB_B_car_articulated, extra_callback_info1) {
+	1..3: return item_4EPB_B_T;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+switch(FEAT_TRAINS, SELF, sw_4EPB_B_LIVERIES, cargo_subtype){
+	0: sw_livery_SRG;
+	1: sw_livery_SRY;
+	2: sw_livery_BRB;
+	3: sw_livery_BRS;
+	4: sw_livery_NSE;
+	return CB_RESULT_NO_TEXT;
+}
+
+item (FEAT_TRAINS, item_4EPB_B, 4152) {
+	property {
+		name: 							string(STR_NAME_4EPB_B);
+		climates_available: 			ALL_CLIMATES;
+		introduction_date:				date(1957, 1, 1);
+		model_life:						15;
+		retire_early:					0;
+		vehicle_life:					50;
+		reliability_decay:				2;
+		refittable_cargo_classes:		bitmask(CC_PASSENGERS);
+		cargo_allow_refit:				[PASS, TOUR];
+		loading_speed:					25;
+		cost_factor:					22;
+		running_cost_factor:			11;
+		sprite_id:						SPRITE_ID_NEW_TRAIN;
+		speed:							75 mph;
+		misc_flags:						bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
+		refit_cost:						0;
+		track_type:						SAA3;
+		ai_special_flag:				AI_FLAG_CARGO;
+		power:							1000 hp;
+		running_cost_base:				RUNNING_COST_ELECTRIC;
+		dual_headed:					0;
+		default_cargo_type:				PASS;
+		cargo_capacity:					95;
+		weight:							138 ton;
+		tractive_effort_coefficient:	0.24;
+		air_drag_coefficient:			0.09;
+		length:							8;
+		effect_spawn_model_and_powered:	EFFECT_SPAWN_MODEL_ELECTRIC;
+		bitmask_vehicle_info:			0;
+		cargo_age_period:				170;
+		default_cargo_type:				PASS;
+		engine_class:					ENGINE_CLASS_ELECTRIC;
+	}
+	graphics {
+		default: 							sw_4EPB_B_default;
+		purchase:							sw_EPB_B_purchase;
+		cargo_subtype_text:					sw_4EPB_B_LIVERIES;
+		running_cost_factor:				return(current_speed == 0 ? 8 : 30) ;
+		articulated_part:					sw_4EPB_B_car_articulated;
+		can_attach_wagon:					sw_coupling_emu_mk1;
+		additional_text:					string(STR_DESC_4EPB_B);
+	}
+}
+if (param_names == 1){
+item (FEAT_TRAINS, item_4EPB_B, 4152){
+	property{
+		name                           : string(STR_NAME_415_B) ;
+	}
+}
+}
+
+item (FEAT_TRAINS, item_4EPB_B_T, 4153) {
+	property {
+		name: 							string(STR_NAME_4EPB_B);
+		climates_available: 			NO_CLIMATE;
+		introduction_date:				date(1957, 1, 1);
+		model_life:						15;
+		retire_early:					0;
+		vehicle_life:					50;
+		reliability_decay:				2;
+		refittable_cargo_classes:		bitmask(CC_PASSENGERS);
+		cargo_allow_refit:				[PASS, TOUR];
+		loading_speed:					25;
+		cost_factor:					22;
+		running_cost_factor:			11;
+		sprite_id:						SPRITE_ID_NEW_TRAIN;
+		speed:							75 mph;
+		misc_flags:						bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
+		refit_cost:						0;
+		track_type:						SAA3;
+		ai_special_flag:				AI_FLAG_CARGO;
+		running_cost_base:				RUNNING_COST_ELECTRIC;
+		dual_headed:					0;
+		default_cargo_type:				PASS;
+		cargo_capacity:					95;
+		weight:							0 ton;
+		air_drag_coefficient:			0.09;
+		length:							8;
+		effect_spawn_model_and_powered:	EFFECT_SPAWN_MODEL_ELECTRIC;
+		bitmask_vehicle_info:			0;
+		cargo_age_period:				170;
+		default_cargo_type:				PASS;
+		engine_class:					ENGINE_CLASS_ELECTRIC;
+	}
+	graphics {
+		default: 							sw_4EPB_B_default;
+		purchase:							sw_EPB_B_purchase;
+		running_cost_factor:				return(current_speed == 0 ? 8 : 30) ;
+	}
+}
+//BR 2 EPB
+switch (FEAT_TRAINS, SELF, sw_2EPB_B_gfx_f, position_in_articulated_veh) {
+	0: return sw_2EPB_B_DMBS;
+	1: return sw_2EPB_B_DTS;
+}
+switch (FEAT_TRAINS, PARENT, sw_2EPB_B_gfx, vehicle_is_reversed) {
+	0: sw_2EPB_B_gfx_f;
+	1: sw_REV_ID_CHECK;
+}
+switch(FEAT_TRAINS, SELF, sw_2EPB_B_default, [STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100), getbits(extra_callback_info1, 8, 8)]){
+	0: return sw_2EPB_B_gfx;
+	1: return sw_MK1_Headlight_Layer;
+}
+switch (FEAT_TRAINS, SELF, sw_2EPB_B_car_articulated, extra_callback_info1) {
+	1: return item_2EPB_B_T;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+switch(FEAT_TRAINS, SELF, sw_2EPB_B_LIVERIES, cargo_subtype){
+	0: sw_livery_SRG;
+	1: sw_livery_SRY;
+	2: sw_livery_BRB;
+	3: sw_livery_BRS;
+	4: sw_livery_NSE;
+	return CB_RESULT_NO_TEXT;
+}
+
+item (FEAT_TRAINS, item_2EPB_B, 4162) {
+	property {
+		name: 							string(STR_NAME_2EPB_B);
+		climates_available: 			ALL_CLIMATES;
+		introduction_date:				date(1953, 1, 1);
+		model_life:						15;
+		retire_early:					0;
+		vehicle_life:					50;
+		reliability_decay:				2;
+		refittable_cargo_classes:		bitmask(CC_PASSENGERS);
+		cargo_allow_refit:				[PASS, TOUR];
+		loading_speed:					25;
+		cost_factor:					11;
+		running_cost_factor:			7;
+		sprite_id:						SPRITE_ID_NEW_TRAIN;
+		speed:							75 mph;
+		misc_flags:						bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
+		refit_cost:						0;
+		track_type:						SAA3;
+		ai_special_flag:				AI_FLAG_CARGO;
+		power:							500 hp;
+		running_cost_base:				RUNNING_COST_ELECTRIC;
+		dual_headed:					0;
+		default_cargo_type:				PASS;
+		cargo_capacity:					95;
+		weight:							71 ton;
+		tractive_effort_coefficient:	0.24;
+		air_drag_coefficient:			0.09;
+		length:							8;
+		effect_spawn_model_and_powered:	EFFECT_SPAWN_MODEL_ELECTRIC;
+		bitmask_vehicle_info:			0;
+		cargo_age_period:				170;
+		default_cargo_type:				PASS;
+		engine_class:					ENGINE_CLASS_ELECTRIC;
+	}
+	graphics {
+		default: 							sw_2EPB_B_default;
+		purchase:							sw_EPB_B_purchase;
+		cargo_subtype_text:					sw_2EPB_B_LIVERIES;
+		running_cost_factor:				return(current_speed == 0 ? 4 : 7) ;
+		articulated_part:					sw_2EPB_B_car_articulated;
+		can_attach_wagon:					sw_coupling_emu_mk1;
+		additional_text:					string(STR_DESC_2EPB_B);
+	}
+}
+if (param_names == 1){
+item (FEAT_TRAINS, item_2EPB_B, 4162){
+	property{
+		name                           : string(STR_NAME_416_B) ;
+	}
+}
+}
+
+item (FEAT_TRAINS, item_2EPB_B_T, 4163) {
+	property {
+		name: 							string(STR_NAME_2EPB_B);
+		climates_available: 			NO_CLIMATE;
+		introduction_date:				date(1953, 1, 1);
+		model_life:						15;
+		retire_early:					0;
+		vehicle_life:					50;
+		reliability_decay:				2;
+		refittable_cargo_classes:		bitmask(CC_PASSENGERS);
+		cargo_allow_refit:				[PASS, TOUR];
+		loading_speed:					25;
+		cost_factor:					11;
+		running_cost_factor:			7;
+		sprite_id:						SPRITE_ID_NEW_TRAIN;
+		speed:							75 mph;
+		misc_flags:						bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
+		refit_cost:						0;
+		track_type:						SAA3;
+		ai_special_flag:				AI_FLAG_CARGO;
+		running_cost_base:				RUNNING_COST_ELECTRIC;
+		dual_headed:					0;
+		default_cargo_type:				PASS;
+		cargo_capacity:					95;
+		weight:							0 ton;
+		air_drag_coefficient:			0.09;
+		length:							8;
+		effect_spawn_model_and_powered:	EFFECT_SPAWN_MODEL_ELECTRIC;
+		bitmask_vehicle_info:			0;
+		cargo_age_period:				170;
+		default_cargo_type:				PASS;
+		engine_class:					ENGINE_CLASS_ELECTRIC;
+	}
+	graphics {
+		default: 							sw_2EPB_B_default;
+		purchase:							sw_EPB_B_purchase;
+		running_cost_factor:				return(current_speed == 0 ? 4 : 7) ;
+	}
+}
+//BR 2 HAP
+switch (FEAT_TRAINS, SELF, sw_HAP_B_gfx_f, position_in_articulated_veh) {
+	0: return sw_2EPB_B_DMBS;
+	1: return sw_HAP_B_DTCL;
+}
+switch (FEAT_TRAINS, PARENT, sw_HAP_B_gfx, vehicle_is_reversed) {
+	0: sw_HAP_B_gfx_f;
+	1: sw_REV_ID_CHECK;
+}
+switch(FEAT_TRAINS, SELF, sw_HAP_B_default, [STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100), getbits(extra_callback_info1, 8, 8)]){
+	0: return sw_HAP_B_gfx;
+	1: return sw_MK1_Headlight_Layer;
+}
+switch (FEAT_TRAINS, SELF, sw_HAP_B_car_articulated, extra_callback_info1) {
+	1: return item_HAP_B_T;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+switch(FEAT_TRAINS, SELF, sw_HAP_B_LIVERIES, cargo_subtype){
+	0: sw_livery_SRG;
+	1: sw_livery_SRY;
+	2: sw_livery_BRB;
+	3: sw_livery_BRS;
+	4: sw_livery_NSE;
+	return CB_RESULT_NO_TEXT;
+}
+
+item (FEAT_TRAINS, item_HAP_B, 4142) {
+	property {
+		name: 							string(STR_NAME_HAP_B);
+		climates_available: 			ALL_CLIMATES;
+		introduction_date:				date(1957, 1, 1);
+		model_life:						15;
+		retire_early:					0;
+		vehicle_life:					50;
+		reliability_decay:				2;
+		refittable_cargo_classes:		bitmask(CC_PASSENGERS);
+		cargo_allow_refit:				[PASS, TOUR];
+		loading_speed:					25;
+		cost_factor:					13;
+		running_cost_factor:			9;
+		sprite_id:						SPRITE_ID_NEW_TRAIN;
+		speed:							90 mph;
+		misc_flags:						bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
+		refit_cost:						0;
+		track_type:						SAA3;
+		ai_special_flag:				AI_FLAG_CARGO;
+		power:							500 hp;
+		running_cost_base:				RUNNING_COST_ELECTRIC;
+		dual_headed:					0;
+		default_cargo_type:				PASS;
+		cargo_capacity:					95;
+		weight:							70 ton;
+		tractive_effort_coefficient:	0.20;
+		air_drag_coefficient:			0.09;
+		length:							8;
+		effect_spawn_model_and_powered:	EFFECT_SPAWN_MODEL_ELECTRIC;
+		bitmask_vehicle_info:			0;
+		cargo_age_period:				190;
+		default_cargo_type:				PASS;
+		engine_class:					ENGINE_CLASS_ELECTRIC;
+	}
+	graphics {
+		default: 							sw_HAP_B_default;
+		purchase:							sw_HAP_B_purchase;
+		cargo_subtype_text:					sw_HAP_B_LIVERIES;
+		running_cost_factor:				return(current_speed == 0 ? 5 : 9) ;
+		articulated_part:					sw_HAP_B_car_articulated;
+		can_attach_wagon:					sw_coupling_emu_mk1;
+		additional_text:					string(STR_DESC_HAP_B);
+	}
+}
+if (param_names == 1){
+item (FEAT_TRAINS, item_HAP_B, 4142){
+	property{
+		name                           : string(STR_NAME_414_B) ;
+	}
+}
+}
+
+item (FEAT_TRAINS, item_HAP_B_T, 4143) {
+	property {
+		name: 							string(STR_NAME_HAP_B);
+		climates_available: 			NO_CLIMATE;
+		introduction_date:				date(1957, 1, 1);
+		model_life:						15;
+		retire_early:					0;
+		vehicle_life:					50;
+		reliability_decay:				2;
+		refittable_cargo_classes:		bitmask(CC_PASSENGERS);
+		cargo_allow_refit:				[PASS, TOUR];
+		loading_speed:					25;
+		cost_factor:					13;
+		running_cost_factor:			9;
+		sprite_id:						SPRITE_ID_NEW_TRAIN;
+		speed:							90 mph;
+		misc_flags:						bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
+		refit_cost:						0;
+		track_type:						SAA3;
+		ai_special_flag:				AI_FLAG_CARGO;
+		running_cost_base:				RUNNING_COST_ELECTRIC;
+		dual_headed:					0;
+		default_cargo_type:				PASS;
+		cargo_capacity:					50;
+		weight:							0 ton;
+		air_drag_coefficient:			0.09;
+		length:							8;
+		effect_spawn_model_and_powered:	EFFECT_SPAWN_MODEL_ELECTRIC;
+		bitmask_vehicle_info:			0;
+		cargo_age_period:				190;
+		default_cargo_type:				PASS;
+		engine_class:					ENGINE_CLASS_ELECTRIC;
+	}
+	graphics {
+		default: 							sw_HAP_B_default;
+		purchase:							sw_HAP_B_purchase;
+		running_cost_factor:				return(current_speed == 0 ? 5 : 9) ;
+	}
+}
+//BR 2 SAP
+switch (FEAT_TRAINS, SELF, sw_SAP_B_gfx_f, position_in_articulated_veh) {
+	0: return sw_2EPB_B_DMBS;
+	1: return sw_SAP_B_DTSL;
+}
+switch (FEAT_TRAINS, PARENT, sw_SAP_B_gfx, vehicle_is_reversed) {
+	0: sw_SAP_B_gfx_f;
+	1: sw_REV_ID_CHECK;
+}
+switch(FEAT_TRAINS, SELF, sw_SAP_B_default, [STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100), getbits(extra_callback_info1, 8, 8)]){
+	0: return sw_SAP_B_gfx;
+	1: return sw_MK1_Headlight_Layer;
+}
+switch (FEAT_TRAINS, SELF, sw_SAP_B_car_articulated, extra_callback_info1) {
+	1: return item_SAP_B_T;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+switch(FEAT_TRAINS, SELF, sw_SAP_B_LIVERIES, cargo_subtype){
+	0: sw_livery_SRG;
+	1: sw_livery_SRY;
+	2: sw_livery_BRB;
+	3: sw_livery_BRS;
+	4: sw_livery_NSE;
+	return CB_RESULT_NO_TEXT;
+}
+
+item (FEAT_TRAINS, item_SAP_B, 4182) {
+	property {
+		name: 							string(STR_NAME_SAP_B);
+		climates_available: 			ALL_CLIMATES;
+		introduction_date:				date(1973, 1, 1);
+		model_life:						15;
+		retire_early:					0;
+		vehicle_life:					50;
+		reliability_decay:				2;
+		refittable_cargo_classes:		bitmask(CC_PASSENGERS);
+		cargo_allow_refit:				[PASS, TOUR];
+		loading_speed:					25;
+		cost_factor:					11;
+		running_cost_factor:			9;
+		sprite_id:						SPRITE_ID_NEW_TRAIN;
+		speed:							90 mph;
+		misc_flags:						bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
+		refit_cost:						0;
+		track_type:						SAA3;
+		ai_special_flag:				AI_FLAG_CARGO;
+		power:							500 hp;
+		running_cost_base:				RUNNING_COST_ELECTRIC;
+		dual_headed:					0;
+		default_cargo_type:				PASS;
+		cargo_capacity:					95;
+		weight:							70 ton;
+		tractive_effort_coefficient:	0.20;
+		air_drag_coefficient:			0.09;
+		length:							8;
+		effect_spawn_model_and_powered:	EFFECT_SPAWN_MODEL_ELECTRIC;
+		bitmask_vehicle_info:			0;
+		cargo_age_period:				180;
+		default_cargo_type:				PASS;
+		engine_class:					ENGINE_CLASS_ELECTRIC;
+	}
+	graphics {
+		default: 							sw_SAP_B_default;
+		purchase:							sw_SAP_B_purchase;
+		cargo_subtype_text:					sw_SAP_B_LIVERIES;
+		running_cost_factor:				return(current_speed == 0 ? 5 : 9) ;
+		articulated_part:					sw_SAP_B_car_articulated;
+		can_attach_wagon:					sw_coupling_emu_mk1;
+		additional_text:					string(STR_DESC_SAP_B);
+	}
+}
+if (param_names == 1){
+item (FEAT_TRAINS, item_SAP_B, 4182){
+	property{
+		name                           : string(STR_NAME_418_B) ;
+	}
+}
+}
+
+item (FEAT_TRAINS, item_SAP_B_T, 4183) {
+	property {
+		name: 							string(STR_NAME_SAP_B);
+		climates_available: 			NO_CLIMATE;
+		introduction_date:				date(1974, 1, 1);
+		model_life:						15;
+		retire_early:					0;
+		vehicle_life:					50;
+		reliability_decay:				2;
+		refittable_cargo_classes:		bitmask(CC_PASSENGERS);
+		cargo_allow_refit:				[PASS, TOUR];
+		loading_speed:					25;
+		cost_factor:					11;
+		running_cost_factor:			9;
+		sprite_id:						SPRITE_ID_NEW_TRAIN;
+		speed:							90 mph;
+		misc_flags:						bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
+		refit_cost:						0;
+		track_type:						SAA3;
+		ai_special_flag:				AI_FLAG_CARGO;
+		running_cost_base:				RUNNING_COST_ELECTRIC;
+		dual_headed:					0;
+		default_cargo_type:				PASS;
+		cargo_capacity:					60;
+		weight:							0 ton;
+		air_drag_coefficient:			0.09;
+		length:							8;
+		effect_spawn_model_and_powered:	EFFECT_SPAWN_MODEL_ELECTRIC;
+		bitmask_vehicle_info:			0;
+		cargo_age_period:				180;
+		default_cargo_type:				PASS;
+		engine_class:					ENGINE_CLASS_ELECTRIC;
+	}
+	graphics {
+		default: 							sw_SAP_B_default;
+		purchase:							sw_SAP_B_purchase;
+		running_cost_factor:				return(current_speed == 0 ? 5 : 9) ;
+	}
+}
+//BR 4 CAP
+switch (FEAT_TRAINS, SELF, sw_CAP_gfx_f, position_in_articulated_veh) {
+	0: return sw_CAP_DTSL;
+	1: return sw_CAP_MBS1;
+	2: return sw_CAP_MBS2;
+	3: return sw_CAP_DTSL_r;
+}
+switch (FEAT_TRAINS, PARENT, sw_CAP_gfx, vehicle_is_reversed) {
+	0: sw_CAP_gfx_f;
+	1: sw_REV_ID_CHECK;
+}
+switch(FEAT_TRAINS, SELF, sw_CAP_default, [STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100), getbits(extra_callback_info1, 8, 8)]){
+	0: return sw_CAP_gfx;
+	1: return sw_MK1_Headlight_Layer;
+}
+switch (FEAT_TRAINS, SELF, sw_CAP_car_articulated, extra_callback_info1) {
+	1..3: return item_CAP_T;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+switch(FEAT_TRAINS, SELF, sw_CAP_LIVERIES, cargo_subtype){
+	0: sw_livery_BRS;
+	1: sw_livery_NSE;
+	return CB_RESULT_NO_TEXT;
+}
+
+item (FEAT_TRAINS, item_CAP, 4130) {
+	property {
+		name: 							string(STR_NAME_CAP);
+		climates_available: 			ALL_CLIMATES;
+		introduction_date:				date(1982, 1, 1);
+		model_life:						15;
+		retire_early:					0;
+		vehicle_life:					50;
+		reliability_decay:				2;
+		refittable_cargo_classes:		bitmask(CC_PASSENGERS);
+		cargo_allow_refit:				[PASS, TOUR];
+		loading_speed:					25;
+		cost_factor:					24;
+		running_cost_factor:			11;
+		sprite_id:						SPRITE_ID_NEW_TRAIN;
+		speed:							90 mph;
+		misc_flags:						bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
+		refit_cost:						0;
+		track_type:						SAA3;
+		ai_special_flag:				AI_FLAG_CARGO;
+		power:							1000 hp;
+		running_cost_base:				RUNNING_COST_ELECTRIC;
+		dual_headed:					0;
+		default_cargo_type:				PASS;
+		cargo_capacity:					95;
+		weight:							140 ton;
+		tractive_effort_coefficient:	0.20;
+		air_drag_coefficient:			0.09;
+		length:							8;
+		effect_spawn_model_and_powered:	EFFECT_SPAWN_MODEL_ELECTRIC;
+		bitmask_vehicle_info:			0;
+		cargo_age_period:				190;
+		default_cargo_type:				PASS;
+		engine_class:					ENGINE_CLASS_ELECTRIC;
+	}
+	graphics {
+		default: 							sw_CAP_default;
+		purchase:							sw_CAP_purchase;
+		cargo_subtype_text:					sw_CAP_LIVERIES;
+		running_cost_factor:				return(current_speed == 0 ? 7 : 11) ;
+		articulated_part:					sw_CAP_car_articulated;
+		can_attach_wagon:					sw_coupling_emu_mk1;
+		additional_text:					string(STR_DESC_CAP);
+	}
+}
+if (param_names == 1){
+item (FEAT_TRAINS, item_CAP, 4130){
+	property{
+		name                           : string(STR_NAME_413) ;
+	}
+}
+}
+
+item (FEAT_TRAINS, item_CAP_T, 4131) {
+	property {
+		name: 							string(STR_NAME_CAP);
+		climates_available: 			NO_CLIMATE;
+		introduction_date:				date(1982, 1, 1);
+		model_life:						15;
+		retire_early:					0;
+		vehicle_life:					50;
+		reliability_decay:				2;
+		refittable_cargo_classes:		bitmask(CC_PASSENGERS);
+		cargo_allow_refit:				[PASS, TOUR];
+		loading_speed:					25;
+		cost_factor:					24;
+		running_cost_factor:			11;
+		sprite_id:						SPRITE_ID_NEW_TRAIN;
+		speed:							90 mph;
+		misc_flags:						bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
+		refit_cost:						0;
+		track_type:						SAA3;
+		ai_special_flag:				AI_FLAG_CARGO;
+		running_cost_base:				RUNNING_COST_ELECTRIC;
+		dual_headed:					0;
+		default_cargo_type:				PASS;
+		cargo_capacity:					70;
+		weight:							0 ton;
+		air_drag_coefficient:			0.09;
+		length:							8;
+		effect_spawn_model_and_powered:	EFFECT_SPAWN_MODEL_ELECTRIC;
+		bitmask_vehicle_info:			0;
+		cargo_age_period:				190;
+		default_cargo_type:				PASS;
+		engine_class:					ENGINE_CLASS_ELECTRIC;
+	}
+	graphics {
+		default: 							sw_CAP_default;
+		purchase:							sw_CAP_purchase;
+		running_cost_factor:				return(current_speed == 0 ? 7 : 11) ;
+	}
+}

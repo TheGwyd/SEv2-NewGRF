@@ -1,0 +1,398 @@
+//CIG GFX
+
+//Purchase
+spriteset(spriteset_CIG_SRG_PURCHASE, "gfx/purchase_sprites/late_mk1.png") {template_purchase(0, 0)}
+spriteset(spriteset_CIG_BRG_PURCHASE, "gfx/purchase_sprites/late_mk1.png") {template_purchase(0, 13)}
+spriteset(spriteset_CIG_NSE_PURCHASE, "gfx/purchase_sprites/late_mk1.png") {template_purchase(0, 26)}
+spriteset(spriteset_CIG_2_SWT_PURCHASE, "gfx/purchase_sprites/late_mk1.png") {template_purchase(0, 39)}
+spriteset(spriteset_CIG_2_CNX_PURCHASE, "gfx/purchase_sprites/late_mk1.png") {template_purchase(0, 52)}
+spriteset(spriteset_CIG_2_STN_PURCHASE, "gfx/purchase_sprites/late_mk1.png") {template_purchase(0, 65)}
+spriteset(spriteset_CIG_7_CNX_PURCHASE, "gfx/purchase_sprites/late_mk1.png") {template_purchase(0, 78)}
+spriteset(spriteset_CIG_7_SWH_PURCHASE, "gfx/purchase_sprites/late_mk1.png") {template_purchase(0, 91)}
+spriteset(spriteset_CIG_G_NSE_PURCHASE, "gfx/purchase_sprites/late_mk1.png") {template_purchase(0, 104)}
+spriteset(spriteset_CIG_G_SWT_PURCHASE, "gfx/purchase_sprites/late_mk1.png") {template_purchase(0, 117)}
+spriteset(spriteset_CIG_1_CNX_PURCHASE, "gfx/purchase_sprites/late_mk1.png") {template_purchase(0, 130)}
+spriteset(spriteset_CIG_1_STN_PURCHASE, "gfx/purchase_sprites/late_mk1.png") {template_purchase(0, 143)}
+
+
+spriteset(spriteset_BIG_SRG_PURCHASE, "gfx/purchase_sprites/late_mk1.png") {template_purchase(100, 0)}
+spriteset(spriteset_BIG_BRG_PURCHASE, "gfx/purchase_sprites/late_mk1.png") {template_purchase(100, 13)}
+spriteset(spriteset_BIG_NSE_PURCHASE, "gfx/purchase_sprites/late_mk1.png") {template_purchase(100, 26)}
+
+//DTCL
+spriteset(spriteset_CIG_SRG_DTCL, "gfx/v2_latemk1.png") {template_8_8_networker(179, 300)}
+spriteset(spriteset_CIG_BRG_DTCL, "gfx/v2_latemk1.png") {template_8_8_networker(179, 0)}
+spriteset(spriteset_CIG_NSE_DTCL, "gfx/v2_latemk1.png") {template_8_8_networker(0, 0)}
+spriteset(spriteset_CIG_SWT_DTCL, "gfx/v2_latemk1.png") {template_8_8_networker(0, 150)}
+spriteset(spriteset_CIG_CNX_DTCL, "gfx/v2_latemk1.png") {template_8_8_networker(179, 150)}
+spriteset(spriteset_CIG_CNG_DTCL, "gfx/v2_latemk1.png") {template_8_8_networker(358, 150)}
+spriteset(spriteset_CIG_STN_DTCL, "gfx/v2_latemk1.png") {template_8_8_networker(0, 300)}
+spriteset(spriteset_CIG_SWH_DTCL, "gfx/v2_latemk1.png") {template_8_8_networker(358, 300)}
+
+spriteset(spriteset_CIG_SRG_DTCL_r, "gfx/v2_latemk1.png") {template_8_8_networker_reverse(179, 300)}
+spriteset(spriteset_CIG_BRG_DTCL_r, "gfx/v2_latemk1.png") {template_8_8_networker_reverse(179, 0)}
+spriteset(spriteset_CIG_NSE_DTCL_r, "gfx/v2_latemk1.png") {template_8_8_networker_reverse(0, 0)}
+spriteset(spriteset_CIG_SWT_DTCL_r, "gfx/v2_latemk1.png") {template_8_8_networker_reverse(0, 150)}
+spriteset(spriteset_CIG_CNX_DTCL_r, "gfx/v2_latemk1.png") {template_8_8_networker_reverse(179, 150)}
+spriteset(spriteset_CIG_CNG_DTCL_r, "gfx/v2_latemk1.png") {template_8_8_networker_reverse(358, 150)}
+spriteset(spriteset_CIG_STN_DTCL_r, "gfx/v2_latemk1.png") {template_8_8_networker_reverse(0, 300)}
+spriteset(spriteset_CIG_SWH_DTCL_r, "gfx/v2_latemk1.png") {template_8_8_networker_reverse(358, 300)}
+
+//TS
+spriteset(spriteset_CIG_SRG_TS, "gfx/v2_latemk1.png") {template_8_4_networker(179, 325)}
+spriteset(spriteset_CIG_BRG_TS, "gfx/v2_latemk1.png") {template_8_4_networker(179, 25)}
+spriteset(spriteset_CIG_NSE_TS, "gfx/v2_latemk1.png") {template_8_4_networker(0, 25)}
+spriteset(spriteset_CIG_SWT_TS, "gfx/v2_latemk1.png") {template_8_4_networker(0, 175)}
+spriteset(spriteset_CIG_CNX_TS, "gfx/v2_latemk1.png") {template_8_4_networker(179, 175)}
+spriteset(spriteset_CIG_CNG_TS, "gfx/v2_latemk1.png") {template_8_4_networker(358, 175)}
+spriteset(spriteset_CIG_STN_TS, "gfx/v2_latemk1.png") {template_8_4_networker(0, 325)}
+
+/*Only has 4 views, no need for reversed sprites*/
+
+//MBS
+spriteset(spriteset_CIG_SRG_MBS, "gfx/v2_latemk1.png") {template_8_8_networker(179, 350)}
+spriteset(spriteset_CIG_BRG_MBS, "gfx/v2_latemk1.png") {template_8_8_networker(179, 50)}
+spriteset(spriteset_CIG_NSE_MBS, "gfx/v2_latemk1.png") {template_8_8_networker(0, 50)}
+spriteset(spriteset_CIG_SWT_MBS, "gfx/v2_latemk1.png") {template_8_8_networker(0, 200)}
+spriteset(spriteset_CIG_CNX_MBS, "gfx/v2_latemk1.png") {template_8_8_networker(179, 200)}
+spriteset(spriteset_CIG_CNG_MBS, "gfx/v2_latemk1.png") {template_8_8_networker(358, 200)}
+spriteset(spriteset_CIG_STN_MBS, "gfx/v2_latemk1.png") {template_8_8_networker(0, 350)}
+
+
+spriteset(spriteset_CIG_SRG_MBS_r, "gfx/v2_latemk1.png") {template_8_8_networker_reverse(179, 350)}
+spriteset(spriteset_CIG_BRG_MBS_r, "gfx/v2_latemk1.png") {template_8_8_networker_reverse(179, 50)}
+spriteset(spriteset_CIG_NSE_MBS_r, "gfx/v2_latemk1.png") {template_8_8_networker_reverse(0, 50)}
+spriteset(spriteset_CIG_SWT_MBS_r, "gfx/v2_latemk1.png") {template_8_8_networker_reverse(0, 200)}
+spriteset(spriteset_CIG_CNX_MBS_r, "gfx/v2_latemk1.png") {template_8_8_networker_reverse(179, 200)}
+spriteset(spriteset_CIG_CNG_MBS_r, "gfx/v2_latemk1.png") {template_8_8_networker_reverse(358, 200)}
+spriteset(spriteset_CIG_STN_MBS_r, "gfx/v2_latemk1.png") {template_8_8_networker_reverse(0, 350)}
+
+//TRB
+spriteset(spriteset_CIG_SRG_TRB, "gfx/v2_latemk1.png") {template_8_8_networker(358, 50)}
+spriteset(spriteset_CIG_BRG_TRB, "gfx/v2_latemk1.png") {template_8_8_networker(358, 75)}
+spriteset(spriteset_CIG_NSE_TRB, "gfx/v2_latemk1.png") {template_8_8_networker(358, 100)}
+
+spriteset(spriteset_CIG_SRG_TRB_r, "gfx/v2_latemk1.png") {template_8_8_networker_reverse(358, 50)}
+spriteset(spriteset_CIG_BRG_TRB_r, "gfx/v2_latemk1.png") {template_8_8_networker_reverse(358, 75)}
+spriteset(spriteset_CIG_NSE_TRB_r, "gfx/v2_latemk1.png") {template_8_8_networker_reverse(358, 100)}
+
+
+//Headlights
+spriteset(spriteset_MK1_Headlight, "gfx/v2_latemk1.png") {template_8_8_networker(358, 0)}
+spriteset(spriteset_MK1_Taillight, "gfx/v2_latemk1.png") {template_8_8_networker_reverse(358, 25)}
+
+//MK1 Headlight code
+switch (FEAT_TRAINS, SELF, sw_MK1_Headlight, position_in_consist) {
+	0: return spriteset_MK1_Headlight;
+	return blank;
+}
+
+switch (FEAT_TRAINS, SELF, sw_MK1_Headlight_Layer, position_in_consist_from_end) {
+	0: return spriteset_MK1_Taillight;
+	return sw_MK1_Headlight;
+}
+
+//Purchase sprite code
+switch (FEAT_TRAINS, PARENT, sw_CIG_1_purchase, current_year) {
+	0..1964: spriteset_CIG_SRG_PURCHASE;
+	1965..1985: spriteset_CIG_BRG_PURCHASE;
+	1986..1996: spriteset_CIG_NSE_PURCHASE;
+	1997..2000: spriteset_CIG_1_CNX_PURCHASE;
+	spriteset_CIG_1_STN_PURCHASE;
+}
+
+switch (FEAT_TRAINS, PARENT, sw_CIG_2_purchase, current_year) {
+	0..1964: spriteset_CIG_SRG_PURCHASE;
+	1965..1985: spriteset_CIG_BRG_PURCHASE;
+	1986..1995: spriteset_CIG_NSE_PURCHASE;
+	1996: spriteset_CIG_2_SWT_PURCHASE;
+	1997..2000: spriteset_CIG_2_CNX_PURCHASE;
+	spriteset_CIG_2_STN_PURCHASE;
+}
+
+switch (FEAT_TRAINS, PARENT, sw_CIG_G_purchase, current_year) {
+	0..1995: spriteset_CIG_G_NSE_PURCHASE;
+	spriteset_CIG_G_SWT_PURCHASE;
+}
+
+switch (FEAT_TRAINS, PARENT, sw_CIG_7_purchase, current_year) {
+	0..2003: spriteset_CIG_7_CNX_PURCHASE;
+	spriteset_CIG_7_SWH_PURCHASE;
+}
+
+switch (FEAT_TRAINS, PARENT, sw_BIG_purchase, current_year) {
+	0..1964: spriteset_BIG_SRG_PURCHASE;
+	1965..1985: spriteset_BIG_BRG_PURCHASE;
+	spriteset_BIG_NSE_PURCHASE;
+}
+
+//Phase 1 CIG code
+switch (FEAT_TRAINS, SELF, sw_CIG_1_DTCL, cargo_subtype) {
+	0: spriteset_CIG_SRG_DTCL;
+	1: spriteset_CIG_BRG_DTCL;
+	2: spriteset_CIG_NSE_DTCL;
+	3: spriteset_CIG_CNX_DTCL;
+	4: spriteset_CIG_CNG_DTCL;
+	5: spriteset_CIG_STN_DTCL;
+}
+switch (FEAT_TRAINS, SELF, sw_CIG_1_TS, cargo_subtype) {
+	0: spriteset_CIG_SRG_TS;
+	1: spriteset_CIG_BRG_TS;
+	2: spriteset_CIG_NSE_TS;
+	3: spriteset_CIG_CNX_TS;
+	4: spriteset_CIG_CNG_TS;
+	5: spriteset_CIG_STN_TS;
+}
+switch (FEAT_TRAINS, SELF, sw_CIG_1_MBS, cargo_subtype) {
+	0: spriteset_CIG_SRG_MBS;
+	1: spriteset_CIG_BRG_MBS;
+	2: spriteset_CIG_NSE_MBS;
+	3: spriteset_CIG_CNX_MBS;
+	4: spriteset_CIG_CNG_MBS;
+	5: spriteset_CIG_STN_MBS;
+}
+switch (FEAT_TRAINS, SELF, sw_CIG_1_DTCL_R, cargo_subtype) {
+	0: spriteset_CIG_SRG_DTCL_r;
+	1: spriteset_CIG_BRG_DTCL_r;
+	2: spriteset_CIG_NSE_DTCL_r;
+	3: spriteset_CIG_CNX_DTCL_r;
+	4: spriteset_CIG_CNG_DTCL_r;
+	5: spriteset_CIG_STN_DTCL_r;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_CIG_1_DTCL_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_CIG_SRG_DTCL_r;
+	1: spriteset_CIG_BRG_DTCL_r;
+	2: spriteset_CIG_NSE_DTCL_r;
+	3: spriteset_CIG_CNX_DTCL_r;
+	4: spriteset_CIG_CNG_DTCL_r;
+	5: spriteset_CIG_STN_DTCL_r;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_CIG_1_TS_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_CIG_SRG_TS;
+	1: spriteset_CIG_BRG_TS;
+	2: spriteset_CIG_NSE_TS;
+	3: spriteset_CIG_CNX_TS;
+	4: spriteset_CIG_CNG_TS;
+	5: spriteset_CIG_STN_TS;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_CIG_1_MBS_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_CIG_SRG_MBS_r;
+	1: spriteset_CIG_BRG_MBS_r;
+	2: spriteset_CIG_NSE_MBS_r;
+	3: spriteset_CIG_CNX_MBS_r;
+	4: spriteset_CIG_CNG_MBS_r;
+	5: spriteset_CIG_STN_MBS_r;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_CIG_1_DTCL_R_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_CIG_SRG_DTCL;
+	1: spriteset_CIG_BRG_DTCL;
+	2: spriteset_CIG_NSE_DTCL;
+	3: spriteset_CIG_CNX_DTCL;
+	4: spriteset_CIG_CNG_DTCL;
+	5: spriteset_CIG_STN_DTCL;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_CIG_1_POSITION,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x000000FF, 0x4D]]){
+	0: sw_REV_CIG_1_DTCL_livery;
+	1: sw_REV_CIG_1_TS_livery;
+	2: sw_REV_CIG_1_MBS_livery;
+	3: sw_REV_CIG_1_DTCL_R_livery;
+}
+
+//Phase 2 code
+switch (FEAT_TRAINS, SELF, sw_CIG_2_DTCL, cargo_subtype) {
+	0: spriteset_CIG_SRG_DTCL;
+	1: spriteset_CIG_BRG_DTCL;
+	2: spriteset_CIG_NSE_DTCL;
+	3: spriteset_CIG_SWT_DTCL;
+	4: spriteset_CIG_CNX_DTCL;
+	5: spriteset_CIG_CNG_DTCL;
+	6: spriteset_CIG_STN_DTCL;
+}
+switch (FEAT_TRAINS, SELF, sw_CIG_2_TS, cargo_subtype) {
+	0: spriteset_CIG_SRG_TS;
+	1: spriteset_CIG_BRG_TS;
+	2: spriteset_CIG_NSE_TS;
+	3: spriteset_CIG_SWT_TS;
+	4: spriteset_CIG_CNX_TS;
+	5: spriteset_CIG_CNG_TS;
+	6: spriteset_CIG_STN_TS;
+}
+switch (FEAT_TRAINS, SELF, sw_CIG_2_MBS, cargo_subtype) {
+	0: spriteset_CIG_SRG_MBS;
+	1: spriteset_CIG_BRG_MBS;
+	2: spriteset_CIG_NSE_MBS;
+	3: spriteset_CIG_SWT_MBS;
+	4: spriteset_CIG_CNX_MBS;
+	5: spriteset_CIG_CNG_MBS;
+	6: spriteset_CIG_STN_MBS;
+}
+switch (FEAT_TRAINS, SELF, sw_CIG_2_DTCL_R, cargo_subtype) {
+	0: spriteset_CIG_SRG_DTCL_r;
+	1: spriteset_CIG_BRG_DTCL_r;
+	2: spriteset_CIG_NSE_DTCL_r;
+	3: spriteset_CIG_SWT_DTCL_r;
+	4: spriteset_CIG_CNX_DTCL_r;
+	5: spriteset_CIG_CNG_DTCL_r;
+	6: spriteset_CIG_STN_DTCL_r;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_CIG_2_DTCL_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_CIG_SRG_DTCL_r;
+	1: spriteset_CIG_BRG_DTCL_r;
+	2: spriteset_CIG_NSE_DTCL_r;
+	3: spriteset_CIG_SWT_DTCL_r;
+	4: spriteset_CIG_CNX_DTCL_r;
+	5: spriteset_CIG_CNG_DTCL_r;
+	6: spriteset_CIG_STN_DTCL_r;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_CIG_2_TS_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_CIG_SRG_TS;
+	1: spriteset_CIG_BRG_TS;
+	2: spriteset_CIG_NSE_TS;
+	3: spriteset_CIG_SWT_TS;
+	4: spriteset_CIG_CNX_TS;
+	5: spriteset_CIG_CNG_TS;
+	6: spriteset_CIG_STN_TS;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_CIG_2_MBS_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_CIG_SRG_MBS_r;
+	1: spriteset_CIG_BRG_MBS_r;
+	2: spriteset_CIG_NSE_MBS_r;
+	3: spriteset_CIG_SWT_MBS_r;
+	4: spriteset_CIG_CNX_MBS_r;
+	5: spriteset_CIG_CNG_MBS_r;
+	6: spriteset_CIG_STN_MBS_r;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_CIG_2_DTCL_R_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_CIG_SRG_DTCL;
+	1: spriteset_CIG_BRG_DTCL;
+	2: spriteset_CIG_NSE_DTCL;
+	3: spriteset_CIG_SWT_DTCL;
+	4: spriteset_CIG_CNX_DTCL;
+	5: spriteset_CIG_CNG_DTCL;
+	6: spriteset_CIG_STN_DTCL;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_CIG_2_POSITION,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x000000FF, 0x4D]]){
+	0: sw_REV_CIG_2_DTCL_livery;
+	1: sw_REV_CIG_2_TS_livery;
+	2: sw_REV_CIG_2_MBS_livery;
+	3: sw_REV_CIG_2_DTCL_R_livery;
+}
+
+//Greyhound code
+switch (FEAT_TRAINS, SELF, sw_CIG_G_DTCL, cargo_subtype) {
+	0: spriteset_CIG_NSE_DTCL;
+	1: spriteset_CIG_SWT_DTCL;
+}
+switch (FEAT_TRAINS, SELF, sw_CIG_G_TS, cargo_subtype) {
+	0: spriteset_CIG_NSE_TS;
+	1: spriteset_CIG_SWT_TS;
+}
+switch (FEAT_TRAINS, SELF, sw_CIG_G_MBS, cargo_subtype) {
+	0: spriteset_CIG_NSE_MBS;
+	1: spriteset_CIG_SWT_MBS;
+}
+switch (FEAT_TRAINS, SELF, sw_CIG_G_DTCL_R, cargo_subtype) {
+	0: spriteset_CIG_NSE_DTCL_r;
+	1: spriteset_CIG_SWT_DTCL_r;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_CIG_G_DTCL_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_CIG_NSE_DTCL_r;
+	1: spriteset_CIG_SWT_DTCL_r;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_CIG_G_TS_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_CIG_NSE_TS;
+	1: spriteset_CIG_SWT_TS;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_CIG_G_MBS_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_CIG_NSE_MBS_r;
+	1: spriteset_CIG_SWT_MBS_r;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_CIG_G_DTCL_R_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_CIG_NSE_DTCL;
+	1: spriteset_CIG_SWT_DTCL;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_CIG_G_POSITION,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x000000FF, 0x4D]]){
+	0: sw_REV_CIG_G_DTCL_livery;
+	1: sw_REV_CIG_G_TS_livery;
+	2: sw_REV_CIG_G_MBS_livery;
+	3: sw_REV_CIG_G_DTCL_R_livery;
+}
+
+//3-CIG/3-COP code
+switch (FEAT_TRAINS, SELF, sw_CIG_7_DTCL, cargo_subtype) {
+	0: spriteset_CIG_CNX_DTCL;
+	1: spriteset_CIG_SWH_DTCL;
+}
+switch (FEAT_TRAINS, SELF, sw_CIG_7_MBS, cargo_subtype) {
+	0: spriteset_CIG_CNX_MBS;
+	1: spriteset_CIG_SRG_MBS;
+}
+switch (FEAT_TRAINS, SELF, sw_CIG_7_DTCL_R, cargo_subtype) {
+	0: spriteset_CIG_CNX_DTCL_r;
+	1: spriteset_CIG_SWH_DTCL_r;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_CIG_7_DTCL_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_CIG_CNX_DTCL_r;
+	1: spriteset_CIG_SWH_DTCL_r;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_CIG_7_TS_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_CIG_CNX_MBS_r;
+	1: spriteset_CIG_SRG_MBS_r;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_CIG_7_DTCL_R_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_CIG_CNX_DTCL;
+	1: spriteset_CIG_SWH_DTCL;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_CIG_7_POSITION,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x000000FF, 0x4D]]){
+	0: sw_REV_CIG_7_DTCL_livery;
+	1: sw_REV_CIG_7_TS_livery;
+	2: sw_REV_CIG_7_DTCL_R_livery;
+}
+
+//BIG code
+switch (FEAT_TRAINS, SELF, sw_BIG_DTCL, cargo_subtype) {
+	0: spriteset_CIG_SRG_DTCL;
+	1: spriteset_CIG_BRG_DTCL;
+	2: spriteset_CIG_NSE_DTCL;
+}
+switch (FEAT_TRAINS, SELF, sw_BIG_TRB, cargo_subtype) {
+	0: spriteset_CIG_SRG_TRB;
+	1: spriteset_CIG_BRG_TRB;
+	2: spriteset_CIG_NSE_TRB;
+}
+switch (FEAT_TRAINS, SELF, sw_BIG_MBS, cargo_subtype) {
+	0: spriteset_CIG_SRG_MBS;
+	1: spriteset_CIG_BRG_MBS;
+	2: spriteset_CIG_NSE_MBS;
+}
+switch (FEAT_TRAINS, SELF, sw_BIG_DTCL_R, cargo_subtype) {
+	0: spriteset_CIG_SRG_DTCL_r;
+	1: spriteset_CIG_BRG_DTCL_r;
+	2: spriteset_CIG_NSE_DTCL_r;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_BIG_DTCL_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_CIG_SRG_DTCL_r;
+	1: spriteset_CIG_BRG_DTCL_r;
+	2: spriteset_CIG_NSE_DTCL_r;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_BIG_TS_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_CIG_SRG_TRB_r;
+	1: spriteset_CIG_BRG_TRB_r;
+	2: spriteset_CIG_NSE_TRB_r;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_BIG_MBS_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_CIG_SRG_MBS_r;
+	1: spriteset_CIG_BRG_MBS_r;
+	2: spriteset_CIG_NSE_MBS_r;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_BIG_DTCL_R_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_CIG_SRG_DTCL;
+	1: spriteset_CIG_BRG_DTCL;
+	2: spriteset_CIG_NSE_DTCL;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_BIG_POSITION,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x000000FF, 0x4D]]){
+	0: sw_REV_BIG_DTCL_livery;
+	1: sw_REV_BIG_TS_livery;
+	2: sw_REV_BIG_MBS_livery;
+	3: sw_REV_BIG_DTCL_R_livery;
+}

@@ -1,0 +1,224 @@
+//Networker GFX
+
+//Purchase
+spriteset(spriteset_465_0_NSE_PURCHASE, "gfx/purchase_sprites/networker.png") {template_purchase(0, 0)}
+spriteset(spriteset_465_0_CNX_PURCHASE, "gfx/purchase_sprites/networker.png") {template_purchase(0, 13)}
+spriteset(spriteset_465_0_SET_PURCHASE, "gfx/purchase_sprites/networker.png") {template_purchase(0, 26)}
+spriteset(spriteset_465_0_SEB_PURCHASE, "gfx/purchase_sprites/networker.png") {template_purchase(0, 39)}
+spriteset(spriteset_465_2_NSE_PURCHASE, "gfx/purchase_sprites/networker.png") {template_purchase(81, 0)}
+spriteset(spriteset_465_2_CNX_PURCHASE, "gfx/purchase_sprites/networker.png") {template_purchase(81, 13)}
+spriteset(spriteset_465_2_SET_PURCHASE, "gfx/purchase_sprites/networker.png") {template_purchase(81, 26)}
+spriteset(spriteset_465_2_SEB_PURCHASE, "gfx/purchase_sprites/networker.png") {template_purchase(81, 39)}
+spriteset(spriteset_465_9_SEB_PURCHASE, "gfx/purchase_sprites/networker.png") {template_purchase(243, 0)}
+spriteset(spriteset_466_NSE_PURCHASE, "gfx/purchase_sprites/networker.png") {template_purchase(162, 13)}
+spriteset(spriteset_466_CNX_PURCHASE, "gfx/purchase_sprites/networker.png") {template_purchase(162, 13)}
+spriteset(spriteset_466_SET_PURCHASE, "gfx/purchase_sprites/networker.png") {template_purchase(162, 26)}
+spriteset(spriteset_466_SEB_PURCHASE, "gfx/purchase_sprites/networker.png") {template_purchase(162, 39)}
+
+//DMSO (DTSO for class 466)
+spriteset(spriteset_465_0_NSE_DMSO, "gfx/v2_networker.png") {template_8_8_networker(0, 0)}
+spriteset(spriteset_465_0_CNX_DMSO, "gfx/v2_networker.png") {template_8_8_networker(0, 50)}
+spriteset(spriteset_465_0_SET_DMSO, "gfx/v2_networker.png") {template_8_8_networker(0, 75)}
+spriteset(spriteset_465_0_SEB_DMSO, "gfx/v2_networker.png") {template_8_8_networker(0, 125)}
+spriteset(spriteset_465_2_NSE_DMSO, "gfx/v2_networker.png") {template_8_8_networker(358, 0)}
+spriteset(spriteset_465_2_CNX_DMSO, "gfx/v2_networker.png") {template_8_8_networker(358, 50)}
+spriteset(spriteset_465_2_SET_DMSO, "gfx/v2_networker.png") {template_8_8_networker(358, 75)}
+spriteset(spriteset_465_2_SEB_DMSO, "gfx/v2_networker.png") {template_8_8_networker(358, 125)}
+spriteset(spriteset_465_9_SEB_DMSO, "gfx/v2_networker.png") {template_8_8_networker(358, 150)}
+
+spriteset(spriteset_465_0_NSE_DMSO_r, "gfx/v2_networker.png") {template_8_8_networker_reverse(0, 0)}
+spriteset(spriteset_465_0_CNX_DMSO_r, "gfx/v2_networker.png") {template_8_8_networker_reverse(0, 50)}
+spriteset(spriteset_465_0_SET_DMSO_r, "gfx/v2_networker.png") {template_8_8_networker_reverse(0, 75)}
+spriteset(spriteset_465_0_SEB_DMSO_r, "gfx/v2_networker.png") {template_8_8_networker_reverse(0, 125)}
+spriteset(spriteset_465_2_NSE_DMSO_r, "gfx/v2_networker.png") {template_8_8_networker_reverse(358, 0)}
+spriteset(spriteset_465_2_CNX_DMSO_r, "gfx/v2_networker.png") {template_8_8_networker_reverse(358, 50)}
+spriteset(spriteset_465_2_SET_DMSO_r, "gfx/v2_networker.png") {template_8_8_networker_reverse(358, 75)}
+spriteset(spriteset_465_2_SEB_DMSO_r, "gfx/v2_networker.png") {template_8_8_networker_reverse(358, 125)}
+spriteset(spriteset_465_9_SEB_DMSO_r, "gfx/v2_networker.png") {template_8_8_networker_reverse(358, 150)}
+
+//TSO
+spriteset(spriteset_465_0_NSE_TSO, "gfx/v2_networker.png") {template_8_4_networker(90, 25)}
+spriteset(spriteset_465_0_CNX_TSO, "gfx/v2_networker.png") {template_8_4_networker(0, 25)}
+spriteset(spriteset_465_0_SET_TSO, "gfx/v2_networker.png") {template_8_4_networker(90, 100)}
+spriteset(spriteset_465_0_SEB_TSO, "gfx/v2_networker.png") {template_8_4_networker(0, 100)}
+spriteset(spriteset_465_2_NSE_TSO, "gfx/v2_networker.png") {template_8_4_networker(448, 25)}
+spriteset(spriteset_465_2_CNX_TSO, "gfx/v2_networker.png") {template_8_4_networker(358, 25)}
+spriteset(spriteset_465_2_SET_TSO, "gfx/v2_networker.png") {template_8_4_networker(448, 100)}
+spriteset(spriteset_465_2_SEB_TSO, "gfx/v2_networker.png") {template_8_4_networker(358, 100)}
+
+/*Only has 4 views, no need for reversed sprites*/
+
+
+//Headlights
+spriteset(spriteset_Networker_Headlight, "gfx/v2_networker.png") {template_8_8_networker(179, 0)}
+spriteset(spriteset_Networker_Taillight, "gfx/v2_networker.png") {template_8_8_networker_reverse(179, 25)}
+
+
+//Networker Headlight code
+switch (FEAT_TRAINS, SELF, sw_Networker_Headlight, position_in_consist) {
+	0: return spriteset_Networker_Headlight;
+	return blank;
+}
+
+switch (FEAT_TRAINS, SELF, sw_Networker_Headlight_Layer, position_in_consist_from_end) {
+	0: return spriteset_Networker_Taillight;
+	return sw_Networker_Headlight;
+}
+
+//Purchase sprite code
+switch (FEAT_TRAINS, PARENT, sw_465_0_purchase, current_year) {
+	0..1996: spriteset_465_0_NSE_PURCHASE;
+	1997..2002: spriteset_465_0_CNX_PURCHASE;
+	2003..2006: spriteset_465_0_SET_PURCHASE;
+	spriteset_465_0_SEB_PURCHASE;
+}
+switch (FEAT_TRAINS, PARENT, sw_465_2_purchase, current_year) {
+	0..1996: spriteset_465_2_NSE_PURCHASE;
+	1997..2002: spriteset_465_2_CNX_PURCHASE;
+	2003..2006: spriteset_465_2_SET_PURCHASE;
+	spriteset_465_2_SEB_PURCHASE;
+}
+switch (FEAT_TRAINS, PARENT, sw_465_9_purchase, current_year) {
+	spriteset_465_9_SEB_PURCHASE;
+}
+
+switch (FEAT_TRAINS, PARENT, sw_466_purchase, current_year) {
+	0..1996: spriteset_466_NSE_PURCHASE;
+	1997..2002: spriteset_466_CNX_PURCHASE;
+	2003..2006: spriteset_466_SET_PURCHASE;
+	spriteset_466_SEB_PURCHASE;
+}
+
+//Class 465/0/1
+switch (FEAT_TRAINS, SELF, sw_465_0_DMSO, cargo_subtype) {
+	0: spriteset_465_0_NSE_DMSO;
+	1: spriteset_465_0_CNX_DMSO;
+	2: spriteset_465_0_SET_DMSO;
+	3: spriteset_465_0_SEB_DMSO;
+}
+switch (FEAT_TRAINS, SELF, sw_465_0_TSO, cargo_subtype) {
+	0: spriteset_465_0_NSE_TSO;
+	1: spriteset_465_0_CNX_TSO;
+	2: spriteset_465_0_SET_TSO;
+	3: spriteset_465_0_SEB_TSO;
+}
+switch (FEAT_TRAINS, SELF, sw_465_0_DMSO_R, cargo_subtype) {
+	0: spriteset_465_0_NSE_DMSO_r;
+	1: spriteset_465_0_CNX_DMSO_r;
+	2: spriteset_465_0_SET_DMSO_r;
+	3: spriteset_465_0_SEB_DMSO_r;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_465_0_DMSO_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_465_0_NSE_DMSO_r;
+	1: spriteset_465_0_CNX_DMSO_r;
+	2: spriteset_465_0_SET_DMSO_r;
+	3: spriteset_465_0_SEB_DMSO_r;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_465_0_TSO_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_465_0_NSE_TSO;
+	1: spriteset_465_0_CNX_TSO;
+	2: spriteset_465_0_SET_TSO;
+	3: spriteset_465_0_SEB_TSO;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_465_0_DMSO_R_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_465_0_NSE_DMSO;
+	1: spriteset_465_0_CNX_DMSO;
+	2: spriteset_465_0_SET_DMSO;
+	3: spriteset_465_0_SEB_DMSO;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_465_0_POSITION,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x000000FF, 0x4D]]){
+	0: sw_REV_465_0_DMSO_livery;
+	1: sw_REV_465_0_TSO_livery;
+	2: sw_REV_465_0_TSO_livery;
+	3: sw_REV_465_0_DMSO_R_livery;
+}
+
+//Class 465/2
+switch (FEAT_TRAINS, SELF, sw_465_2_DMSO, cargo_subtype) {
+	0: spriteset_465_2_NSE_DMSO;
+	1: spriteset_465_2_CNX_DMSO;
+	2: spriteset_465_2_SET_DMSO;
+	3: spriteset_465_2_SEB_DMSO;
+}
+switch (FEAT_TRAINS, SELF, sw_465_2_TSO, cargo_subtype) {
+	0: spriteset_465_2_NSE_TSO;
+	1: spriteset_465_2_CNX_TSO;
+	2: spriteset_465_2_SET_TSO;
+	3: spriteset_465_2_SEB_TSO;
+}
+switch (FEAT_TRAINS, SELF, sw_465_2_DMSO_R, cargo_subtype) {
+	0: spriteset_465_2_NSE_DMSO_r;
+	1: spriteset_465_2_CNX_DMSO_r;
+	2: spriteset_465_2_SET_DMSO_r;
+	3: spriteset_465_2_SEB_DMSO_r;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_465_2_DMSO_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_465_2_NSE_DMSO_r;
+	1: spriteset_465_2_CNX_DMSO_r;
+	2: spriteset_465_2_SET_DMSO_r;
+	3: spriteset_465_2_SEB_DMSO_r;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_465_2_TSO_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_465_2_NSE_TSO;
+	1: spriteset_465_2_CNX_TSO;
+	2: spriteset_465_2_SET_TSO;
+	3: spriteset_465_2_SEB_TSO;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_465_2_DMSO_R_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_465_2_NSE_DMSO;
+	1: spriteset_465_2_CNX_DMSO;
+	2: spriteset_465_2_SET_DMSO;
+	3: spriteset_465_2_SEB_DMSO;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_465_2_POSITION,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x000000FF, 0x4D]]){
+	0: sw_REV_465_2_DMSO_livery;
+	1: sw_REV_465_2_TSO_livery;
+	2: sw_REV_465_2_TSO_livery;
+	3: sw_REV_465_2_DMSO_R_livery;
+}
+
+//Class 465/9
+switch (FEAT_TRAINS, SELF, sw_465_9_DMSO, cargo_subtype) {
+	0: spriteset_465_9_SEB_DMSO;
+}
+switch (FEAT_TRAINS, SELF, sw_465_9_DMSO_R, cargo_subtype) {
+	0: spriteset_465_9_SEB_DMSO_r;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_465_9_DMSO_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_465_9_SEB_DMSO_r;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_465_9_DMSO_R_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_465_9_SEB_DMSO;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_465_9_POSITION,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x000000FF, 0x4D]]){
+	0: sw_REV_465_9_DMSO_livery;
+	1: sw_REV_465_2_TSO_livery;
+	2: sw_REV_465_2_TSO_livery;
+	3: sw_REV_465_9_DMSO_R_livery;
+}
+
+//Class 466
+switch (FEAT_TRAINS, SELF, sw_466_DMSO, cargo_subtype) {
+	0: spriteset_465_0_NSE_DMSO;
+	1: spriteset_465_0_SET_DMSO;
+	2: spriteset_465_0_SEB_DMSO;
+}
+switch (FEAT_TRAINS, SELF, sw_466_DMSO_R, cargo_subtype) {
+	0: spriteset_465_0_NSE_DMSO_r;
+	1: spriteset_465_0_SET_DMSO_r;
+	2: spriteset_465_0_SEB_DMSO_r;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_466_DMSO_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_465_0_NSE_DMSO_r;
+	1: spriteset_465_0_SET_DMSO_r;
+	2: spriteset_465_0_SEB_DMSO_r;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_466_DMSO_R_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_465_0_NSE_DMSO;
+	1: spriteset_465_0_SET_DMSO;
+	2: spriteset_465_0_SEB_DMSO;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_466_POSITION,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x000000FF, 0x4D]]){
+	0: sw_REV_466_DMSO_livery;
+	1: sw_REV_466_DMSO_R_livery;
+}

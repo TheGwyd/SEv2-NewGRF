@@ -1,0 +1,34 @@
+/Whole List
+CC1 HA_ 92_ HB_ JA_
+JB_ 73G 739 [SL][CP]
+[CW]MLV GLV 424 BIL
+EPB HAL HAP NOL PEP
+PAN SAP SL_ WIM 456
+466 482 483 SUB CEP
+CIG REP TIS 313 375
+377 378 387 508 BEP
+BIG BUF CAP COP COR
+DD_ 450 GRI 458 LAV
+PUL REP RES VEC VEP
+CEP VOP 319 365 450
+455 465 487 403 442
+376 444 707 CIT DIG
+MIG VAB 460 700 373
+374 499 492 491 488
+/Completed
+xxx xxx xxx xxx xxx
+xxx xxx xxx xxx xxx
+xxx xxx xxx xxx xxx
+xxx xxx xxx xxx xxx
+xxx xxx xxx xxx xxx
+xxx xxx xxx xxx xxx
+CIG xxx xxx xxx xxx
+xxx xxx xxx xxx xxx
+BIG xxx xxx COP xxx
+xxx xxx xxx xxx xxx
+xxx xxx xxx xxx VEP
+xxx xxx xxx xxx xxx
+xxx xxx xxx xxx xxx
+xxx xxx xxx xxx xxx
+xxx xxx xxx xxx xxx
+xxx xxx xxx xxx xxx
