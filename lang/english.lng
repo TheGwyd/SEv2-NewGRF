@@ -125,6 +125,7 @@ STR_NAME_CIG_1: 4-CIG Phase 1
 STR_NAME_CIG_2: 4-CIG Phase 2
 STR_NAME_CIG_G: 4-CIG "Greyhound"
 STR_NAME_VEP: 4-VEP
+STR_NAME_319_0: Class 319/0
 STR_NAME_465_0: Class 465/0/1
 STR_NAME_465_2: Class 465/2
 STR_NAME_465_9: Class 465/9
@@ -162,6 +163,7 @@ STR_DESC_CIG_1: The first batch of 4-CIGs introduced, initially only on the Brig
 STR_DESC_CIG_2: The second batch of 4-CIGs introduced, initially used on the London-Portsmouth line. These were low density, but with motor bogies in a centre coach and better riding bogies.{}{BLUE}Used on medium to long distance routes with infrequent stops.
 STR_DESC_CIG_G: Refurbished 4-CIGs with better top end speed performance. These were used on the undulating routes in the south on express services.{}{BLUE}Used on long distance undulating routes.
 STR_DESC_VEP: High desnity EMUs used on medium-long distance services with more frequent stops.{}{DKGREEN}Used on medium to long distance routes with more frequent stops.
+STR_DESC_319_0: Higher density dual-voltage EMU, initally for Thameslink but with no first class provisions.{}{DKGREEN}Used on medium to long distance routes with more frequent stops.
 STR_DESC_465_0: Class 465/0/1
 STR_DESC_465_2: Class 465/2
 STR_DESC_465_9: Class 465/9
@@ -173,6 +175,8 @@ STR_BRG	: {BLUE}British Railway (Blue & Grey)
 STR_BRG_GAT	: {BLUE}British Railway - CityLink Fittings (Blue & Grey)
 STR_CNG	: {YELLOW}Connex {GRAY}"Ghost"
 STR_CNX	: {YELLOW}Connex
+STR_FCC : {PURPLE}First Capitol Connect
+STR_GTR : {BLUE}Thameslink (TSGN)
 STR_NSE	: {RED}Network SouthEast
 STR_SEB : {BLUE}SouthEastern (Blue livery)
 STR_SET : {YELLOW}South Easttern Trains (Yellow livery)
@@ -181,7 +185,10 @@ STR_SRY	: {GREEN}British Railway (Southern) {YELLOW}with Yellow Front
 STR_STN	: {GREEN}Southern
 STR_SWT	: {ORANGE}South West Trains
 STR_SWH	: {ORANGE}South West Trains {GRAY}"Heritage Green"
+STR_TLN : {DKBLUE}Thameslink (Dark Blue Livery)
+STR_TLS : {WHITE}Thameslink (Silver and Blue Livery)
 
 #/*Coupling Group Names*/
 STR_MK1_EMU_ONLY_COUPLE : This vehicle can only be coupled with other MK1 EMUs!
 STR_NETWORKER_ONLY_COUPLE : This vehicle can only be coupled with other Networkers!
+STR_319_ONLY_COUPLE : This vehicle can only be coupled with other Class 319 EMUs!

@@ -105,7 +105,7 @@ template template_8_4_networker(x,y){
     [ x+67, y, 21, 18, -6, -10]
 }
 
-spriteset(blank, "gfx/New42x.png") {
+spriteset(blank, "gfx/v2_latemk1.png") {
     [ 0, 0, 1, 1, 0, 0]
 }
 
@@ -160,6 +160,16 @@ switch (FEAT_TRAINS, SELF, sw_livery_CNG, current_year > 1996) {
  return CB_RESULT_NO_TEXT;
 }
 
+switch (FEAT_TRAINS, SELF, sw_livery_TLN, current_year > 1996) {
+ 1: return string(STR_TLN);
+ return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, sw_livery_TLS, current_year > 2000) {
+ 1: return string(STR_TLS);
+ return CB_RESULT_NO_TEXT;
+}
+
 switch (FEAT_TRAINS, SELF, sw_livery_STN, current_year > 2000) {
  1: return string(STR_STN);
  return CB_RESULT_NO_TEXT;
@@ -175,8 +185,18 @@ switch (FEAT_TRAINS, SELF, sw_livery_SET, current_year > 2002) {
  return CB_RESULT_NO_TEXT;
 }
 
+switch (FEAT_TRAINS, SELF, sw_livery_FCC, current_year > 2005) {
+ 1: return string(STR_FCC);
+ return CB_RESULT_NO_TEXT;
+}
+
 switch (FEAT_TRAINS, SELF, sw_livery_SEB, current_year > 2006) {
  1: return string(STR_SEB);
+ return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, sw_livery_GTR, current_year > 2015) {
+ 1: return string(STR_GTR);
  return CB_RESULT_NO_TEXT;
 }
 # 2 "SREMUs_v2.pnml" 2
@@ -225,10 +245,728 @@ switch(FEAT_TRAINS, SELF, sw_coupling_networker, vehicle_type_id) {
  4661: CB_RESULT_ATTACH_ALLOW;
     return string(STR_NETWORKER_ONLY_COUPLE);
 }
+
+switch(FEAT_TRAINS, SELF, sw_coupling_319, vehicle_type_id) {
+ 3190: CB_RESULT_ATTACH_ALLOW;
+ 3191: CB_RESULT_ATTACH_ALLOW;
+ 3192: CB_RESULT_ATTACH_ALLOW;
+ 3193: CB_RESULT_ATTACH_ALLOW;
+ 3194: CB_RESULT_ATTACH_ALLOW;
+ 3195: CB_RESULT_ATTACH_ALLOW;
+ 3196: CB_RESULT_ATTACH_ALLOW;
+ 3197: CB_RESULT_ATTACH_ALLOW;
+ 3198: CB_RESULT_ATTACH_ALLOW;
+ 3199: CB_RESULT_ATTACH_ALLOW;
+    return string(STR_319_ONLY_COUPLE);
+}
 # 3 "SREMUs_v2.pnml" 2
 
 //Train sprites files
 
+# 1 "src/sprites/319.pnml" 1
+//319 GFX
+
+//Purchase
+spriteset(spriteset_319_0_NSE_PURCHASE, "gfx/purchase_sprites/319.png") {template_purchase(0, 0)}
+spriteset(spriteset_319_0_CNX_PURCHASE, "gfx/purchase_sprites/319.png") {template_purchase(0, 13)}
+spriteset(spriteset_319_0_TLN_PURCHASE, "gfx/purchase_sprites/319.png") {template_purchase(0, 26)}
+spriteset(spriteset_319_0_TLS_PURCHASE, "gfx/purchase_sprites/319.png") {template_purchase(0, 39)}
+spriteset(spriteset_319_0_STN_PURCHASE, "gfx/purchase_sprites/319.png") {template_purchase(0, 52)}
+spriteset(spriteset_319_0_FCC_PURCHASE, "gfx/purchase_sprites/319.png") {template_purchase(0, 65)}
+spriteset(spriteset_319_0_GTR_PURCHASE, "gfx/purchase_sprites/319.png") {template_purchase(0, 78)}
+spriteset(spriteset_319_1_NSW_PURCHASE, "gfx/purchase_sprites/319.png") {template_purchase(81, 0)}
+//spriteset(spriteset_319_2_CNX_PURCHASE, "gfx/purchase_sprites/319.png") {template_purchase(0, 13)}
+//spriteset(spriteset_319_2_TLN_PURCHASE, "gfx/purchase_sprites/319.png") {template_purchase(0, 26)}
+//spriteset(spriteset_319_2_TLS_PURCHASE, "gfx/purchase_sprites/319.png") {template_purchase(0, 0)}
+//spriteset(spriteset_319_2_FCC_PURCHASE, "gfx/purchase_sprites/319.png") {template_purchase(0, 26)}
+//spriteset(spriteset_319_2_GTR_PURCHASE, "gfx/purchase_sprites/319.png") {template_purchase(0, 0)}
+//spriteset(spriteset_319_3_TLN_PURCHASE, "gfx/purchase_sprites/319.png") {template_purchase(0, 26)}
+//spriteset(spriteset_319_3_TLS_PURCHASE, "gfx/purchase_sprites/319.png") {template_purchase(0, 0)}
+//spriteset(spriteset_319_3_FCC_PURCHASE, "gfx/purchase_sprites/319.png") {template_purchase(0, 26)}
+//spriteset(spriteset_319_3_GTR_PURCHASE, "gfx/purchase_sprites/319.png") {template_purchase(0, 0)}
+//spriteset(spriteset_319_4_TLN_PURCHASE, "gfx/purchase_sprites/319.png") {template_purchase(0, 26)}
+//spriteset(spriteset_319_4_TLS_PURCHASE, "gfx/purchase_sprites/319.png") {template_purchase(0, 0)}
+//spriteset(spriteset_319_4_FCC_PURCHASE, "gfx/purchase_sprites/319.png") {template_purchase(0, 26)}
+//spriteset(spriteset_319_4_GTR_PURCHASE, "gfx/purchase_sprites/319.png") {template_purchase(0, 0)}
+
+//DTSO
+spriteset(spriteset_319_0_NSE_DTSO, "gfx/v2_319.png") {template_8_8_networker(0, 0)}
+spriteset(spriteset_319_1_NSW_DTSO, "gfx/v2_319.png") {template_8_8_networker(0, 100)}
+spriteset(spriteset_319_0_2_CNX_DTSO, "gfx/v2_319.png") {template_8_8_networker(0, 225)}
+spriteset(spriteset_319_0_2_4_TLN_DTSO, "gfx/v2_319.png") {template_8_8_networker(0, 350)}
+//spriteset(spriteset_319_3_TLN_DTSO, 		"gfx/v2_319.png") {template_8_8_networker(0, 0)}
+spriteset(spriteset_319_0_2_4_TLS_DTSO, "gfx/v2_319.png") {template_8_8_networker(0, 500)}
+//spriteset(spriteset_319_3_TLS_DTSO, 		"gfx/v2_319.png") {template_8_8_networker(0, 0)}
+spriteset(spriteset_319_0_STN_DTSO, "gfx/v2_319.png") {template_8_8_networker(0, 150)}
+spriteset(spriteset_319_0_2_4_FCC_DTSO, "gfx/v2_319.png") {template_8_8_networker(0, 0)}
+//spriteset(spriteset_319_3_FCC_DTSO, 		"gfx/v2_319.png") {template_8_8_networker(0, 0)}
+spriteset(spriteset_319_0_2_4_GTR_DTSO, "gfx/v2_319.png") {template_8_8_networker(0, 0)}
+//spriteset(spriteset_319_3_GTR_DTSO, 		"gfx/v2_319.png") {template_8_8_networker(0, 0)}
+
+
+spriteset(spriteset_319_0_NSE_DTSO_r, "gfx/v2_319.png") {template_8_8_networker_reverse(0, 0)}
+spriteset(spriteset_319_1_NSW_DTSO_r, "gfx/v2_319.png") {template_8_8_networker_reverse(0, 100)}
+spriteset(spriteset_319_0_2_CNX_DTSO_r, "gfx/v2_319.png") {template_8_8_networker_reverse(0, 225)}
+spriteset(spriteset_319_0_2_4_TLN_DTSO_r, "gfx/v2_319.png") {template_8_8_networker_reverse(0, 350)}
+//spriteset(spriteset_319_3_TLN_DTSO_r,		"gfx/v2_319.png") {template_8_8_networker_reverse(0, 0)}
+spriteset(spriteset_319_0_2_4_TLS_DTSO_r, "gfx/v2_319.png") {template_8_8_networker_reverse(0, 500)}
+//spriteset(spriteset_319_3_TLS_DTSO_r, 	"gfx/v2_319.png") {template_8_8_networker_reverse(0, 0)}
+spriteset(spriteset_319_0_STN_DTSO_r, "gfx/v2_319.png") {template_8_8_networker_reverse(0, 150)}
+spriteset(spriteset_319_0_2_4_FCC_DTSO_r, "gfx/v2_319.png") {template_8_8_networker_reverse(0, 0)}
+//spriteset(spriteset_319_3_FCC_DTSO_r,		"gfx/v2_319.png") {template_8_8_networker_reverse(0, 0)}
+spriteset(spriteset_319_0_2_4_GTR_DTSO_r, "gfx/v2_319.png") {template_8_8_networker_reverse(0, 0)}
+//spriteset(spriteset_319_3_GTR_DTSO_r,		"gfx/v2_319.png") {template_8_8_networker_reverse(0, 0)}
+
+//DTCO
+spriteset(spriteset_319_1_NSW_DTCO, "gfx/v2_319.png") {template_8_8_networker(0, 125)}
+spriteset(spriteset_319_2_CNX_DTCO, "gfx/v2_319.png") {template_8_8_networker(0, 250)}
+spriteset(spriteset_319_2_4_TLN_DTCO, "gfx/v2_319.png") {template_8_8_networker(0, 375)}
+spriteset(spriteset_319_2_4_TLS_DTCO, "gfx/v2_319.png") {template_8_8_networker(0, 525)}
+spriteset(spriteset_319_2_4_FCC_DTCO, "gfx/v2_319.png") {template_8_8_networker(0, 0)}
+spriteset(spriteset_319_2_4_GTR_DTCO, "gfx/v2_319.png") {template_8_8_networker(0, 0)}
+
+spriteset(spriteset_319_1_NSW_DTCO_r, "gfx/v2_319.png") {template_8_8_networker_reverse(0, 125)}
+spriteset(spriteset_319_2_CNX_DTCO_r, "gfx/v2_319.png") {template_8_8_networker_reverse(0, 250)}
+spriteset(spriteset_319_2_4_TLN_DTCO_r, "gfx/v2_319.png") {template_8_8_networker_reverse(0, 375)}
+spriteset(spriteset_319_2_4_TLS_DTCO_r, "gfx/v2_319.png") {template_8_8_networker_reverse(0, 525)}
+spriteset(spriteset_319_2_4_FCC_DTCO_r, "gfx/v2_319.png") {template_8_8_networker_reverse(0, 0)}
+spriteset(spriteset_319_2_4_GTR_DTCO_r, "gfx/v2_319.png") {template_8_8_networker_reverse(0, 0)}
+
+//TSO
+spriteset(spriteset_319_0_NSE_TSO, "gfx/v2_319.png") {template_8_4_networker(0, 25)}
+spriteset(spriteset_319_1_NSW_TSO, "gfx/v2_319.png") {template_8_4_networker(0, 25)}
+spriteset(spriteset_319_0_2_CNX_TSO, "gfx/v2_319.png") {template_8_4_networker(0, 275)}
+spriteset(spriteset_319_0_2_3_4_TLN_TSO, "gfx/v2_319.png") {template_8_4_networker(0, 425)}
+spriteset(spriteset_319_0_2_3_4_TLS_TSO, "gfx/v2_319.png") {template_8_4_networker(179, 25)}
+spriteset(spriteset_319_0_STN_TSO, "gfx/v2_319.png") {template_8_4_networker(0, 0)}
+spriteset(spriteset_319_0_2_3_4_FCC_TSO, "gfx/v2_319.png") {template_8_4_networker(0, 0)}
+spriteset(spriteset_319_0_2_3_4_GTR_TSO, "gfx/v2_319.png") {template_8_4_networker(0, 0)}
+
+/*Only has 4 views, no need for reversed sprites*/
+
+//MSO(L) (pan down)
+spriteset(spriteset_319_NSE_MSO_xP, "gfx/v2_319.png") {template_8_8_networker(0, 50)}
+spriteset(spriteset_319_NSW_MSO_xP, "gfx/v2_319.png") {template_8_8_networker(0, 50)}
+spriteset(spriteset_319_CNX_MSO_xP, "gfx/v2_319.png") {template_8_8_networker(0, 300)}
+spriteset(spriteset_319_TLN_MSO_xP, "gfx/v2_319.png") {template_8_8_networker(0, 450)}
+spriteset(spriteset_319_TLS_MSO_xP, "gfx/v2_319.png") {template_8_8_networker(179, 50)}
+spriteset(spriteset_319_STN_MSO_xP, "gfx/v2_319.png") {template_8_8_networker(179, 200)}
+spriteset(spriteset_319_FCC_MSO_xP, "gfx/v2_319.png") {template_8_8_networker(0, 350)}
+spriteset(spriteset_319_GTR_MSO_xP, "gfx/v2_319.png") {template_8_8_networker(0, 350)}
+
+spriteset(spriteset_319_NSE_MSO_xP_r, "gfx/v2_319.png") {template_8_8_networker_reverse(0, 50)}
+spriteset(spriteset_319_NSW_MSO_xP_r, "gfx/v2_319.png") {template_8_8_networker_reverse(0, 50)}
+spriteset(spriteset_319_CNX_MSO_xP_r, "gfx/v2_319.png") {template_8_8_networker_reverse(0, 300)}
+spriteset(spriteset_319_TLN_MSO_xP_r, "gfx/v2_319.png") {template_8_8_networker_reverse(0, 450)}
+spriteset(spriteset_319_TLS_MSO_xP_r, "gfx/v2_319.png") {template_8_8_networker_reverse(179, 50)}
+spriteset(spriteset_319_STN_MSO_xP_r, "gfx/v2_319.png") {template_8_8_networker_reverse(179, 200)}
+spriteset(spriteset_319_FCC_MSO_xP_r, "gfx/v2_319.png") {template_8_8_networker_reverse(0, 350)}
+spriteset(spriteset_319_GTR_MSO_xP_r, "gfx/v2_319.png") {template_8_8_networker_reverse(0, 350)}
+
+//MSO(L) (pan up)
+spriteset(spriteset_319_NSE_MSO_P, "gfx/v2_319.png") {template_8_8_networker(0, 75)}
+spriteset(spriteset_319_NSW_MSO_P, "gfx/v2_319.png") {template_8_8_networker(0, 50)}
+spriteset(spriteset_319_CNX_MSO_P, "gfx/v2_319.png") {template_8_8_networker(0, 325)}
+spriteset(spriteset_319_TLN_MSO_P, "gfx/v2_319.png") {template_8_8_networker(0, 475)}
+spriteset(spriteset_319_TLS_MSO_P, "gfx/v2_319.png") {template_8_8_networker(179, 75)}
+spriteset(spriteset_319_STN_MSO_P, "gfx/v2_319.png") {template_8_8_networker(179, 200)}
+spriteset(spriteset_319_FCC_MSO_P, "gfx/v2_319.png") {template_8_8_networker(0, 350)}
+spriteset(spriteset_319_GTR_MSO_P, "gfx/v2_319.png") {template_8_8_networker(0, 350)}
+
+spriteset(spriteset_319_NSE_MSO_P_r, "gfx/v2_319.png") {template_8_8_networker_reverse(0, 75)}
+spriteset(spriteset_319_NSW_MSO_P_r, "gfx/v2_319.png") {template_8_8_networker_reverse(0, 50)}
+spriteset(spriteset_319_CNX_MSO_P_r, "gfx/v2_319.png") {template_8_8_networker_reverse(0, 325)}
+spriteset(spriteset_319_TLN_MSO_P_r, "gfx/v2_319.png") {template_8_8_networker_reverse(0, 475)}
+spriteset(spriteset_319_TLS_MSO_P_r, "gfx/v2_319.png") {template_8_8_networker_reverse(179, 75)}
+spriteset(spriteset_319_STN_MSO_P_r, "gfx/v2_319.png") {template_8_8_networker_reverse(179, 200)}
+spriteset(spriteset_319_FCC_MSO_P_r, "gfx/v2_319.png") {template_8_8_networker_reverse(0, 350)}
+spriteset(spriteset_319_GTR_MSO_P_r, "gfx/v2_319.png") {template_8_8_networker_reverse(0, 350)}
+
+//Headlights
+spriteset(spriteset_319_Headlight, "gfx/v2_319.png") {template_8_8_networker(179, 500)}
+spriteset(spriteset_319_Taillight, "gfx/v2_319.png") {template_8_8_networker_reverse(179, 525)}
+
+//319 Headlight code
+switch (FEAT_TRAINS, SELF, sw_319_Headlight, position_in_consist) {
+ 0: return spriteset_319_Headlight;
+ return blank;
+}
+
+switch (FEAT_TRAINS, SELF, sw_319_Headlight_Layer, position_in_consist_from_end) {
+ 0: return spriteset_319_Taillight;
+ return sw_319_Headlight;
+}
+
+//Purchase sprite code
+switch (FEAT_TRAINS, PARENT, sw_319_0_purchase, current_year) {
+ 0..1996: spriteset_319_0_NSE_PURCHASE;
+ 1997..2000: spriteset_319_0_TLN_PURCHASE;
+ 2001..2002: spriteset_319_0_TLS_PURCHASE;
+ 2003..2005: spriteset_319_0_STN_PURCHASE;
+ 2006..2015: spriteset_319_0_FCC_PURCHASE;
+ spriteset_319_0_GTR_PURCHASE;
+}
+
+switch (FEAT_TRAINS, PARENT, sw_319_1_purchase, current_year) {
+ spriteset_319_1_NSW_PURCHASE;
+}
+/*
+
+switch (FEAT_TRAINS, PARENT, sw_319_2_purchase, current_year) {
+
+	0..2000: spriteset_319_2_TLN_PURCHASE;
+
+	2001..2005: spriteset_319_2_TLS_PURCHASE;
+
+	2006..2015: spriteset_319_2_FCC_PURCHASE;
+
+	spriteset_319_2_GTR_PURCHASE;
+
+}
+
+
+
+switch (FEAT_TRAINS, PARENT, sw_319_3_purchase, current_year) {
+
+	0..2000: spriteset_319_3_TLN_PURCHASE;
+
+	2001..2005: spriteset_319_3_TLS_PURCHASE;
+
+	2006..2015: spriteset_319_3_FCC_PURCHASE;
+
+	spriteset_319_3_GTR_PURCHASE;
+
+}
+
+
+
+switch (FEAT_TRAINS, PARENT, sw_319_4_purchase, current_year) {
+
+	0..2000: spriteset_319_4_TLN_PURCHASE;
+
+	2001..2005: spriteset_319_4_TLS_PURCHASE;
+
+	2006..2015: spriteset_319_4_FCC_PURCHASE;
+
+	spriteset_319_4_GTR_PURCHASE;
+
+}*/
+# 169 "src/sprites/319.pnml"
+//Class 319/0 code
+switch (FEAT_TRAINS, SELF, sw_319_0_DTSO, cargo_subtype) {
+ 0: spriteset_319_0_NSE_DTSO;
+ 1: spriteset_319_0_2_CNX_DTSO;
+ 2: spriteset_319_0_2_4_TLN_DTSO;
+ 3: spriteset_319_0_2_4_TLS_DTSO;
+ 4: spriteset_319_0_STN_DTSO;
+ 5: spriteset_319_0_2_4_FCC_DTSO;
+ 6: spriteset_319_0_2_4_GTR_DTSO;
+}
+switch (FEAT_TRAINS, SELF, sw_319_0_TSO, cargo_subtype) {
+ 0: spriteset_319_0_NSE_TSO;
+ 1: spriteset_319_0_2_CNX_TSO;
+ 2: spriteset_319_0_2_3_4_TLN_TSO;
+ 3: spriteset_319_0_2_3_4_TLS_TSO;
+ 4: spriteset_319_0_STN_TSO;
+ 5: spriteset_319_0_2_3_4_FCC_TSO;
+ 6: spriteset_319_0_2_3_4_GTR_TSO;
+}
+switch (FEAT_TRAINS, SELF, sw_319_0_MSO_xP, cargo_subtype) {
+ 0: spriteset_319_NSE_MSO_xP;
+ 1: spriteset_319_CNX_MSO_xP;
+ 2: spriteset_319_TLN_MSO_xP;
+ 3: spriteset_319_TLS_MSO_xP;
+ 4: spriteset_319_STN_MSO_xP;
+ 5: spriteset_319_FCC_MSO_xP;
+ 6: spriteset_319_GTR_MSO_xP;
+}
+switch (FEAT_TRAINS, SELF, sw_319_0_MSO_P, cargo_subtype) {
+ 0: spriteset_319_NSE_MSO_P;
+ 1: spriteset_319_CNX_MSO_P;
+ 2: spriteset_319_TLN_MSO_P;
+ 3: spriteset_319_TLS_MSO_P;
+ 4: spriteset_319_STN_MSO_P;
+ 5: spriteset_319_FCC_MSO_P;
+ 6: spriteset_319_GTR_MSO_P;
+}
+switch (FEAT_TRAINS, PARENT, sw_319_0_MSO, current_railtype) {
+ ELRL : sw_319_0_MSO_P;
+ sw_319_0_MSO_xP;
+}
+switch (FEAT_TRAINS, SELF, sw_319_0_DTSO_R, cargo_subtype) {
+ 0: spriteset_319_0_NSE_DTSO_r;
+ 1: spriteset_319_0_2_CNX_DTSO_r;
+ 2: spriteset_319_0_2_4_TLN_DTSO_r;
+ 3: spriteset_319_0_2_4_TLS_DTSO_r;
+ 4: spriteset_319_0_STN_DTSO_r;
+ 5: spriteset_319_0_2_4_FCC_DTSO_r;
+ 6: spriteset_319_0_2_4_GTR_DTSO_r;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_319_0_DTSO_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+ 0: spriteset_319_0_NSE_DTSO_r;
+ 1: spriteset_319_0_2_CNX_DTSO_r;
+ 2: spriteset_319_0_2_4_TLN_DTSO_r;
+ 3: spriteset_319_0_2_4_TLS_DTSO_r;
+ 4: spriteset_319_0_STN_DTSO_r;
+ 5: spriteset_319_0_2_4_FCC_DTSO_r;
+ 6: spriteset_319_0_2_4_GTR_DTSO_r;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_319_0_TSO_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+ 0: spriteset_319_0_NSE_TSO;
+ 1: spriteset_319_0_2_CNX_TSO;
+ 2: spriteset_319_0_2_3_4_TLN_TSO;
+ 3: spriteset_319_0_2_3_4_TLS_TSO;
+ 4: spriteset_319_0_STN_TSO;
+ 5: spriteset_319_0_2_3_4_FCC_TSO;
+ 6: spriteset_319_0_2_3_4_GTR_TSO;
+}
+switch (FEAT_TRAINS, SELF, sw_REV_319_0_MSO_xP,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+ 0: spriteset_319_NSE_MSO_xP;
+ 1: spriteset_319_CNX_MSO_xP;
+ 2: spriteset_319_TLN_MSO_xP;
+ 3: spriteset_319_TLS_MSO_xP;
+ 4: spriteset_319_STN_MSO_xP;
+ 5: spriteset_319_FCC_MSO_xP;
+ 6: spriteset_319_GTR_MSO_xP;
+}
+switch (FEAT_TRAINS, SELF, sw_REV_319_0_MSO_P,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+ 0: spriteset_319_NSE_MSO_P;
+ 1: spriteset_319_CNX_MSO_P;
+ 2: spriteset_319_TLN_MSO_P;
+ 3: spriteset_319_TLS_MSO_P;
+ 4: spriteset_319_STN_MSO_P;
+ 5: spriteset_319_FCC_MSO_P;
+ 6: spriteset_319_GTR_MSO_P;
+}
+switch (FEAT_TRAINS, PARENT, sw_REV_319_0_MSO, current_railtype) {
+ ELRL : sw_REV_319_0_MSO_P;
+ sw_REV_319_0_MSO_xP;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_319_0_DTSO_R_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+ 0: spriteset_319_0_NSE_DTSO;
+ 1: spriteset_319_0_2_CNX_DTSO;
+ 2: spriteset_319_0_2_4_TLN_DTSO;
+ 3: spriteset_319_0_2_4_TLS_DTSO;
+ 4: spriteset_319_0_STN_DTSO;
+ 5: spriteset_319_0_2_4_FCC_DTSO;
+ 6: spriteset_319_0_2_4_GTR_DTSO;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_319_0_POSITION,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x000000FF, 0x4D]]){
+ 0: sw_REV_319_0_DTSO_livery;
+ 1: sw_REV_319_0_MSO;
+ 2: sw_REV_319_0_TSO_livery;
+ 3: sw_REV_319_0_DTSO_R_livery;
+}
+/* 
+
+
+
+
+
+!!!!DON'T FORGET TO DO THE OTHER 319S AT SOME POINT!!!!
+
+
+
+
+
+
+
+//Class 319/1
+
+switch (FEAT_TRAINS, SELF, sw_319_2_DTCL, cargo_subtype) {
+
+	0: spriteset_319_SRG_DTCL;
+
+	1: spriteset_319_BRG_DTCL;
+
+	2: spriteset_319_NSE_DTCL;
+
+	3: spriteset_319_SWT_DTCL;
+
+	4: spriteset_319_CNX_DTCL;
+
+	5: spriteset_319_CNG_DTCL;
+
+	6: spriteset_319_STN_DTCL;
+
+}
+
+switch (FEAT_TRAINS, SELF, sw_319_2_TS, cargo_subtype) {
+
+	0: spriteset_319_SRG_TS;
+
+	1: spriteset_319_BRG_TS;
+
+	2: spriteset_319_NSE_TS;
+
+	3: spriteset_319_SWT_TS;
+
+	4: spriteset_319_CNX_TS;
+
+	5: spriteset_319_CNG_TS;
+
+	6: spriteset_319_STN_TS;
+
+}
+
+switch (FEAT_TRAINS, SELF, sw_319_2_MBS, cargo_subtype) {
+
+	0: spriteset_319_SRG_MBS;
+
+	1: spriteset_319_BRG_MBS;
+
+	2: spriteset_319_NSE_MBS;
+
+	3: spriteset_319_SWT_MBS;
+
+	4: spriteset_319_CNX_MBS;
+
+	5: spriteset_319_CNG_MBS;
+
+	6: spriteset_319_STN_MBS;
+
+}
+
+switch (FEAT_TRAINS, SELF, sw_319_2_DTCL_R, cargo_subtype) {
+
+	0: spriteset_319_SRG_DTCL_r;
+
+	1: spriteset_319_BRG_DTCL_r;
+
+	2: spriteset_319_NSE_DTCL_r;
+
+	3: spriteset_319_SWT_DTCL_r;
+
+	4: spriteset_319_CNX_DTCL_r;
+
+	5: spriteset_319_CNG_DTCL_r;
+
+	6: spriteset_319_STN_DTCL_r;
+
+}
+
+switch(FEAT_TRAINS,SELF,sw_REV_319_2_DTCL_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+
+	0: spriteset_319_SRG_DTCL_r;
+
+	1: spriteset_319_BRG_DTCL_r;
+
+	2: spriteset_319_NSE_DTCL_r;
+
+	3: spriteset_319_SWT_DTCL_r;
+
+	4: spriteset_319_CNX_DTCL_r;
+
+	5: spriteset_319_CNG_DTCL_r;
+
+	6: spriteset_319_STN_DTCL_r;
+
+}
+
+switch(FEAT_TRAINS,SELF,sw_REV_319_2_TS_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+
+	0: spriteset_319_SRG_TS;
+
+	1: spriteset_319_BRG_TS;
+
+	2: spriteset_319_NSE_TS;
+
+	3: spriteset_319_SWT_TS;
+
+	4: spriteset_319_CNX_TS;
+
+	5: spriteset_319_CNG_TS;
+
+	6: spriteset_319_STN_TS;
+
+}
+
+switch(FEAT_TRAINS,SELF,sw_REV_319_2_MBS_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+
+	0: spriteset_319_SRG_MBS_r;
+
+	1: spriteset_319_BRG_MBS_r;
+
+	2: spriteset_319_NSE_MBS_r;
+
+	3: spriteset_319_SWT_MBS_r;
+
+	4: spriteset_319_CNX_MBS_r;
+
+	5: spriteset_319_CNG_MBS_r;
+
+	6: spriteset_319_STN_MBS_r;
+
+}
+
+switch(FEAT_TRAINS,SELF,sw_REV_319_2_DTCL_R_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+
+	0: spriteset_319_SRG_DTCL;
+
+	1: spriteset_319_BRG_DTCL;
+
+	2: spriteset_319_NSE_DTCL;
+
+	3: spriteset_319_SWT_DTCL;
+
+	4: spriteset_319_CNX_DTCL;
+
+	5: spriteset_319_CNG_DTCL;
+
+	6: spriteset_319_STN_DTCL;
+
+}
+
+switch(FEAT_TRAINS,SELF,sw_REV_319_2_POSITION,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x000000FF, 0x4D]]){
+
+	0: sw_REV_319_2_DTCL_livery;
+
+	1: sw_REV_319_2_TS_livery;
+
+	2: sw_REV_319_2_MBS_livery;
+
+	3: sw_REV_319_2_DTCL_R_livery;
+
+}
+
+
+
+//Class 319/2
+
+switch (FEAT_TRAINS, SELF, sw_319_G_DTCL, cargo_subtype) {
+
+	0: spriteset_319_NSE_DTCL;
+
+	1: spriteset_319_SWT_DTCL;
+
+}
+
+switch (FEAT_TRAINS, SELF, sw_319_G_TS, cargo_subtype) {
+
+	0: spriteset_319_NSE_TS;
+
+	1: spriteset_319_SWT_TS;
+
+}
+
+switch (FEAT_TRAINS, SELF, sw_319_G_MBS, cargo_subtype) {
+
+	0: spriteset_319_NSE_MBS;
+
+	1: spriteset_319_SWT_MBS;
+
+}
+
+switch (FEAT_TRAINS, SELF, sw_319_G_DTCL_R, cargo_subtype) {
+
+	0: spriteset_319_NSE_DTCL_r;
+
+	1: spriteset_319_SWT_DTCL_r;
+
+}
+
+switch(FEAT_TRAINS,SELF,sw_REV_319_G_DTCL_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+
+	0: spriteset_319_NSE_DTCL_r;
+
+	1: spriteset_319_SWT_DTCL_r;
+
+}
+
+switch(FEAT_TRAINS,SELF,sw_REV_319_G_TS_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+
+	0: spriteset_319_NSE_TS;
+
+	1: spriteset_319_SWT_TS;
+
+}
+
+switch(FEAT_TRAINS,SELF,sw_REV_319_G_MBS_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+
+	0: spriteset_319_NSE_MBS_r;
+
+	1: spriteset_319_SWT_MBS_r;
+
+}
+
+switch(FEAT_TRAINS,SELF,sw_REV_319_G_DTCL_R_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+
+	0: spriteset_319_NSE_DTCL;
+
+	1: spriteset_319_SWT_DTCL;
+
+}
+
+switch(FEAT_TRAINS,SELF,sw_REV_319_G_POSITION,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x000000FF, 0x4D]]){
+
+	0: sw_REV_319_G_DTCL_livery;
+
+	1: sw_REV_319_G_TS_livery;
+
+	2: sw_REV_319_G_MBS_livery;
+
+	3: sw_REV_319_G_DTCL_R_livery;
+
+}
+
+
+
+//Class 319/3
+
+switch (FEAT_TRAINS, SELF, sw_319_7_DTCL, cargo_subtype) {
+
+	0: spriteset_319_CNX_DTCL;
+
+	1: spriteset_319_SWH_DTCL;
+
+}
+
+switch (FEAT_TRAINS, SELF, sw_319_7_MBS, cargo_subtype) {
+
+	0: spriteset_319_CNX_MBS;
+
+	1: spriteset_319_SRG_MBS;
+
+}
+
+switch (FEAT_TRAINS, SELF, sw_319_7_DTCL_R, cargo_subtype) {
+
+	0: spriteset_319_CNX_DTCL_r;
+
+	1: spriteset_319_SWH_DTCL_r;
+
+}
+
+switch(FEAT_TRAINS,SELF,sw_REV_319_7_DTCL_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+
+	0: spriteset_319_CNX_DTCL_r;
+
+	1: spriteset_319_SWH_DTCL_r;
+
+}
+
+switch(FEAT_TRAINS,SELF,sw_REV_319_7_TS_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+
+	0: spriteset_319_CNX_MBS_r;
+
+	1: spriteset_319_SRG_MBS_r;
+
+}
+
+switch(FEAT_TRAINS,SELF,sw_REV_319_7_DTCL_R_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+
+	0: spriteset_319_CNX_DTCL;
+
+	1: spriteset_319_SWH_DTCL;
+
+}
+
+switch(FEAT_TRAINS,SELF,sw_REV_319_7_POSITION,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x000000FF, 0x4D]]){
+
+	0: sw_REV_319_7_DTCL_livery;
+
+	1: sw_REV_319_7_TS_livery;
+
+	2: sw_REV_319_7_DTCL_R_livery;
+
+}
+
+
+
+//Class 319/4
+
+switch (FEAT_TRAINS, SELF, sw_BIG_DTCL, cargo_subtype) {
+
+	0: spriteset_319_SRG_DTCL;
+
+	1: spriteset_319_BRG_DTCL;
+
+	2: spriteset_319_NSE_DTCL;
+
+}
+
+switch (FEAT_TRAINS, SELF, sw_BIG_TRB, cargo_subtype) {
+
+	0: spriteset_319_SRG_TRB;
+
+	1: spriteset_319_BRG_TRB;
+
+	2: spriteset_319_NSE_TRB;
+
+}
+
+switch (FEAT_TRAINS, SELF, sw_BIG_MBS, cargo_subtype) {
+
+	0: spriteset_319_SRG_MBS;
+
+	1: spriteset_319_BRG_MBS;
+
+	2: spriteset_319_NSE_MBS;
+
+}
+
+switch (FEAT_TRAINS, SELF, sw_BIG_DTCL_R, cargo_subtype) {
+
+	0: spriteset_319_SRG_DTCL_r;
+
+	1: spriteset_319_BRG_DTCL_r;
+
+	2: spriteset_319_NSE_DTCL_r;
+
+}
+
+switch(FEAT_TRAINS,SELF,sw_REV_BIG_DTCL_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+
+	0: spriteset_319_SRG_DTCL_r;
+
+	1: spriteset_319_BRG_DTCL_r;
+
+	2: spriteset_319_NSE_DTCL_r;
+
+}
+
+switch(FEAT_TRAINS,SELF,sw_REV_BIG_TS_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+
+	0: spriteset_319_SRG_TRB_r;
+
+	1: spriteset_319_BRG_TRB_r;
+
+	2: spriteset_319_NSE_TRB_r;
+
+}
+
+switch(FEAT_TRAINS,SELF,sw_REV_BIG_MBS_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+
+	0: spriteset_319_SRG_MBS_r;
+
+	1: spriteset_319_BRG_MBS_r;
+
+	2: spriteset_319_NSE_MBS_r;
+
+}
+
+switch(FEAT_TRAINS,SELF,sw_REV_BIG_DTCL_R_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+
+	0: spriteset_319_SRG_DTCL;
+
+	1: spriteset_319_BRG_DTCL;
+
+	2: spriteset_319_NSE_DTCL;
+
+}
+
+switch(FEAT_TRAINS,SELF,sw_REV_BIG_POSITION,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x000000FF, 0x4D]]){
+
+	0: sw_REV_BIG_DTCL_livery;
+
+	1: sw_REV_BIG_TS_livery;
+
+	2: sw_REV_BIG_MBS_livery;
+
+	3: sw_REV_BIG_DTCL_R_livery;
+
+}*/
+# 7 "SREMUs_v2.pnml" 2
 # 1 "src/sprites/EPB.pnml" 1
 /*Index of code locations in file
 
@@ -775,7 +1513,7 @@ switch(FEAT_TRAINS,SELF,sw_REV_CAP_POSITION,[STORE_TEMP(position_in_consist_from
  2: sw_REV_CAP_MBS2_LIVERY;
  3: sw_REV_CAP_DTSL_R_LIVERY;
 }
-# 7 "SREMUs_v2.pnml" 2
+# 8 "SREMUs_v2.pnml" 2
 # 1 "src/sprites/CIG.pnml" 1
 //CIG GFX
 
@@ -1175,7 +1913,7 @@ switch(FEAT_TRAINS,SELF,sw_REV_BIG_POSITION,[STORE_TEMP(position_in_consist_from
  2: sw_REV_BIG_MBS_livery;
  3: sw_REV_BIG_DTCL_R_livery;
 }
-# 8 "SREMUs_v2.pnml" 2
+# 9 "SREMUs_v2.pnml" 2
 # 1 "src/sprites/VEP.pnml" 1
 //VEP GFX
 
@@ -1300,7 +2038,7 @@ switch(FEAT_TRAINS,SELF,sw_REV_VEP_POSITION,[STORE_TEMP(position_in_consist_from
  2: sw_REV_VEP_TSO_LIVERY;
  3: sw_REV_VEP_DTCL_R_LIVERY;
 }
-# 9 "SREMUs_v2.pnml" 2
+# 10 "SREMUs_v2.pnml" 2
 # 1 "src/sprites/Networker.pnml" 1
 //Networker GFX
 
@@ -1526,12 +2264,22 @@ switch(FEAT_TRAINS,SELF,sw_REV_466_POSITION,[STORE_TEMP(position_in_consist_from
  0: sw_REV_466_DMSO_livery;
  1: sw_REV_466_DMSO_R_livery;
 }
-# 10 "SREMUs_v2.pnml" 2
+# 11 "SREMUs_v2.pnml" 2
 
 //File that links all the sprites files together for reversals
 
 # 1 "src/sprites/zz_sprite_end.pnml" 1
 switch(FEAT_TRAINS,SELF,sw_REV_ID_CHECK,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xC6]]){
+ 3190: sw_REV_319_0_POSITION;
+ //3191:
+ //3192:
+ //3193:
+ //3194:
+ 3195: sw_REV_319_0_POSITION;
+ //3196:
+ //3197:
+ //3198:
+ //3199:
  4130: sw_REV_CAP_POSITION;
  4131: sw_REV_CAP_POSITION;
  4140: sw_REV_HAP_S_POSITION;
@@ -1571,10 +2319,1135 @@ switch(FEAT_TRAINS,SELF,sw_REV_ID_CHECK,[STORE_TEMP(position_in_consist_from_end
  4660: sw_REV_466_POSITION;
  4661: sw_REV_466_POSITION;
 }
-# 14 "SREMUs_v2.pnml" 2
+# 15 "SREMUs_v2.pnml" 2
 
 //Train items files
 
+# 1 "src/items/319.pnml" 1
+/*Description & explaination of subclasses in this file
+
+319/0 Initial batch of Class 319 sets, only standard class, no air dams on the front.								319001-319060
+
+319/1 Second batch of Class 319 sets with one DTCO generally used on Bedford-Brightons. Had new front styling.		319161-319186
+
+319/2 A refurbished 319/0 for Connex Express services from Victoria to Brighton. First class and an extra loo.		319214-319220
+
+319/3 A refurbished 319/1 for Thameslink metro services. First class removed.										319361-319386
+
+319/4 A different refresh of the 319/0, with first class but no exta loo, for Thameslink CityFlier services.		319421-319460	
+
+
+
+/0 - All liveries with NSE in darker grey.
+
+/1 - Just NSE silver(? Perhaps old Thameslink too)
+
+/2 - Connex, all post privitisation Thameslink.
+
+/3, /4 - All post privitisation Thameslink.
+
+*/
+# 14 "src/items/319.pnml"
+/* So if you didn't get that
+
+      /0/2/4DTSO /0/2/4DTCO /1/3DTSO /1DTCO MSO TSO
+
+NSE      X          -          -        -   XX   X
+
+NSW      -          -          X        X   XX   X
+
+CNX      X          X          -        -   XX   X
+
+TLN      X          X          X        X   XX   X
+
+TLS      X          X          X        X   XX   X
+
+STN      X          -          -        -   XX   X
+
+FCC      X          X          X        X   XX   X
+
+GTR      X          X          X        X   XX   X
+
+*/
+# 26 "src/items/319.pnml"
+switch (FEAT_TRAINS, SELF, sw_319_0_gfx_f, position_in_articulated_veh) {
+ 0: return sw_319_0_DTSO;
+ 1: return sw_319_0_MSO;
+ 2: return sw_319_0_TSO;
+ 3: return sw_319_0_DTSO_R;
+}
+switch (FEAT_TRAINS, PARENT, sw_319_0_gfx, vehicle_is_reversed) {
+ 0: sw_319_0_gfx_f;
+ 1: sw_REV_ID_CHECK;
+}
+switch(FEAT_TRAINS, SELF, sw_319_0_default, [STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100), getbits(extra_callback_info1, 8, 8)]){
+ 0: return sw_319_0_gfx;
+ 1: return sw_319_Headlight_Layer;
+}
+switch (FEAT_TRAINS, SELF, sw_319_0_car_articulated, extra_callback_info1) {
+ 1..3: return item_319_0_T;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+switch(FEAT_TRAINS, SELF, sw_319_0_LIVERIES, cargo_subtype){
+ 0: sw_livery_NSE;
+ 1: sw_livery_CNX;
+ 2: sw_livery_TLN;
+ 3: sw_livery_TLS;
+ 4: sw_livery_STN;
+ 5: sw_livery_FCC;
+ 6: sw_livery_GTR;
+ return CB_RESULT_NO_TEXT;
+}
+switch(FEAT_TRAINS, SELF, sw_319_SPEED, current_railtype){
+ SAA3: return 144;
+ return 160;
+}
+
+
+item (FEAT_TRAINS, item_319_0, 3190) {
+ property {
+  name: string(STR_NAME_319_0);
+  climates_available: ALL_CLIMATES;
+  introduction_date: date(1987, 1, 1);
+  model_life: 25;
+  retire_early: 0;
+  vehicle_life: 50;
+  reliability_decay: 2;
+  refittable_cargo_classes: bitmask(CC_PASSENGERS);
+  cargo_allow_refit: [PASS, TOUR];
+  loading_speed: 28;
+  cost_factor: 35;
+  running_cost_factor: 20;
+  sprite_id: SPRITE_ID_NEW_TRAIN;
+  speed: 100 mph;
+  misc_flags: bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
+  refit_cost: 0;
+  track_type: SAAZ;
+  ai_special_flag: AI_FLAG_PASSENGER;
+  power: 1438 hp;
+  running_cost_base: RUNNING_COST_ELECTRIC;
+  dual_headed: 0;
+  default_cargo_type: PASS;
+  cargo_capacity: 79;
+  weight: 137 ton;
+  tractive_effort_coefficient: 0.56;
+  air_drag_coefficient: 0.09;
+  length: 8;
+  effect_spawn_model_and_powered: EFFECT_SPAWN_MODEL_ELECTRIC;
+  bitmask_vehicle_info: 0;
+  cargo_age_period: 185;
+  default_cargo_type: PASS;
+  engine_class: ENGINE_CLASS_ELECTRIC;
+ }
+ graphics {
+  default: sw_319_0_default;
+  purchase: sw_319_0_purchase;
+  cargo_subtype_text: sw_319_0_LIVERIES;
+  running_cost_factor: return(current_speed == 0 ? 8 : 25) ;
+  articulated_part: sw_319_0_car_articulated;
+  can_attach_wagon: sw_coupling_319;
+  additional_text: string(STR_DESC_319_0);
+  speed: sw_319_SPEED;
+ }
+}
+
+item (FEAT_TRAINS, item_319_0_T, 3195) {
+ property {
+  name: string(STR_NAME_319_0);
+  climates_available: NO_CLIMATE;
+  introduction_date: date(1987, 1, 1);
+  model_life: 25;
+  retire_early: 0;
+  vehicle_life: 50;
+  reliability_decay: 2;
+  refittable_cargo_classes: bitmask(CC_PASSENGERS);
+  cargo_allow_refit: [PASS, TOUR];
+  loading_speed: 28;
+  cost_factor: 0;
+  running_cost_factor: 0;
+  sprite_id: SPRITE_ID_NEW_TRAIN;
+  speed: 100 mph;
+  misc_flags: bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
+  refit_cost: 0;
+  track_type: SAAZ;
+  ai_special_flag: AI_FLAG_PASSENGER;
+  running_cost_base: RUNNING_COST_ELECTRIC;
+  dual_headed: 0;
+  default_cargo_type: PASS;
+  cargo_capacity: 80;
+  weight: 0 ton;
+  air_drag_coefficient: 0.09;
+  length: 8;
+  effect_spawn_model_and_powered: EFFECT_SPAWN_MODEL_ELECTRIC;
+  bitmask_vehicle_info: 0;
+  cargo_age_period: 185;
+  default_cargo_type: PASS;
+  engine_class: ENGINE_CLASS_ELECTRIC;
+ }
+ graphics {
+  default: sw_319_0_default;
+  purchase: spriteset_319_0_NSE_PURCHASE;
+  running_cost_factor: return(current_speed == 0 ? 8 : 30) ;
+ }
+}
+/*
+
+
+
+!!!!CODE THESE SOME DAY!!!!
+
+
+
+
+
+switch (FEAT_TRAINS, SELF, sw_CIG_2_gfx_f, position_in_articulated_veh) {
+
+	0: return sw_CIG_2_DTCL;
+
+	1: return sw_CIG_2_TS;
+
+	2: return sw_CIG_2_MBS;
+
+	3: return sw_CIG_2_DTCL_R;
+
+}
+
+switch (FEAT_TRAINS, PARENT, sw_CIG_2_gfx, vehicle_is_reversed) {
+
+	0: sw_CIG_2_gfx_f;
+
+	1: sw_REV_ID_CHECK;
+
+}
+
+switch(FEAT_TRAINS, SELF, sw_CIG_2_default, [STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100), getbits(extra_callback_info1, 8, 8)]){
+
+	0: return sw_CIG_2_gfx;
+
+	1: return sw_MK1_Headlight_Layer;
+
+}
+
+switch (FEAT_TRAINS, SELF, sw_CIG_2_car_articulated, extra_callback_info1) {
+
+	1..3: return item_CIG_2_T;
+
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+
+}
+
+switch(FEAT_TRAINS, SELF, sw_CIG_2_LIVERIES, cargo_subtype){
+
+	0: sw_livery_SRG;
+
+	1: sw_livery_BRG;
+
+	2: sw_livery_NSE;
+
+	3: sw_livery_SWT;
+
+	4: sw_livery_CNX;
+
+	5: sw_livery_CNG;
+
+	6: sw_livery_STN;
+
+	return CB_RESULT_NO_TEXT;
+
+}
+
+
+
+
+
+item (FEAT_TRAINS, item_CIG_2, 4212) {
+
+	property {
+
+		name: 							string(STR_NAME_CIG_2);
+
+		climates_available: 			ALL_CLIMATES;
+
+		introduction_date:				date(1970, 1, 1);
+
+		model_life:						25;
+
+		retire_early:					0;
+
+		vehicle_life:					50;
+
+		reliability_decay:				2;
+
+		refittable_cargo_classes:		bitmask(CC_PASSENGERS);
+
+		cargo_allow_refit:				[PASS, TOUR];
+
+		loading_speed:					22;
+
+		cost_factor:					25;
+
+		running_cost_factor:			15;
+
+		sprite_id:						SPRITE_ID_NEW_TRAIN;
+
+		speed:							90 mph;
+
+		misc_flags:						bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
+
+		refit_cost:						0;
+
+		track_type:						SAA3;
+
+		ai_special_flag:				AI_FLAG_PASSENGER;
+
+		power:							1000 hp;
+
+		running_cost_base:				RUNNING_COST_ELECTRIC;
+
+		dual_headed:					0;
+
+		default_cargo_type:				PASS;
+
+		cargo_capacity:					60;
+
+		weight:							157 ton;
+
+		tractive_effort_coefficient:	0.20;
+
+		air_drag_coefficient:			0.09;
+
+		length:							8;
+
+		effect_spawn_model_and_powered:	EFFECT_SPAWN_MODEL_ELECTRIC;
+
+		bitmask_vehicle_info:			0;
+
+		cargo_age_period:				200;
+
+		default_cargo_type:				PASS;
+
+		engine_class:					ENGINE_CLASS_ELECTRIC;
+
+	}
+
+	graphics {
+
+		default: 							sw_CIG_2_default;
+
+		purchase:							sw_CIG_2_purchase;
+
+		cargo_subtype_text:					sw_CIG_2_LIVERIES;
+
+		running_cost_factor:				return(current_speed == 0 ? 8 : 30) ;
+
+		articulated_part:					sw_CIG_2_car_articulated;
+
+		can_attach_wagon:					sw_coupling_emu_mk1;
+
+		additional_text:					string(STR_DESC_CIG_2);
+
+	}
+
+}
+
+if (param_names == 1){
+
+item (FEAT_TRAINS, item_CIG_2, 4212){
+
+	property{
+
+		name                           : string(STR_NAME_421_2) ;
+
+	}
+
+}
+
+}
+
+
+
+item (FEAT_TRAINS, item_CIG_2_T, 4214) {
+
+	property {
+
+		name: 							string(STR_NAME_CIG_2);
+
+		climates_available: 			NO_CLIMATE;
+
+		introduction_date:				date(1970, 1, 1);
+
+		model_life:						34;
+
+		retire_early:					0;
+
+		vehicle_life:					40;
+
+		reliability_decay:				2;
+
+		refittable_cargo_classes:		bitmask(CC_PASSENGERS);
+
+		cargo_allow_refit:				[PASS, TOUR];
+
+		loading_speed:					22;
+
+		cost_factor:					25;
+
+		running_cost_factor:			15;
+
+		sprite_id:						SPRITE_ID_NEW_TRAIN;
+
+		speed:							90 mph;
+
+		misc_flags:						bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
+
+		refit_cost:						0;
+
+		track_type:						SAA3;
+
+		ai_special_flag:				AI_FLAG_PASSENGER;
+
+		running_cost_base:				RUNNING_COST_ELECTRIC;
+
+		dual_headed:					0;
+
+		default_cargo_type:				PASS;
+
+		cargo_capacity:					60;
+
+		weight:							0 ton;
+
+		air_drag_coefficient:			0.09;
+
+		length:							8;
+
+		effect_spawn_model_and_powered:	EFFECT_SPAWN_MODEL_ELECTRIC;
+
+		bitmask_vehicle_info:			0;
+
+		cargo_age_period:				200;
+
+		default_cargo_type:				PASS;
+
+		engine_class:					ENGINE_CLASS_ELECTRIC;
+
+	}
+
+	graphics {
+
+		default: 							sw_CIG_2_default;
+
+		purchase:							spriteset_CIG_BRG_PURCHASE;
+
+		running_cost_factor:				return(current_speed == 0 ? 8 : 30) ;
+
+	}
+
+}
+
+switch (FEAT_TRAINS, SELF, sw_CIG_G_gfx_f, position_in_articulated_veh) {
+
+	0: return sw_CIG_G_DTCL;
+
+	1: return sw_CIG_G_TS;
+
+	2: return sw_CIG_G_MBS;
+
+	3: return sw_CIG_G_DTCL_R;
+
+}
+
+switch (FEAT_TRAINS, PARENT, sw_CIG_G_gfx, vehicle_is_reversed) {
+
+	0: sw_CIG_G_gfx_f;
+
+	1: sw_REV_ID_CHECK;
+
+}
+
+switch(FEAT_TRAINS, SELF, sw_CIG_G_default, [STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100), getbits(extra_callback_info1, 8, 8)]){
+
+	0: return sw_CIG_G_gfx;
+
+	1: return sw_MK1_Headlight_Layer;
+
+}
+
+switch (FEAT_TRAINS, SELF, sw_CIG_G_car_articulated, extra_callback_info1) {
+
+	1..3: return item_CIG_G_T;
+
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+
+}
+
+switch(FEAT_TRAINS, SELF, sw_CIG_G_LIVERIES, cargo_subtype){
+
+	0: sw_livery_NSE;
+
+	1: sw_livery_SWT;
+
+	return CB_RESULT_NO_TEXT;
+
+}
+
+
+
+
+
+item (FEAT_TRAINS, item_CIG_G, 4215) {
+
+	property {
+
+		name: 							string(STR_NAME_CIG_G);
+
+		climates_available: 			ALL_CLIMATES;
+
+		introduction_date:				date(1990, 1, 1);
+
+		model_life:						25;
+
+		retire_early:					0;
+
+		vehicle_life:					50;
+
+		reliability_decay:				2;
+
+		refittable_cargo_classes:		bitmask(CC_PASSENGERS);
+
+		cargo_allow_refit:				[PASS, TOUR];
+
+		loading_speed:					22;
+
+		cost_factor:					25;
+
+		running_cost_factor:			15;
+
+		sprite_id:						SPRITE_ID_NEW_TRAIN;
+
+		speed:							90 mph;
+
+		misc_flags:						bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
+
+		refit_cost:						0;
+
+		track_type:						SAA3;
+
+		ai_special_flag:				AI_FLAG_PASSENGER;
+
+		power:							1000 hp;
+
+		running_cost_base:				RUNNING_COST_ELECTRIC;
+
+		dual_headed:					0;
+
+		default_cargo_type:				PASS;
+
+		cargo_capacity:					60;
+
+		weight:							157 ton;
+
+		tractive_effort_coefficient:	0.20;
+
+		air_drag_coefficient:			0.09;
+
+		length:							8;
+
+		effect_spawn_model_and_powered:	EFFECT_SPAWN_MODEL_ELECTRIC;
+
+		bitmask_vehicle_info:			0;
+
+		cargo_age_period:				200;
+
+		default_cargo_type:				PASS;
+
+		engine_class:					ENGINE_CLASS_ELECTRIC;
+
+	}
+
+	graphics {
+
+		default: 							sw_CIG_G_default;
+
+		purchase:							sw_CIG_G_purchase;
+
+		cargo_subtype_text:					sw_CIG_G_LIVERIES;
+
+		running_cost_factor:				return(current_speed == 0 ? 8 : 30) ;
+
+		articulated_part:					sw_CIG_G_car_articulated;
+
+		can_attach_wagon:					sw_coupling_emu_mk1;
+
+		additional_text:					string(STR_DESC_CIG_G);
+
+	}
+
+}
+
+if (param_names == 1){
+
+item (FEAT_TRAINS, item_CIG_G, 4215){
+
+	property{
+
+		name                           : string(STR_NAME_421_G) ;
+
+	}
+
+}
+
+}
+
+
+
+item (FEAT_TRAINS, item_CIG_G_T, 4216) {
+
+	property {
+
+		name: 							string(STR_NAME_CIG_G);
+
+		climates_available: 			NO_CLIMATE;
+
+		introduction_date:				date(1990, 1, 1);
+
+		model_life:						34;
+
+		retire_early:					0;
+
+		vehicle_life:					40;
+
+		reliability_decay:				2;
+
+		refittable_cargo_classes:		bitmask(CC_PASSENGERS);
+
+		cargo_allow_refit:				[PASS, TOUR];
+
+		loading_speed:					22;
+
+		cost_factor:					25;
+
+		running_cost_factor:			15;
+
+		sprite_id:						SPRITE_ID_NEW_TRAIN;
+
+		speed:							90 mph;
+
+		misc_flags:						bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
+
+		refit_cost:						0;
+
+		track_type:						SAA3;
+
+		ai_special_flag:				AI_FLAG_PASSENGER;
+
+		running_cost_base:				RUNNING_COST_ELECTRIC;
+
+		dual_headed:					0;
+
+		default_cargo_type:				PASS;
+
+		cargo_capacity:					60;
+
+		weight:							0 ton;
+
+		air_drag_coefficient:			0.09;
+
+		length:							8;
+
+		effect_spawn_model_and_powered:	EFFECT_SPAWN_MODEL_ELECTRIC;
+
+		bitmask_vehicle_info:			0;
+
+		cargo_age_period:				200;
+
+		default_cargo_type:				PASS;
+
+		engine_class:					ENGINE_CLASS_ELECTRIC;
+
+	}
+
+	graphics {
+
+		default: 							sw_CIG_G_default;
+
+		purchase:							spriteset_CIG_BRG_PURCHASE;
+
+		running_cost_factor:				return(current_speed == 0 ? 8 : 30) ;
+
+	}
+
+}
+
+
+
+switch (FEAT_TRAINS, SELF, sw_CIG_7_gfx_f, position_in_articulated_veh) {
+
+	0: return sw_CIG_7_DTCL;
+
+	1: return sw_CIG_7_MBS;
+
+	2: return sw_CIG_7_DTCL_R;
+
+}
+
+switch (FEAT_TRAINS, PARENT, sw_CIG_7_gfx, vehicle_is_reversed) {
+
+	0: sw_CIG_7_gfx_f;
+
+	1: sw_REV_ID_CHECK;
+
+}
+
+switch(FEAT_TRAINS, SELF, sw_CIG_7_default, [STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100), getbits(extra_callback_info1, 8, 8)]){
+
+	0: return sw_CIG_7_gfx;
+
+	1: return sw_MK1_Headlight_Layer;
+
+}
+
+switch (FEAT_TRAINS, SELF, sw_CIG_7_car_articulated, extra_callback_info1) {
+
+	1..2: return item_CIG_7_T;
+
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+
+}
+
+switch(FEAT_TRAINS, SELF, sw_CIG_7_LIVERIES, cargo_subtype){
+
+	0: sw_livery_CNX;
+
+	1: sw_livery_SWH;
+
+	return CB_RESULT_NO_TEXT;
+
+}
+
+item (FEAT_TRAINS, item_CIG_7, 4217) {
+
+	property {
+
+		name: 							string(STR_NAME_CIG_7);
+
+		climates_available: 			ALL_CLIMATES;
+
+		introduction_date:				date(1998, 1, 1);
+
+		model_life:						25;
+
+		retire_early:					0;
+
+		vehicle_life:					50;
+
+		reliability_decay:				2;
+
+		refittable_cargo_classes:		bitmask(CC_PASSENGERS);
+
+		cargo_allow_refit:				[PASS, TOUR];
+
+		loading_speed:					22;
+
+		cost_factor:					25;
+
+		running_cost_factor:			15;
+
+		sprite_id:						SPRITE_ID_NEW_TRAIN;
+
+		speed:							90 mph;
+
+		misc_flags:						bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
+
+		refit_cost:						0;
+
+		track_type:						SAA3;
+
+		ai_special_flag:				AI_FLAG_PASSENGER;
+
+		power:							1000 hp;
+
+		running_cost_base:				RUNNING_COST_ELECTRIC;
+
+		dual_headed:					0;
+
+		default_cargo_type:				PASS;
+
+		cargo_capacity:					60;
+
+		weight:							126 ton;
+
+		tractive_effort_coefficient:	0.20;
+
+		air_drag_coefficient:			0.09;
+
+		length:							8;
+
+		effect_spawn_model_and_powered:	EFFECT_SPAWN_MODEL_ELECTRIC;
+
+		bitmask_vehicle_info:			0;
+
+		cargo_age_period:				200;
+
+		default_cargo_type:				PASS;
+
+		engine_class:					ENGINE_CLASS_ELECTRIC;
+
+	}
+
+	graphics {
+
+		default: 							sw_CIG_7_default;
+
+		purchase:							sw_CIG_7_purchase;
+
+		cargo_subtype_text:					sw_CIG_7_LIVERIES;
+
+		running_cost_factor:				return(current_speed == 0 ? 8 : 30) ;
+
+		articulated_part:					sw_CIG_7_car_articulated;
+
+		can_attach_wagon:					sw_coupling_emu_mk1;
+
+		additional_text:					string(STR_DESC_CIG_7);
+
+	}
+
+}
+
+if (param_names == 1){
+
+item (FEAT_TRAINS, item_CIG_7, 4217){
+
+	property{
+
+		name                           : string(STR_NAME_421_7) ;
+
+	}
+
+}
+
+}
+
+
+
+item (FEAT_TRAINS, item_CIG_7_T, 4218) {
+
+	property {
+
+		name: 							string(STR_NAME_CIG_7);
+
+		climates_available: 			NO_CLIMATE;
+
+		introduction_date:				date(1998, 1, 1);
+
+		model_life:						34;
+
+		retire_early:					0;
+
+		vehicle_life:					40;
+
+		reliability_decay:				2;
+
+		refittable_cargo_classes:		bitmask(CC_PASSENGERS);
+
+		cargo_allow_refit:				[PASS, TOUR];
+
+		loading_speed:					22;
+
+		cost_factor:					25;
+
+		running_cost_factor:			15;
+
+		sprite_id:						SPRITE_ID_NEW_TRAIN;
+
+		speed:							90 mph;
+
+		misc_flags:						bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
+
+		refit_cost:						0;
+
+		track_type:						SAA3;
+
+		ai_special_flag:				AI_FLAG_PASSENGER;
+
+		running_cost_base:				RUNNING_COST_ELECTRIC;
+
+		dual_headed:					0;
+
+		default_cargo_type:				PASS;
+
+		cargo_capacity:					60;
+
+		weight:							0 ton;
+
+		air_drag_coefficient:			0.09;
+
+		length:							8;
+
+		effect_spawn_model_and_powered:	EFFECT_SPAWN_MODEL_ELECTRIC;
+
+		bitmask_vehicle_info:			0;
+
+		cargo_age_period:				200;
+
+		default_cargo_type:				PASS;
+
+		engine_class:					ENGINE_CLASS_ELECTRIC;
+
+	}
+
+	graphics {
+
+		default: 							sw_CIG_7_default;
+
+		purchase:							spriteset_CIG_BRG_PURCHASE;
+
+		running_cost_factor:				return(current_speed == 0 ? 8 : 30) ;
+
+	}
+
+}
+
+
+
+
+
+switch (FEAT_TRAINS, SELF, sw_BIG_gfx_f, position_in_articulated_veh) {
+
+	0: return sw_BIG_DTCL;
+
+	1: return sw_BIG_TRB;
+
+	2: return sw_BIG_MBS;
+
+	3: return sw_BIG_DTCL_R;
+
+}
+
+switch (FEAT_TRAINS, PARENT, sw_BIG_gfx, vehicle_is_reversed) {
+
+	0: sw_BIG_gfx_f;
+
+	1: sw_REV_ID_CHECK;
+
+}
+
+switch(FEAT_TRAINS, SELF, sw_BIG_default, [STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100), getbits(extra_callback_info1, 8, 8)]){
+
+	0: return sw_BIG_gfx;
+
+	1: return sw_MK1_Headlight_Layer;
+
+}
+
+switch (FEAT_TRAINS, SELF, sw_BIG_car_articulated, extra_callback_info1) {
+
+	1..3: return item_BIG_T;
+
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+
+}
+
+switch(FEAT_TRAINS, SELF, sw_BIG_LIVERIES, cargo_subtype){
+
+	0: sw_livery_SRG;
+
+	1: sw_livery_BRG;
+
+	2: sw_livery_NSE;
+
+	return CB_RESULT_NO_TEXT;
+
+}
+
+
+
+
+
+item (FEAT_TRAINS, item_BIG, 4220) {
+
+	property {
+
+		name: 							string(STR_NAME_BIG);
+
+		climates_available: 			ALL_CLIMATES;
+
+		introduction_date:				date(1964, 1, 1);
+
+		model_life:						17;
+
+		retire_early:					0;
+
+		vehicle_life:					30;
+
+		reliability_decay:				2;
+
+		refittable_cargo_classes:		bitmask(CC_PASSENGERS);
+
+		cargo_allow_refit:				[PASS, TOUR];
+
+		loading_speed:					22;
+
+		cost_factor:					25;
+
+		running_cost_factor:			15;
+
+		sprite_id:						SPRITE_ID_NEW_TRAIN;
+
+		speed:							90 mph;
+
+		misc_flags:						bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
+
+		refit_cost:						0;
+
+		track_type:						SAA3;
+
+		ai_special_flag:				AI_FLAG_PASSENGER;
+
+		power:							1000 hp;
+
+		running_cost_base:				RUNNING_COST_ELECTRIC;
+
+		dual_headed:					0;
+
+		default_cargo_type:				PASS;
+
+		cargo_capacity:					55;
+
+		weight:							155 ton;
+
+		tractive_effort_coefficient:	0.20;
+
+		air_drag_coefficient:			0.09;
+
+		length:							8;
+
+		effect_spawn_model_and_powered:	EFFECT_SPAWN_MODEL_ELECTRIC;
+
+		bitmask_vehicle_info:			0;
+
+		cargo_age_period:				250;
+
+		default_cargo_type:				PASS;
+
+		engine_class:					ENGINE_CLASS_ELECTRIC;
+
+	}
+
+	graphics {
+
+		default: 							sw_BIG_default;
+
+		purchase:							sw_BIG_purchase;
+
+		cargo_subtype_text:					sw_BIG_LIVERIES;
+
+		running_cost_factor:				return(current_speed == 0 ? 8 : 30) ;
+
+		articulated_part:					sw_BIG_car_articulated;
+
+		can_attach_wagon:					sw_coupling_emu_mk1;
+
+		additional_text:					string(STR_DESC_BIG);
+
+	}
+
+}
+
+if (param_names == 1){
+
+item (FEAT_TRAINS, item_BIG, 4220){
+
+	property{
+
+		name                           : string(STR_NAME_422) ;
+
+	}
+
+}
+
+}
+
+
+
+item (FEAT_TRAINS, item_BIG_T, 4221) {
+
+	property {
+
+		name: 							string(STR_NAME_BIG);
+
+		climates_available: 			NO_CLIMATE;
+
+		introduction_date:				date(1964, 1, 1);
+
+		model_life:						34;
+
+		retire_early:					0;
+
+		vehicle_life:					40;
+
+		reliability_decay:				2;
+
+		refittable_cargo_classes:		bitmask(CC_PASSENGERS);
+
+		cargo_allow_refit:				[PASS, TOUR];
+
+		loading_speed:					22;
+
+		cost_factor:					25;
+
+		running_cost_factor:			15;
+
+		sprite_id:						SPRITE_ID_NEW_TRAIN;
+
+		speed:							90 mph;
+
+		misc_flags:						bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
+
+		refit_cost:						0;
+
+		track_type:						SAA3;
+
+		ai_special_flag:				AI_FLAG_PASSENGER;
+
+		running_cost_base:				RUNNING_COST_ELECTRIC;
+
+		dual_headed:					0;
+
+		default_cargo_type:				PASS;
+
+		cargo_capacity:					55;
+
+		weight:							0 ton;
+
+		air_drag_coefficient:			0.09;
+
+		length:							8;
+
+		effect_spawn_model_and_powered:	EFFECT_SPAWN_MODEL_ELECTRIC;
+
+		bitmask_vehicle_info:			0;
+
+		cargo_age_period:				250;
+
+		default_cargo_type:				PASS;
+
+		engine_class:					ENGINE_CLASS_ELECTRIC;
+
+	}
+
+	graphics {
+
+		default: 							sw_BIG_default;
+
+		purchase:							spriteset_CIG_BRG_PURCHASE;
+
+		running_cost_factor:				return(current_speed == 0 ? 8 : 30) ;
+
+	}
+
+}*/
+# 19 "SREMUs_v2.pnml" 2
 # 1 "src/items/EPB.pnml" 1
 /*IDs used in this file
 
@@ -1663,7 +3536,7 @@ item (FEAT_TRAINS, item_4EPB_S, 4150) {
   misc_flags: bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
   refit_cost: 0;
   track_type: SAA3;
-  ai_special_flag: AI_FLAG_CARGO;
+  ai_special_flag: AI_FLAG_PASSENGER;
   power: 1000 hp;
   running_cost_base: RUNNING_COST_ELECTRIC;
   dual_headed: 0;
@@ -1716,7 +3589,7 @@ item (FEAT_TRAINS, item_4EPB_S_T, 4151) {
   misc_flags: bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
   refit_cost: 0;
   track_type: SAA3;
-  ai_special_flag: AI_FLAG_CARGO;
+  ai_special_flag: AI_FLAG_PASSENGER;
   running_cost_base: RUNNING_COST_ELECTRIC;
   dual_headed: 0;
   default_cargo_type: PASS;
@@ -1781,7 +3654,7 @@ item (FEAT_TRAINS, item_2EPB_S, 4160) {
   misc_flags: bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
   refit_cost: 0;
   track_type: SAA3;
-  ai_special_flag: AI_FLAG_CARGO;
+  ai_special_flag: AI_FLAG_PASSENGER;
   power: 500 hp;
   running_cost_base: RUNNING_COST_ELECTRIC;
   dual_headed: 0;
@@ -1834,7 +3707,7 @@ item (FEAT_TRAINS, item_2EPB_S_T, 4161) {
   misc_flags: bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
   refit_cost: 0;
   track_type: SAA3;
-  ai_special_flag: AI_FLAG_CARGO;
+  ai_special_flag: AI_FLAG_PASSENGER;
   running_cost_base: RUNNING_COST_ELECTRIC;
   dual_headed: 0;
   default_cargo_type: PASS;
@@ -1899,7 +3772,7 @@ item (FEAT_TRAINS, item_HAP_S, 4140) {
   misc_flags: bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
   refit_cost: 0;
   track_type: SAA3;
-  ai_special_flag: AI_FLAG_CARGO;
+  ai_special_flag: AI_FLAG_PASSENGER;
   power: 500 hp;
   running_cost_base: RUNNING_COST_ELECTRIC;
   dual_headed: 0;
@@ -1952,7 +3825,7 @@ item (FEAT_TRAINS, item_HAP_S_T, 4141) {
   misc_flags: bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
   refit_cost: 0;
   track_type: SAA3;
-  ai_special_flag: AI_FLAG_CARGO;
+  ai_special_flag: AI_FLAG_PASSENGER;
   running_cost_base: RUNNING_COST_ELECTRIC;
   dual_headed: 0;
   default_cargo_type: PASS;
@@ -2017,7 +3890,7 @@ item (FEAT_TRAINS, item_SAP_S, 4180) {
   misc_flags: bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
   refit_cost: 0;
   track_type: SAA3;
-  ai_special_flag: AI_FLAG_CARGO;
+  ai_special_flag: AI_FLAG_PASSENGER;
   power: 500 hp;
   running_cost_base: RUNNING_COST_ELECTRIC;
   dual_headed: 0;
@@ -2070,7 +3943,7 @@ item (FEAT_TRAINS, item_SAP_S_T, 4181) {
   misc_flags: bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
   refit_cost: 0;
   track_type: SAA3;
-  ai_special_flag: AI_FLAG_CARGO;
+  ai_special_flag: AI_FLAG_PASSENGER;
   running_cost_base: RUNNING_COST_ELECTRIC;
   dual_headed: 0;
   default_cargo_type: PASS;
@@ -2137,7 +4010,7 @@ item (FEAT_TRAINS, item_4EPB_B, 4152) {
   misc_flags: bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
   refit_cost: 0;
   track_type: SAA3;
-  ai_special_flag: AI_FLAG_CARGO;
+  ai_special_flag: AI_FLAG_PASSENGER;
   power: 1000 hp;
   running_cost_base: RUNNING_COST_ELECTRIC;
   dual_headed: 0;
@@ -2190,7 +4063,7 @@ item (FEAT_TRAINS, item_4EPB_B_T, 4153) {
   misc_flags: bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
   refit_cost: 0;
   track_type: SAA3;
-  ai_special_flag: AI_FLAG_CARGO;
+  ai_special_flag: AI_FLAG_PASSENGER;
   running_cost_base: RUNNING_COST_ELECTRIC;
   dual_headed: 0;
   default_cargo_type: PASS;
@@ -2255,7 +4128,7 @@ item (FEAT_TRAINS, item_2EPB_B, 4162) {
   misc_flags: bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
   refit_cost: 0;
   track_type: SAA3;
-  ai_special_flag: AI_FLAG_CARGO;
+  ai_special_flag: AI_FLAG_PASSENGER;
   power: 500 hp;
   running_cost_base: RUNNING_COST_ELECTRIC;
   dual_headed: 0;
@@ -2308,7 +4181,7 @@ item (FEAT_TRAINS, item_2EPB_B_T, 4163) {
   misc_flags: bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
   refit_cost: 0;
   track_type: SAA3;
-  ai_special_flag: AI_FLAG_CARGO;
+  ai_special_flag: AI_FLAG_PASSENGER;
   running_cost_base: RUNNING_COST_ELECTRIC;
   dual_headed: 0;
   default_cargo_type: PASS;
@@ -2373,7 +4246,7 @@ item (FEAT_TRAINS, item_HAP_B, 4142) {
   misc_flags: bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
   refit_cost: 0;
   track_type: SAA3;
-  ai_special_flag: AI_FLAG_CARGO;
+  ai_special_flag: AI_FLAG_PASSENGER;
   power: 500 hp;
   running_cost_base: RUNNING_COST_ELECTRIC;
   dual_headed: 0;
@@ -2426,7 +4299,7 @@ item (FEAT_TRAINS, item_HAP_B_T, 4143) {
   misc_flags: bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
   refit_cost: 0;
   track_type: SAA3;
-  ai_special_flag: AI_FLAG_CARGO;
+  ai_special_flag: AI_FLAG_PASSENGER;
   running_cost_base: RUNNING_COST_ELECTRIC;
   dual_headed: 0;
   default_cargo_type: PASS;
@@ -2491,7 +4364,7 @@ item (FEAT_TRAINS, item_SAP_B, 4182) {
   misc_flags: bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
   refit_cost: 0;
   track_type: SAA3;
-  ai_special_flag: AI_FLAG_CARGO;
+  ai_special_flag: AI_FLAG_PASSENGER;
   power: 500 hp;
   running_cost_base: RUNNING_COST_ELECTRIC;
   dual_headed: 0;
@@ -2544,7 +4417,7 @@ item (FEAT_TRAINS, item_SAP_B_T, 4183) {
   misc_flags: bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
   refit_cost: 0;
   track_type: SAA3;
-  ai_special_flag: AI_FLAG_CARGO;
+  ai_special_flag: AI_FLAG_PASSENGER;
   running_cost_base: RUNNING_COST_ELECTRIC;
   dual_headed: 0;
   default_cargo_type: PASS;
@@ -2608,7 +4481,7 @@ item (FEAT_TRAINS, item_CAP, 4130) {
   misc_flags: bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
   refit_cost: 0;
   track_type: SAA3;
-  ai_special_flag: AI_FLAG_CARGO;
+  ai_special_flag: AI_FLAG_PASSENGER;
   power: 1000 hp;
   running_cost_base: RUNNING_COST_ELECTRIC;
   dual_headed: 0;
@@ -2661,7 +4534,7 @@ item (FEAT_TRAINS, item_CAP_T, 4131) {
   misc_flags: bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
   refit_cost: 0;
   track_type: SAA3;
-  ai_special_flag: AI_FLAG_CARGO;
+  ai_special_flag: AI_FLAG_PASSENGER;
   running_cost_base: RUNNING_COST_ELECTRIC;
   dual_headed: 0;
   default_cargo_type: PASS;
@@ -2681,7 +4554,7 @@ item (FEAT_TRAINS, item_CAP_T, 4131) {
   running_cost_factor: return(current_speed == 0 ? 7 : 11) ;
  }
 }
-# 18 "SREMUs_v2.pnml" 2
+# 20 "SREMUs_v2.pnml" 2
 # 1 "src/items/CIG.pnml" 1
 /*Description & explaination of subclasses in this file
 
@@ -2765,7 +4638,7 @@ item (FEAT_TRAINS, item_CIG_1, 4211) {
   misc_flags: bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
   refit_cost: 0;
   track_type: SAA3;
-  ai_special_flag: AI_FLAG_CARGO;
+  ai_special_flag: AI_FLAG_PASSENGER;
   power: 1000 hp;
   running_cost_base: RUNNING_COST_ELECTRIC;
   dual_headed: 0;
@@ -2818,7 +4691,7 @@ item (FEAT_TRAINS, item_CIG_1_T, 4213) {
   misc_flags: bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
   refit_cost: 0;
   track_type: SAA3;
-  ai_special_flag: AI_FLAG_CARGO;
+  ai_special_flag: AI_FLAG_PASSENGER;
   running_cost_base: RUNNING_COST_ELECTRIC;
   dual_headed: 0;
   default_cargo_type: PASS;
@@ -2887,7 +4760,7 @@ item (FEAT_TRAINS, item_CIG_2, 4212) {
   misc_flags: bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
   refit_cost: 0;
   track_type: SAA3;
-  ai_special_flag: AI_FLAG_CARGO;
+  ai_special_flag: AI_FLAG_PASSENGER;
   power: 1000 hp;
   running_cost_base: RUNNING_COST_ELECTRIC;
   dual_headed: 0;
@@ -2940,7 +4813,7 @@ item (FEAT_TRAINS, item_CIG_2_T, 4214) {
   misc_flags: bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
   refit_cost: 0;
   track_type: SAA3;
-  ai_special_flag: AI_FLAG_CARGO;
+  ai_special_flag: AI_FLAG_PASSENGER;
   running_cost_base: RUNNING_COST_ELECTRIC;
   dual_headed: 0;
   default_cargo_type: PASS;
@@ -3004,7 +4877,7 @@ item (FEAT_TRAINS, item_CIG_G, 4215) {
   misc_flags: bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
   refit_cost: 0;
   track_type: SAA3;
-  ai_special_flag: AI_FLAG_CARGO;
+  ai_special_flag: AI_FLAG_PASSENGER;
   power: 1000 hp;
   running_cost_base: RUNNING_COST_ELECTRIC;
   dual_headed: 0;
@@ -3057,7 +4930,7 @@ item (FEAT_TRAINS, item_CIG_G_T, 4216) {
   misc_flags: bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
   refit_cost: 0;
   track_type: SAA3;
-  ai_special_flag: AI_FLAG_CARGO;
+  ai_special_flag: AI_FLAG_PASSENGER;
   running_cost_base: RUNNING_COST_ELECTRIC;
   dual_headed: 0;
   default_cargo_type: PASS;
@@ -3119,7 +4992,7 @@ item (FEAT_TRAINS, item_CIG_7, 4217) {
   misc_flags: bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
   refit_cost: 0;
   track_type: SAA3;
-  ai_special_flag: AI_FLAG_CARGO;
+  ai_special_flag: AI_FLAG_PASSENGER;
   power: 1000 hp;
   running_cost_base: RUNNING_COST_ELECTRIC;
   dual_headed: 0;
@@ -3172,7 +5045,7 @@ item (FEAT_TRAINS, item_CIG_7_T, 4218) {
   misc_flags: bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
   refit_cost: 0;
   track_type: SAA3;
-  ai_special_flag: AI_FLAG_CARGO;
+  ai_special_flag: AI_FLAG_PASSENGER;
   running_cost_base: RUNNING_COST_ELECTRIC;
   dual_headed: 0;
   default_cargo_type: PASS;
@@ -3239,7 +5112,7 @@ item (FEAT_TRAINS, item_BIG, 4220) {
   misc_flags: bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
   refit_cost: 0;
   track_type: SAA3;
-  ai_special_flag: AI_FLAG_CARGO;
+  ai_special_flag: AI_FLAG_PASSENGER;
   power: 1000 hp;
   running_cost_base: RUNNING_COST_ELECTRIC;
   dual_headed: 0;
@@ -3292,7 +5165,7 @@ item (FEAT_TRAINS, item_BIG_T, 4221) {
   misc_flags: bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
   refit_cost: 0;
   track_type: SAA3;
-  ai_special_flag: AI_FLAG_CARGO;
+  ai_special_flag: AI_FLAG_PASSENGER;
   running_cost_base: RUNNING_COST_ELECTRIC;
   dual_headed: 0;
   default_cargo_type: PASS;
@@ -3312,7 +5185,7 @@ item (FEAT_TRAINS, item_BIG_T, 4221) {
   running_cost_factor: return(current_speed == 0 ? 8 : 30) ;
  }
 }
-# 19 "SREMUs_v2.pnml" 2
+# 21 "SREMUs_v2.pnml" 2
 # 1 "src/items/VEP.pnml" 1
 switch (FEAT_TRAINS, SELF, sw_VEP_gfx_f, position_in_articulated_veh) {
  0: return sw_VEP_DTCL;
@@ -3370,7 +5243,7 @@ item (FEAT_TRAINS, item_VEP, 4230) {
   misc_flags: bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
   refit_cost: 0;
   track_type: SAA3;
-  ai_special_flag: AI_FLAG_CARGO;
+  ai_special_flag: AI_FLAG_PASSENGER;
   power: 1000 hp;
   running_cost_base: RUNNING_COST_ELECTRIC;
   dual_headed: 0;
@@ -3425,7 +5298,7 @@ item (FEAT_TRAINS, item_VEP_T, 4231) {
   misc_flags: bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
   refit_cost: 0;
   track_type: SAA3;
-  ai_special_flag: AI_FLAG_CARGO;
+  ai_special_flag: AI_FLAG_PASSENGER;
   running_cost_base: RUNNING_COST_ELECTRIC;
   dual_headed: 0;
   default_cargo_type: PASS;
@@ -3447,7 +5320,7 @@ item (FEAT_TRAINS, item_VEP_T, 4231) {
   cargo_capacity: sw_VEP_CAPACITY;
  }
 }
-# 20 "SREMUs_v2.pnml" 2
+# 22 "SREMUs_v2.pnml" 2
 # 1 "src/items/Networker.pnml" 1
 /*Description & explaination of subclasses in this file
 
@@ -3517,7 +5390,7 @@ item (FEAT_TRAINS, item_465_0, 4650) {
   misc_flags: bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
   refit_cost: 0;
   track_type: SAA3;
-  ai_special_flag: AI_FLAG_CARGO;
+  ai_special_flag: AI_FLAG_PASSENGER;
   power: 3004 hp;
   running_cost_base: RUNNING_COST_ELECTRIC;
   dual_headed: 0;
@@ -3563,7 +5436,7 @@ item (FEAT_TRAINS, item_465_0_T, 4651) {
   misc_flags: bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
   refit_cost: 0;
   track_type: SAA3;
-  ai_special_flag: AI_FLAG_CARGO;
+  ai_special_flag: AI_FLAG_PASSENGER;
   running_cost_base: RUNNING_COST_ELECTRIC;
   dual_headed: 0;
   default_cargo_type: PASS;
@@ -3630,7 +5503,7 @@ item (FEAT_TRAINS, item_465_2, 4652) {
   misc_flags: bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
   refit_cost: 0;
   track_type: SAA3;
-  ai_special_flag: AI_FLAG_CARGO;
+  ai_special_flag: AI_FLAG_PASSENGER;
   power: 3004 hp;
   running_cost_base: RUNNING_COST_ELECTRIC;
   dual_headed: 0;
@@ -3676,7 +5549,7 @@ item (FEAT_TRAINS, item_465_2_T, 4653) {
   misc_flags: bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
   refit_cost: 0;
   track_type: SAA3;
-  ai_special_flag: AI_FLAG_CARGO;
+  ai_special_flag: AI_FLAG_PASSENGER;
   running_cost_base: RUNNING_COST_ELECTRIC;
   dual_headed: 0;
   default_cargo_type: PASS;
@@ -3740,7 +5613,7 @@ item (FEAT_TRAINS, item_465_9, 4658) {
   misc_flags: bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
   refit_cost: 0;
   track_type: SAA3;
-  ai_special_flag: AI_FLAG_CARGO;
+  ai_special_flag: AI_FLAG_PASSENGER;
   power: 3004 hp;
   running_cost_base: RUNNING_COST_ELECTRIC;
   dual_headed: 0;
@@ -3786,7 +5659,7 @@ item (FEAT_TRAINS, item_465_9_T, 4659) {
   misc_flags: bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
   refit_cost: 0;
   track_type: SAA3;
-  ai_special_flag: AI_FLAG_CARGO;
+  ai_special_flag: AI_FLAG_PASSENGER;
   running_cost_base: RUNNING_COST_ELECTRIC;
   dual_headed: 0;
   default_cargo_type: PASS;
@@ -3850,7 +5723,7 @@ item (FEAT_TRAINS, item_466, 4660) {
   misc_flags: bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
   refit_cost: 0;
   track_type: SAA3;
-  ai_special_flag: AI_FLAG_CARGO;
+  ai_special_flag: AI_FLAG_PASSENGER;
   power: 1500 hp;
   running_cost_base: RUNNING_COST_ELECTRIC;
   dual_headed: 0;
@@ -3896,7 +5769,7 @@ item (FEAT_TRAINS, item_466_T, 4661) {
   misc_flags: bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
   refit_cost: 0;
   track_type: SAA3;
-  ai_special_flag: AI_FLAG_CARGO;
+  ai_special_flag: AI_FLAG_PASSENGER;
   running_cost_base: RUNNING_COST_ELECTRIC;
   dual_headed: 0;
   default_cargo_type: PASS;
@@ -3916,4 +5789,4 @@ item (FEAT_TRAINS, item_466_T, 4661) {
   running_cost_factor: return(current_speed == 0 ? 8 : 30) ;
  }
 }
-# 20 "SREMUs_v2.pnml" 2
+# 22 "SREMUs_v2.pnml" 2

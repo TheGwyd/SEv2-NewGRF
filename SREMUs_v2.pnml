@@ -3,6 +3,7 @@
 
 //Train sprites files
 
+#include "src/sprites/319.pnml"
 #include "src/sprites/EPB.pnml"
 #include "src/sprites/CIG.pnml"
 #include "src/sprites/VEP.pnml"
@@ -14,6 +15,7 @@
 
 //Train items files
 
+#include "src/items/319.pnml"
 #include "src/items/EPB.pnml"
 #include "src/items/CIG.pnml"
 #include "src/items/VEP.pnml"

@@ -1,0 +1,478 @@
+//319 GFX
+
+//Purchase
+spriteset(spriteset_319_0_NSE_PURCHASE, "gfx/purchase_sprites/319.png") {template_purchase(0, 0)}
+spriteset(spriteset_319_0_CNX_PURCHASE, "gfx/purchase_sprites/319.png") {template_purchase(0, 13)}
+spriteset(spriteset_319_0_TLN_PURCHASE, "gfx/purchase_sprites/319.png") {template_purchase(0, 26)}
+spriteset(spriteset_319_0_TLS_PURCHASE, "gfx/purchase_sprites/319.png") {template_purchase(0, 39)}
+spriteset(spriteset_319_0_STN_PURCHASE, "gfx/purchase_sprites/319.png") {template_purchase(0, 52)}
+spriteset(spriteset_319_0_FCC_PURCHASE, "gfx/purchase_sprites/319.png") {template_purchase(0, 65)}
+spriteset(spriteset_319_0_GTR_PURCHASE, "gfx/purchase_sprites/319.png") {template_purchase(0, 78)}
+spriteset(spriteset_319_1_NSW_PURCHASE, "gfx/purchase_sprites/319.png") {template_purchase(81, 0)}
+//spriteset(spriteset_319_2_CNX_PURCHASE, "gfx/purchase_sprites/319.png") {template_purchase(0, 13)}
+//spriteset(spriteset_319_2_TLN_PURCHASE, "gfx/purchase_sprites/319.png") {template_purchase(0, 26)}
+//spriteset(spriteset_319_2_TLS_PURCHASE, "gfx/purchase_sprites/319.png") {template_purchase(0, 0)}
+//spriteset(spriteset_319_2_FCC_PURCHASE, "gfx/purchase_sprites/319.png") {template_purchase(0, 26)}
+//spriteset(spriteset_319_2_GTR_PURCHASE, "gfx/purchase_sprites/319.png") {template_purchase(0, 0)}
+//spriteset(spriteset_319_3_TLN_PURCHASE, "gfx/purchase_sprites/319.png") {template_purchase(0, 26)}
+//spriteset(spriteset_319_3_TLS_PURCHASE, "gfx/purchase_sprites/319.png") {template_purchase(0, 0)}
+//spriteset(spriteset_319_3_FCC_PURCHASE, "gfx/purchase_sprites/319.png") {template_purchase(0, 26)}
+//spriteset(spriteset_319_3_GTR_PURCHASE, "gfx/purchase_sprites/319.png") {template_purchase(0, 0)}
+//spriteset(spriteset_319_4_TLN_PURCHASE, "gfx/purchase_sprites/319.png") {template_purchase(0, 26)}
+//spriteset(spriteset_319_4_TLS_PURCHASE, "gfx/purchase_sprites/319.png") {template_purchase(0, 0)}
+//spriteset(spriteset_319_4_FCC_PURCHASE, "gfx/purchase_sprites/319.png") {template_purchase(0, 26)}
+//spriteset(spriteset_319_4_GTR_PURCHASE, "gfx/purchase_sprites/319.png") {template_purchase(0, 0)}
+
+//DTSO
+spriteset(spriteset_319_0_NSE_DTSO, 		"gfx/v2_319.png") {template_8_8_networker(0, 0)}
+spriteset(spriteset_319_1_NSW_DTSO, 		"gfx/v2_319.png") {template_8_8_networker(0, 100)}
+spriteset(spriteset_319_0_2_CNX_DTSO, 		"gfx/v2_319.png") {template_8_8_networker(0, 225)}
+spriteset(spriteset_319_0_2_4_TLN_DTSO, 	"gfx/v2_319.png") {template_8_8_networker(0, 350)}
+//spriteset(spriteset_319_3_TLN_DTSO, 		"gfx/v2_319.png") {template_8_8_networker(0, 0)}
+spriteset(spriteset_319_0_2_4_TLS_DTSO, 	"gfx/v2_319.png") {template_8_8_networker(0, 500)}
+//spriteset(spriteset_319_3_TLS_DTSO, 		"gfx/v2_319.png") {template_8_8_networker(0, 0)}
+spriteset(spriteset_319_0_STN_DTSO, 		"gfx/v2_319.png") {template_8_8_networker(0, 150)}
+spriteset(spriteset_319_0_2_4_FCC_DTSO, 	"gfx/v2_319.png") {template_8_8_networker(0, 0)}
+//spriteset(spriteset_319_3_FCC_DTSO, 		"gfx/v2_319.png") {template_8_8_networker(0, 0)}
+spriteset(spriteset_319_0_2_4_GTR_DTSO, 	"gfx/v2_319.png") {template_8_8_networker(0, 0)}
+//spriteset(spriteset_319_3_GTR_DTSO, 		"gfx/v2_319.png") {template_8_8_networker(0, 0)}
+
+
+spriteset(spriteset_319_0_NSE_DTSO_r,		"gfx/v2_319.png") {template_8_8_networker_reverse(0, 0)}
+spriteset(spriteset_319_1_NSW_DTSO_r,		"gfx/v2_319.png") {template_8_8_networker_reverse(0, 100)}
+spriteset(spriteset_319_0_2_CNX_DTSO_r,		"gfx/v2_319.png") {template_8_8_networker_reverse(0, 225)}
+spriteset(spriteset_319_0_2_4_TLN_DTSO_r, 	"gfx/v2_319.png") {template_8_8_networker_reverse(0, 350)}
+//spriteset(spriteset_319_3_TLN_DTSO_r,		"gfx/v2_319.png") {template_8_8_networker_reverse(0, 0)}
+spriteset(spriteset_319_0_2_4_TLS_DTSO_r,	"gfx/v2_319.png") {template_8_8_networker_reverse(0, 500)}
+//spriteset(spriteset_319_3_TLS_DTSO_r, 	"gfx/v2_319.png") {template_8_8_networker_reverse(0, 0)}
+spriteset(spriteset_319_0_STN_DTSO_r,		"gfx/v2_319.png") {template_8_8_networker_reverse(0, 150)}
+spriteset(spriteset_319_0_2_4_FCC_DTSO_r,	"gfx/v2_319.png") {template_8_8_networker_reverse(0, 0)}
+//spriteset(spriteset_319_3_FCC_DTSO_r,		"gfx/v2_319.png") {template_8_8_networker_reverse(0, 0)}
+spriteset(spriteset_319_0_2_4_GTR_DTSO_r,	"gfx/v2_319.png") {template_8_8_networker_reverse(0, 0)}
+//spriteset(spriteset_319_3_GTR_DTSO_r,		"gfx/v2_319.png") {template_8_8_networker_reverse(0, 0)}
+
+//DTCO
+spriteset(spriteset_319_1_NSW_DTCO, "gfx/v2_319.png") {template_8_8_networker(0, 125)}
+spriteset(spriteset_319_2_CNX_DTCO, "gfx/v2_319.png") {template_8_8_networker(0, 250)}
+spriteset(spriteset_319_2_4_TLN_DTCO, "gfx/v2_319.png") {template_8_8_networker(0, 375)}
+spriteset(spriteset_319_2_4_TLS_DTCO, "gfx/v2_319.png") {template_8_8_networker(0, 525)}
+spriteset(spriteset_319_2_4_FCC_DTCO, "gfx/v2_319.png") {template_8_8_networker(0, 0)}
+spriteset(spriteset_319_2_4_GTR_DTCO, "gfx/v2_319.png") {template_8_8_networker(0, 0)}
+
+spriteset(spriteset_319_1_NSW_DTCO_r, "gfx/v2_319.png") {template_8_8_networker_reverse(0, 125)}
+spriteset(spriteset_319_2_CNX_DTCO_r, "gfx/v2_319.png") {template_8_8_networker_reverse(0, 250)}
+spriteset(spriteset_319_2_4_TLN_DTCO_r, "gfx/v2_319.png") {template_8_8_networker_reverse(0, 375)}
+spriteset(spriteset_319_2_4_TLS_DTCO_r, "gfx/v2_319.png") {template_8_8_networker_reverse(0, 525)}
+spriteset(spriteset_319_2_4_FCC_DTCO_r, "gfx/v2_319.png") {template_8_8_networker_reverse(0, 0)}
+spriteset(spriteset_319_2_4_GTR_DTCO_r, "gfx/v2_319.png") {template_8_8_networker_reverse(0, 0)}
+
+//TSO
+spriteset(spriteset_319_0_NSE_TSO, "gfx/v2_319.png") {template_8_4_networker(0, 25)}
+spriteset(spriteset_319_1_NSW_TSO, "gfx/v2_319.png") {template_8_4_networker(0, 25)}
+spriteset(spriteset_319_0_2_CNX_TSO, "gfx/v2_319.png") {template_8_4_networker(0, 275)}
+spriteset(spriteset_319_0_2_3_4_TLN_TSO, "gfx/v2_319.png") {template_8_4_networker(0, 425)}
+spriteset(spriteset_319_0_2_3_4_TLS_TSO, "gfx/v2_319.png") {template_8_4_networker(179, 25)}
+spriteset(spriteset_319_0_STN_TSO, "gfx/v2_319.png") {template_8_4_networker(0, 0)}
+spriteset(spriteset_319_0_2_3_4_FCC_TSO, "gfx/v2_319.png") {template_8_4_networker(0, 0)}
+spriteset(spriteset_319_0_2_3_4_GTR_TSO, "gfx/v2_319.png") {template_8_4_networker(0, 0)}
+
+/*Only has 4 views, no need for reversed sprites*/
+
+//MSO(L) (pan down)
+spriteset(spriteset_319_NSE_MSO_xP, "gfx/v2_319.png") {template_8_8_networker(0, 50)}
+spriteset(spriteset_319_NSW_MSO_xP, "gfx/v2_319.png") {template_8_8_networker(0, 50)}
+spriteset(spriteset_319_CNX_MSO_xP, "gfx/v2_319.png") {template_8_8_networker(0, 300)}
+spriteset(spriteset_319_TLN_MSO_xP, "gfx/v2_319.png") {template_8_8_networker(0, 450)}
+spriteset(spriteset_319_TLS_MSO_xP, "gfx/v2_319.png") {template_8_8_networker(179, 50)}
+spriteset(spriteset_319_STN_MSO_xP, "gfx/v2_319.png") {template_8_8_networker(179, 200)}
+spriteset(spriteset_319_FCC_MSO_xP, "gfx/v2_319.png") {template_8_8_networker(0, 350)}
+spriteset(spriteset_319_GTR_MSO_xP, "gfx/v2_319.png") {template_8_8_networker(0, 350)}
+
+spriteset(spriteset_319_NSE_MSO_xP_r, "gfx/v2_319.png") {template_8_8_networker_reverse(0, 50)}
+spriteset(spriteset_319_NSW_MSO_xP_r, "gfx/v2_319.png") {template_8_8_networker_reverse(0, 50)}
+spriteset(spriteset_319_CNX_MSO_xP_r, "gfx/v2_319.png") {template_8_8_networker_reverse(0, 300)}
+spriteset(spriteset_319_TLN_MSO_xP_r, "gfx/v2_319.png") {template_8_8_networker_reverse(0, 450)}
+spriteset(spriteset_319_TLS_MSO_xP_r, "gfx/v2_319.png") {template_8_8_networker_reverse(179, 50)}
+spriteset(spriteset_319_STN_MSO_xP_r, "gfx/v2_319.png") {template_8_8_networker_reverse(179, 200)}
+spriteset(spriteset_319_FCC_MSO_xP_r, "gfx/v2_319.png") {template_8_8_networker_reverse(0, 350)}
+spriteset(spriteset_319_GTR_MSO_xP_r, "gfx/v2_319.png") {template_8_8_networker_reverse(0, 350)}
+
+//MSO(L) (pan up)
+spriteset(spriteset_319_NSE_MSO_P, "gfx/v2_319.png") {template_8_8_networker(0, 75)}
+spriteset(spriteset_319_NSW_MSO_P, "gfx/v2_319.png") {template_8_8_networker(0, 50)}
+spriteset(spriteset_319_CNX_MSO_P, "gfx/v2_319.png") {template_8_8_networker(0, 325)}
+spriteset(spriteset_319_TLN_MSO_P, "gfx/v2_319.png") {template_8_8_networker(0, 475)}
+spriteset(spriteset_319_TLS_MSO_P, "gfx/v2_319.png") {template_8_8_networker(179, 75)}
+spriteset(spriteset_319_STN_MSO_P, "gfx/v2_319.png") {template_8_8_networker(179, 200)}
+spriteset(spriteset_319_FCC_MSO_P, "gfx/v2_319.png") {template_8_8_networker(0, 350)}
+spriteset(spriteset_319_GTR_MSO_P, "gfx/v2_319.png") {template_8_8_networker(0, 350)}
+
+spriteset(spriteset_319_NSE_MSO_P_r, "gfx/v2_319.png") {template_8_8_networker_reverse(0, 75)}
+spriteset(spriteset_319_NSW_MSO_P_r, "gfx/v2_319.png") {template_8_8_networker_reverse(0, 50)}
+spriteset(spriteset_319_CNX_MSO_P_r, "gfx/v2_319.png") {template_8_8_networker_reverse(0, 325)}
+spriteset(spriteset_319_TLN_MSO_P_r, "gfx/v2_319.png") {template_8_8_networker_reverse(0, 475)}
+spriteset(spriteset_319_TLS_MSO_P_r, "gfx/v2_319.png") {template_8_8_networker_reverse(179, 75)}
+spriteset(spriteset_319_STN_MSO_P_r, "gfx/v2_319.png") {template_8_8_networker_reverse(179, 200)}
+spriteset(spriteset_319_FCC_MSO_P_r, "gfx/v2_319.png") {template_8_8_networker_reverse(0, 350)}
+spriteset(spriteset_319_GTR_MSO_P_r, "gfx/v2_319.png") {template_8_8_networker_reverse(0, 350)}
+
+//Headlights
+spriteset(spriteset_319_Headlight, "gfx/v2_319.png") {template_8_8_networker(179, 500)}
+spriteset(spriteset_319_Taillight, "gfx/v2_319.png") {template_8_8_networker_reverse(179, 525)}
+
+//319 Headlight code
+switch (FEAT_TRAINS, SELF, sw_319_Headlight, position_in_consist) {
+	0: return spriteset_319_Headlight;
+	return blank;
+}
+
+switch (FEAT_TRAINS, SELF, sw_319_Headlight_Layer, position_in_consist_from_end) {
+	0: return spriteset_319_Taillight;
+	return sw_319_Headlight;
+}
+
+//Purchase sprite code
+switch (FEAT_TRAINS, PARENT, sw_319_0_purchase, current_year) {
+	0..1996: spriteset_319_0_NSE_PURCHASE;
+	1997..2000: spriteset_319_0_TLN_PURCHASE;
+	2001..2002: spriteset_319_0_TLS_PURCHASE;
+	2003..2005: spriteset_319_0_STN_PURCHASE;
+	2006..2015: spriteset_319_0_FCC_PURCHASE;
+	spriteset_319_0_GTR_PURCHASE;
+}
+
+switch (FEAT_TRAINS, PARENT, sw_319_1_purchase, current_year) {
+	spriteset_319_1_NSW_PURCHASE;
+}
+/*
+switch (FEAT_TRAINS, PARENT, sw_319_2_purchase, current_year) {
+	0..2000: spriteset_319_2_TLN_PURCHASE;
+	2001..2005: spriteset_319_2_TLS_PURCHASE;
+	2006..2015: spriteset_319_2_FCC_PURCHASE;
+	spriteset_319_2_GTR_PURCHASE;
+}
+
+switch (FEAT_TRAINS, PARENT, sw_319_3_purchase, current_year) {
+	0..2000: spriteset_319_3_TLN_PURCHASE;
+	2001..2005: spriteset_319_3_TLS_PURCHASE;
+	2006..2015: spriteset_319_3_FCC_PURCHASE;
+	spriteset_319_3_GTR_PURCHASE;
+}
+
+switch (FEAT_TRAINS, PARENT, sw_319_4_purchase, current_year) {
+	0..2000: spriteset_319_4_TLN_PURCHASE;
+	2001..2005: spriteset_319_4_TLS_PURCHASE;
+	2006..2015: spriteset_319_4_FCC_PURCHASE;
+	spriteset_319_4_GTR_PURCHASE;
+}*/
+
+//Class 319/0 code
+switch (FEAT_TRAINS, SELF, sw_319_0_DTSO, cargo_subtype) {
+	0: spriteset_319_0_NSE_DTSO;
+	1: spriteset_319_0_2_CNX_DTSO;
+	2: spriteset_319_0_2_4_TLN_DTSO;
+	3: spriteset_319_0_2_4_TLS_DTSO;
+	4: spriteset_319_0_STN_DTSO;
+	5: spriteset_319_0_2_4_FCC_DTSO;
+	6: spriteset_319_0_2_4_GTR_DTSO;
+}
+switch (FEAT_TRAINS, SELF, sw_319_0_TSO, cargo_subtype) {
+	0: spriteset_319_0_NSE_TSO;
+	1: spriteset_319_0_2_CNX_TSO;
+	2: spriteset_319_0_2_3_4_TLN_TSO;
+	3: spriteset_319_0_2_3_4_TLS_TSO;
+	4: spriteset_319_0_STN_TSO;
+	5: spriteset_319_0_2_3_4_FCC_TSO;
+	6: spriteset_319_0_2_3_4_GTR_TSO;
+}
+switch (FEAT_TRAINS, SELF, sw_319_0_MSO_xP, cargo_subtype) {
+	0: spriteset_319_NSE_MSO_xP;
+	1: spriteset_319_CNX_MSO_xP;
+	2: spriteset_319_TLN_MSO_xP;
+	3: spriteset_319_TLS_MSO_xP;
+	4: spriteset_319_STN_MSO_xP;
+	5: spriteset_319_FCC_MSO_xP;
+	6: spriteset_319_GTR_MSO_xP;
+}
+switch (FEAT_TRAINS, SELF, sw_319_0_MSO_P, cargo_subtype) {
+	0: spriteset_319_NSE_MSO_P;
+	1: spriteset_319_CNX_MSO_P;
+	2: spriteset_319_TLN_MSO_P;
+	3: spriteset_319_TLS_MSO_P;
+	4: spriteset_319_STN_MSO_P;
+	5: spriteset_319_FCC_MSO_P;
+	6: spriteset_319_GTR_MSO_P;
+}
+switch (FEAT_TRAINS, PARENT, sw_319_0_MSO, current_railtype) {
+	ELRL : sw_319_0_MSO_P;
+	sw_319_0_MSO_xP;
+}
+switch (FEAT_TRAINS, SELF, sw_319_0_DTSO_R, cargo_subtype) {
+	0: spriteset_319_0_NSE_DTSO_r;
+	1: spriteset_319_0_2_CNX_DTSO_r;
+	2: spriteset_319_0_2_4_TLN_DTSO_r;
+	3: spriteset_319_0_2_4_TLS_DTSO_r;
+	4: spriteset_319_0_STN_DTSO_r;
+	5: spriteset_319_0_2_4_FCC_DTSO_r;
+	6: spriteset_319_0_2_4_GTR_DTSO_r;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_319_0_DTSO_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_319_0_NSE_DTSO_r;
+	1: spriteset_319_0_2_CNX_DTSO_r;
+	2: spriteset_319_0_2_4_TLN_DTSO_r;
+	3: spriteset_319_0_2_4_TLS_DTSO_r;
+	4: spriteset_319_0_STN_DTSO_r;
+	5: spriteset_319_0_2_4_FCC_DTSO_r;
+	6: spriteset_319_0_2_4_GTR_DTSO_r;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_319_0_TSO_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_319_0_NSE_TSO;
+	1: spriteset_319_0_2_CNX_TSO;
+	2: spriteset_319_0_2_3_4_TLN_TSO;
+	3: spriteset_319_0_2_3_4_TLS_TSO;
+	4: spriteset_319_0_STN_TSO;
+	5: spriteset_319_0_2_3_4_FCC_TSO;
+	6: spriteset_319_0_2_3_4_GTR_TSO;
+}
+switch (FEAT_TRAINS, SELF, sw_REV_319_0_MSO_xP,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_319_NSE_MSO_xP;
+	1: spriteset_319_CNX_MSO_xP;
+	2: spriteset_319_TLN_MSO_xP;
+	3: spriteset_319_TLS_MSO_xP;
+	4: spriteset_319_STN_MSO_xP;
+	5: spriteset_319_FCC_MSO_xP;
+	6: spriteset_319_GTR_MSO_xP;
+}
+switch (FEAT_TRAINS, SELF, sw_REV_319_0_MSO_P,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_319_NSE_MSO_P;
+	1: spriteset_319_CNX_MSO_P;
+	2: spriteset_319_TLN_MSO_P;
+	3: spriteset_319_TLS_MSO_P;
+	4: spriteset_319_STN_MSO_P;
+	5: spriteset_319_FCC_MSO_P;
+	6: spriteset_319_GTR_MSO_P;
+}
+switch (FEAT_TRAINS, PARENT, sw_REV_319_0_MSO, current_railtype) {
+	ELRL : sw_REV_319_0_MSO_P;
+	sw_REV_319_0_MSO_xP;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_319_0_DTSO_R_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_319_0_NSE_DTSO;
+	1: spriteset_319_0_2_CNX_DTSO;
+	2: spriteset_319_0_2_4_TLN_DTSO;
+	3: spriteset_319_0_2_4_TLS_DTSO;
+	4: spriteset_319_0_STN_DTSO;
+	5: spriteset_319_0_2_4_FCC_DTSO;
+	6: spriteset_319_0_2_4_GTR_DTSO;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_319_0_POSITION,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x000000FF, 0x4D]]){
+	0: sw_REV_319_0_DTSO_livery;
+	1: sw_REV_319_0_MSO;
+	2: sw_REV_319_0_TSO_livery;
+	3: sw_REV_319_0_DTSO_R_livery;
+}
+/* 
+
+
+!!!!DON'T FORGET TO DO THE OTHER 319S AT SOME POINT!!!!
+
+
+
+//Class 319/1
+switch (FEAT_TRAINS, SELF, sw_319_2_DTCL, cargo_subtype) {
+	0: spriteset_319_SRG_DTCL;
+	1: spriteset_319_BRG_DTCL;
+	2: spriteset_319_NSE_DTCL;
+	3: spriteset_319_SWT_DTCL;
+	4: spriteset_319_CNX_DTCL;
+	5: spriteset_319_CNG_DTCL;
+	6: spriteset_319_STN_DTCL;
+}
+switch (FEAT_TRAINS, SELF, sw_319_2_TS, cargo_subtype) {
+	0: spriteset_319_SRG_TS;
+	1: spriteset_319_BRG_TS;
+	2: spriteset_319_NSE_TS;
+	3: spriteset_319_SWT_TS;
+	4: spriteset_319_CNX_TS;
+	5: spriteset_319_CNG_TS;
+	6: spriteset_319_STN_TS;
+}
+switch (FEAT_TRAINS, SELF, sw_319_2_MBS, cargo_subtype) {
+	0: spriteset_319_SRG_MBS;
+	1: spriteset_319_BRG_MBS;
+	2: spriteset_319_NSE_MBS;
+	3: spriteset_319_SWT_MBS;
+	4: spriteset_319_CNX_MBS;
+	5: spriteset_319_CNG_MBS;
+	6: spriteset_319_STN_MBS;
+}
+switch (FEAT_TRAINS, SELF, sw_319_2_DTCL_R, cargo_subtype) {
+	0: spriteset_319_SRG_DTCL_r;
+	1: spriteset_319_BRG_DTCL_r;
+	2: spriteset_319_NSE_DTCL_r;
+	3: spriteset_319_SWT_DTCL_r;
+	4: spriteset_319_CNX_DTCL_r;
+	5: spriteset_319_CNG_DTCL_r;
+	6: spriteset_319_STN_DTCL_r;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_319_2_DTCL_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_319_SRG_DTCL_r;
+	1: spriteset_319_BRG_DTCL_r;
+	2: spriteset_319_NSE_DTCL_r;
+	3: spriteset_319_SWT_DTCL_r;
+	4: spriteset_319_CNX_DTCL_r;
+	5: spriteset_319_CNG_DTCL_r;
+	6: spriteset_319_STN_DTCL_r;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_319_2_TS_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_319_SRG_TS;
+	1: spriteset_319_BRG_TS;
+	2: spriteset_319_NSE_TS;
+	3: spriteset_319_SWT_TS;
+	4: spriteset_319_CNX_TS;
+	5: spriteset_319_CNG_TS;
+	6: spriteset_319_STN_TS;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_319_2_MBS_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_319_SRG_MBS_r;
+	1: spriteset_319_BRG_MBS_r;
+	2: spriteset_319_NSE_MBS_r;
+	3: spriteset_319_SWT_MBS_r;
+	4: spriteset_319_CNX_MBS_r;
+	5: spriteset_319_CNG_MBS_r;
+	6: spriteset_319_STN_MBS_r;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_319_2_DTCL_R_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_319_SRG_DTCL;
+	1: spriteset_319_BRG_DTCL;
+	2: spriteset_319_NSE_DTCL;
+	3: spriteset_319_SWT_DTCL;
+	4: spriteset_319_CNX_DTCL;
+	5: spriteset_319_CNG_DTCL;
+	6: spriteset_319_STN_DTCL;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_319_2_POSITION,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x000000FF, 0x4D]]){
+	0: sw_REV_319_2_DTCL_livery;
+	1: sw_REV_319_2_TS_livery;
+	2: sw_REV_319_2_MBS_livery;
+	3: sw_REV_319_2_DTCL_R_livery;
+}
+
+//Class 319/2
+switch (FEAT_TRAINS, SELF, sw_319_G_DTCL, cargo_subtype) {
+	0: spriteset_319_NSE_DTCL;
+	1: spriteset_319_SWT_DTCL;
+}
+switch (FEAT_TRAINS, SELF, sw_319_G_TS, cargo_subtype) {
+	0: spriteset_319_NSE_TS;
+	1: spriteset_319_SWT_TS;
+}
+switch (FEAT_TRAINS, SELF, sw_319_G_MBS, cargo_subtype) {
+	0: spriteset_319_NSE_MBS;
+	1: spriteset_319_SWT_MBS;
+}
+switch (FEAT_TRAINS, SELF, sw_319_G_DTCL_R, cargo_subtype) {
+	0: spriteset_319_NSE_DTCL_r;
+	1: spriteset_319_SWT_DTCL_r;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_319_G_DTCL_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_319_NSE_DTCL_r;
+	1: spriteset_319_SWT_DTCL_r;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_319_G_TS_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_319_NSE_TS;
+	1: spriteset_319_SWT_TS;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_319_G_MBS_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_319_NSE_MBS_r;
+	1: spriteset_319_SWT_MBS_r;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_319_G_DTCL_R_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_319_NSE_DTCL;
+	1: spriteset_319_SWT_DTCL;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_319_G_POSITION,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x000000FF, 0x4D]]){
+	0: sw_REV_319_G_DTCL_livery;
+	1: sw_REV_319_G_TS_livery;
+	2: sw_REV_319_G_MBS_livery;
+	3: sw_REV_319_G_DTCL_R_livery;
+}
+
+//Class 319/3
+switch (FEAT_TRAINS, SELF, sw_319_7_DTCL, cargo_subtype) {
+	0: spriteset_319_CNX_DTCL;
+	1: spriteset_319_SWH_DTCL;
+}
+switch (FEAT_TRAINS, SELF, sw_319_7_MBS, cargo_subtype) {
+	0: spriteset_319_CNX_MBS;
+	1: spriteset_319_SRG_MBS;
+}
+switch (FEAT_TRAINS, SELF, sw_319_7_DTCL_R, cargo_subtype) {
+	0: spriteset_319_CNX_DTCL_r;
+	1: spriteset_319_SWH_DTCL_r;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_319_7_DTCL_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_319_CNX_DTCL_r;
+	1: spriteset_319_SWH_DTCL_r;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_319_7_TS_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_319_CNX_MBS_r;
+	1: spriteset_319_SRG_MBS_r;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_319_7_DTCL_R_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_319_CNX_DTCL;
+	1: spriteset_319_SWH_DTCL;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_319_7_POSITION,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x000000FF, 0x4D]]){
+	0: sw_REV_319_7_DTCL_livery;
+	1: sw_REV_319_7_TS_livery;
+	2: sw_REV_319_7_DTCL_R_livery;
+}
+
+//Class 319/4
+switch (FEAT_TRAINS, SELF, sw_BIG_DTCL, cargo_subtype) {
+	0: spriteset_319_SRG_DTCL;
+	1: spriteset_319_BRG_DTCL;
+	2: spriteset_319_NSE_DTCL;
+}
+switch (FEAT_TRAINS, SELF, sw_BIG_TRB, cargo_subtype) {
+	0: spriteset_319_SRG_TRB;
+	1: spriteset_319_BRG_TRB;
+	2: spriteset_319_NSE_TRB;
+}
+switch (FEAT_TRAINS, SELF, sw_BIG_MBS, cargo_subtype) {
+	0: spriteset_319_SRG_MBS;
+	1: spriteset_319_BRG_MBS;
+	2: spriteset_319_NSE_MBS;
+}
+switch (FEAT_TRAINS, SELF, sw_BIG_DTCL_R, cargo_subtype) {
+	0: spriteset_319_SRG_DTCL_r;
+	1: spriteset_319_BRG_DTCL_r;
+	2: spriteset_319_NSE_DTCL_r;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_BIG_DTCL_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_319_SRG_DTCL_r;
+	1: spriteset_319_BRG_DTCL_r;
+	2: spriteset_319_NSE_DTCL_r;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_BIG_TS_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_319_SRG_TRB_r;
+	1: spriteset_319_BRG_TRB_r;
+	2: spriteset_319_NSE_TRB_r;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_BIG_MBS_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_319_SRG_MBS_r;
+	1: spriteset_319_BRG_MBS_r;
+	2: spriteset_319_NSE_MBS_r;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_BIG_DTCL_R_livery,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]){
+	0: spriteset_319_SRG_DTCL;
+	1: spriteset_319_BRG_DTCL;
+	2: spriteset_319_NSE_DTCL;
+}
+switch(FEAT_TRAINS,SELF,sw_REV_BIG_POSITION,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x000000FF, 0x4D]]){
+	0: sw_REV_BIG_DTCL_livery;
+	1: sw_REV_BIG_TS_livery;
+	2: sw_REV_BIG_MBS_livery;
+	3: sw_REV_BIG_DTCL_R_livery;
+}*/

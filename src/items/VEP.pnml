@@ -54,7 +54,7 @@ item (FEAT_TRAINS, item_VEP, 4230) {
 		misc_flags:						bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
 		refit_cost:						0;
 		track_type:						SAA3;
-		ai_special_flag:				AI_FLAG_CARGO;
+		ai_special_flag:				AI_FLAG_PASSENGER;
 		power:							1000 hp;
 		running_cost_base:				RUNNING_COST_ELECTRIC;
 		dual_headed:					0;
@@ -109,7 +109,7 @@ item (FEAT_TRAINS, item_VEP_T, 4231) {
 		misc_flags:						bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
 		refit_cost:						0;
 		track_type:						SAA3;
-		ai_special_flag:				AI_FLAG_CARGO;
+		ai_special_flag:				AI_FLAG_PASSENGER;
 		running_cost_base:				RUNNING_COST_ELECTRIC;
 		dual_headed:					0;
 		default_cargo_type:				PASS;

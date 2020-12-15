@@ -56,7 +56,7 @@ item (FEAT_TRAINS, item_465_0, 4650) {
 		misc_flags:						bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
 		refit_cost:						0;
 		track_type:						SAA3;
-		ai_special_flag:				AI_FLAG_CARGO;
+		ai_special_flag:				AI_FLAG_PASSENGER;
 		power:							3004 hp;
 		running_cost_base:				RUNNING_COST_ELECTRIC;
 		dual_headed:					0;
@@ -102,7 +102,7 @@ item (FEAT_TRAINS, item_465_0_T, 4651) {
 		misc_flags:						bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
 		refit_cost:						0;
 		track_type:						SAA3;
-		ai_special_flag:				AI_FLAG_CARGO;
+		ai_special_flag:				AI_FLAG_PASSENGER;
 		running_cost_base:				RUNNING_COST_ELECTRIC;
 		dual_headed:					0;
 		default_cargo_type:				PASS;
@@ -169,7 +169,7 @@ item (FEAT_TRAINS, item_465_2, 4652) {
 		misc_flags:						bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
 		refit_cost:						0;
 		track_type:						SAA3;
-		ai_special_flag:				AI_FLAG_CARGO;
+		ai_special_flag:				AI_FLAG_PASSENGER;
 		power:							3004 hp;
 		running_cost_base:				RUNNING_COST_ELECTRIC;
 		dual_headed:					0;
@@ -215,7 +215,7 @@ item (FEAT_TRAINS, item_465_2_T, 4653) {
 		misc_flags:						bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
 		refit_cost:						0;
 		track_type:						SAA3;
-		ai_special_flag:				AI_FLAG_CARGO;
+		ai_special_flag:				AI_FLAG_PASSENGER;
 		running_cost_base:				RUNNING_COST_ELECTRIC;
 		dual_headed:					0;
 		default_cargo_type:				PASS;
@@ -279,7 +279,7 @@ item (FEAT_TRAINS, item_465_9, 4658) {
 		misc_flags:						bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
 		refit_cost:						0;
 		track_type:						SAA3;
-		ai_special_flag:				AI_FLAG_CARGO;
+		ai_special_flag:				AI_FLAG_PASSENGER;
 		power:							3004 hp;
 		running_cost_base:				RUNNING_COST_ELECTRIC;
 		dual_headed:					0;
@@ -325,7 +325,7 @@ item (FEAT_TRAINS, item_465_9_T, 4659) {
 		misc_flags:						bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
 		refit_cost:						0;
 		track_type:						SAA3;
-		ai_special_flag:				AI_FLAG_CARGO;
+		ai_special_flag:				AI_FLAG_PASSENGER;
 		running_cost_base:				RUNNING_COST_ELECTRIC;
 		dual_headed:					0;
 		default_cargo_type:				PASS;
@@ -389,7 +389,7 @@ item (FEAT_TRAINS, item_466, 4660) {
 		misc_flags:						bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
 		refit_cost:						0;
 		track_type:						SAA3;
-		ai_special_flag:				AI_FLAG_CARGO;
+		ai_special_flag:				AI_FLAG_PASSENGER;
 		power:							1500 hp;
 		running_cost_base:				RUNNING_COST_ELECTRIC;
 		dual_headed:					0;
@@ -435,7 +435,7 @@ item (FEAT_TRAINS, item_466_T, 4661) {
 		misc_flags:						bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
 		refit_cost:						0;
 		track_type:						SAA3;
-		ai_special_flag:				AI_FLAG_CARGO;
+		ai_special_flag:				AI_FLAG_PASSENGER;
 		running_cost_base:				RUNNING_COST_ELECTRIC;
 		dual_headed:					0;
 		default_cargo_type:				PASS;

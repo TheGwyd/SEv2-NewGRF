@@ -1,4 +1,14 @@
 switch(FEAT_TRAINS,SELF,sw_REV_ID_CHECK,[STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xC6]]){
+	3190: sw_REV_319_0_POSITION;
+	//3191:
+	//3192:
+	//3193:
+	//3194:
+	3195: sw_REV_319_0_POSITION;
+	//3196:
+	//3197:
+	//3198:
+	//3199:
 	4130: sw_REV_CAP_POSITION;
 	4131: sw_REV_CAP_POSITION;
 	4140: sw_REV_HAP_S_POSITION;

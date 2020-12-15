@@ -91,7 +91,7 @@ template template_8_4_networker(x,y){
     [ x+67, y, 21, 18, -6, -10]
 }
 
-spriteset(blank, "gfx/New42x.png") {
+spriteset(blank, "gfx/v2_latemk1.png") {
     [ 0, 0, 1, 1, 0, 0]
 }
 
@@ -146,6 +146,16 @@ switch (FEAT_TRAINS, SELF, sw_livery_CNG, current_year > 1996) {
 	return CB_RESULT_NO_TEXT;
 }
 
+switch (FEAT_TRAINS, SELF, sw_livery_TLN, current_year > 1996) {
+	1: return string(STR_TLN);
+	return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, sw_livery_TLS, current_year > 2000) {
+	1: return string(STR_TLS);
+	return CB_RESULT_NO_TEXT;
+}
+
 switch (FEAT_TRAINS, SELF, sw_livery_STN, current_year > 2000) {
 	1: return string(STR_STN);
 	return CB_RESULT_NO_TEXT;
@@ -161,8 +171,18 @@ switch (FEAT_TRAINS, SELF, sw_livery_SET, current_year > 2002) {
 	return CB_RESULT_NO_TEXT;
 }
 
+switch (FEAT_TRAINS, SELF, sw_livery_FCC, current_year > 2005) {
+	1: return string(STR_FCC);
+	return CB_RESULT_NO_TEXT;
+}
+
 switch (FEAT_TRAINS, SELF, sw_livery_SEB, current_year > 2006) {
 	1: return string(STR_SEB);
+	return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, sw_livery_GTR, current_year > 2015) {
+	1: return string(STR_GTR);
 	return CB_RESULT_NO_TEXT;
 }
 	
