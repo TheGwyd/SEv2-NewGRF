@@ -1,0 +1,192 @@
+/*Description & explaination of subclasses in this file
+4-SUB "Sheba", HAL-style front, composite trailers initially, change in x-section between cab & body 9/11/11/9 compartments Jun '45-Feb '46				4101-4110
+4-SUB, 405/1 "Marys", Revised front, wider compartments, constant cross section, all steel Apr '46- Oct '47												4111-4130, 4355-4377
+4-SUB, 405/1/2 "Standard", Revised front, formed DMBT-TT-TTO-DMBT, had EE339 and 507 motors, weight varied Sep '48 - Jan '52							4277-4299, 4378-4387, 4621-4754
+4-SUB, 405/1/2 double "augmented" trailers, otherwise standard, Apr '50 - May '50																		4601-4607, partial renum 4617-4620
+
+				Capacity		Weight		Detail
+A	"Sheba" DMBT 	108				43
+B	"Sheba" TC		120				29
+C	"Sheba" TT		132				29
+D	"Mary" DMBT		96				43
+E	"Mary" TT		120				28			10 compartment
+F	"Mary" TT		108				28			9 compartment
+G	"Mary" TTO		102				28			Open interior for crush loading
+H	"Standard" DMBS	82				39			EE507 motors
+I	"Standard" DMBS	82				42			EE339 motors
+J	"Standard" TS	120				27			Reconditioned underframes
+K	"Standard" TS	120				28			New underframes
+L	"Standard" TSO	102				26			Reconditioned underframes
+M	"Standard" TSO	102				28			New underframes
+*/
+
+switch (FEAT_TRAINS, SELF, sw_4_SUB_gfx_f, position_in_articulated_veh) {
+	0: return sw_4_SUB_DMBS;
+	1: return sw_4_SUB_TT;
+	2: return sw_4_SUB_TT;
+	3: return sw_4_SUB_DMBS_R;
+}
+switch (FEAT_TRAINS, PARENT, sw_4_SUB_gfx, vehicle_is_reversed) {
+	0: sw_4_SUB_gfx_f;
+	1: sw_REV_ID_CHECK;
+}
+switch(FEAT_TRAINS, SELF, sw_4_SUB_default, [STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100), getbits(extra_callback_info1, 8, 8)]){
+	0: return sw_4_SUB_gfx;
+	1: return sw_4_SUB_Headlight;
+}
+switch (FEAT_TRAINS, SELF, sw_4_SUB_car_articulated, extra_callback_info1) {
+	1..3: return item_4_SUB_T;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+switch(FEAT_TRAINS, SELF, sw_CIG_1_LIVERIES, cargo_subtype){
+	0: sw_livery_SHEBA_SRG;
+	1: sw_livery_SRG;
+	2: sw_livery_SHEBA_SRY;
+	3: sw_livery_SRY;
+	4: sw_livery_SHEBA_BRB;
+	5: sw_livery_BRB;
+	6: sw_livery_SRH;
+	return CB_RESULT_NO_TEXT;
+}
+/*Possible weight combos:
+All EE339 DMBTs pairs are 86t
+All EE507 DMBTs pairs are 78t
+A 29/B 29/E 28/F 28/G 28/J 27/K 28/L 26/M 28
+	29/28/27/26
+29	58/57/56/55
+28	57/56/55/54
+27	56/55/54/53
+26	55/54/53/52
+
+Total weights are 144t (BC/BB/CC) -138t (LL) with EE339 motors and 136-130t with EE507s
+
+Possible capacity combos:
+All DMBS are 102, 96 or 82 (totalling to 204, 192 or 164 for a pair)
+	 B / C / E / F / G / J / K / L / M
+B	 X  252  X   X   X   X   X   X   X 
+C	 X  264  X   X   X   X   X   X   X 
+E	 X   X  240 228 222  X   X   X   X 
+F	 X   X   X  216 210  X   X   X   X 
+G	 X   X   X   X  204  X   X   X   X 
+J	 X   X   X   X   X  240 240 222 222
+K	 X   X   X   X   X   X  240 222 222
+L	 X   X   X   X   X   X   X  204 204
+M	 X   X   X   X   X   X   X   X  204
+
+EE339 combos
+Combo	Weight	Capacity
+BC		144		252
+CC		144		264
+EE		142		240
+EF		142		228
+EG		142		222
+FF		142		216
+FG		142		210
+GG		142		204
+JJ
+JK
+JL
+JM
+KK
+KL
+KM
+LL
+LM
+MM
+
+random_switch(FEAT_TRAINS, SELF, sw_4_SUB_weight, TRIGGER_VEHICLE_SERVICE) {
+	(<probability>: <return_value>;)+
+}
+
+item (FEAT_TRAINS, item_4_SUB, 4050) {
+	property {
+		name: 							string(STR_NAME_4_SUB);
+		climates_available: 			ALL_CLIMATES;
+		introduction_date:				date(1945, 1, 1);
+		model_life:						8;
+		retire_early:					0;
+		vehicle_life:					38;
+		reliability_decay:				2;
+		refittable_cargo_classes:		bitmask(CC_PASSENGERS);
+		cargo_allow_refit:				[PASS, TOUR];
+		loading_speed:					22;
+		cost_factor:					25;
+		running_cost_factor:			15;
+		sprite_id:						SPRITE_ID_NEW_TRAIN;
+		speed:							75 mph;
+		misc_flags:						bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
+		refit_cost:						0;
+		track_type:						SAA3;
+		ai_special_flag:				AI_FLAG_PASSENGER;
+		power:							1000 hp;
+		running_cost_base:				RUNNING_COST_ELECTRIC;
+		dual_headed:					0;
+		default_cargo_type:				PASS;
+		cargo_capacity:					60;
+		weight:							144 ton;
+		tractive_effort_coefficient:	0.20;
+		air_drag_coefficient:			0.09;
+		length:							8;
+		effect_spawn_model_and_powered:	EFFECT_SPAWN_MODEL_ELECTRIC;
+		bitmask_vehicle_info:			0;
+		cargo_age_period:				200;
+		default_cargo_type:				PASS;
+		engine_class:					ENGINE_CLASS_ELECTRIC;
+	}
+	graphics {
+		default: 							sw_CIG_1_default;
+		purchase:							sw_CIG_1_purchase;
+		cargo_subtype_text:					sw_CIG_1_LIVERIES;
+		running_cost_factor:				return(current_speed == 0 ? 8 : 30) ;
+		articulated_part:					sw_CIG_1_car_articulated;
+		can_attach_wagon:					sw_coupling_emu_mk1;
+		additional_text:					string(STR_DESC_CIG_1);
+	}
+}
+if (param_names == 1){
+item (FEAT_TRAINS, item_CIG_1, 4211){
+	property{
+		name                           : string(STR_NAME_421_1) ;
+	}
+}
+}
+
+item (FEAT_TRAINS, item_4_SUB_T, 4051) {
+	property {
+		name: 							string(STR_NAME_4_SUB);
+		climates_available: 			ALL_CLIMATES;
+		introduction_date:				date(1945, 1, 1);
+		model_life:						8;
+		retire_early:					0;
+		vehicle_life:					38;
+		reliability_decay:				2;
+		refittable_cargo_classes:		bitmask(CC_PASSENGERS);
+		cargo_allow_refit:				[PASS, TOUR];
+		loading_speed:					22;
+		cost_factor:					25;
+		running_cost_factor:			15;
+		sprite_id:						SPRITE_ID_NEW_TRAIN;
+		speed:							90 mph;
+		misc_flags:						bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_SPRITE_STACK);
+		refit_cost:						0;
+		track_type:						SAA3;
+		ai_special_flag:				AI_FLAG_PASSENGER;
+		running_cost_base:				RUNNING_COST_ELECTRIC;
+		dual_headed:					0;
+		default_cargo_type:				PASS;
+		cargo_capacity:					60;
+		weight:							0 ton;
+		air_drag_coefficient:			0.09;
+		length:							8;
+		effect_spawn_model_and_powered:	EFFECT_SPAWN_MODEL_ELECTRIC;
+		bitmask_vehicle_info:			0;
+		cargo_age_period:				200;
+		default_cargo_type:				PASS;
+		engine_class:					ENGINE_CLASS_ELECTRIC;
+	}
+	graphics {
+		default: 							sw_CIG_1_default;
+		purchase:							spriteset_CIG_BRG_PURCHASE;
+		running_cost_factor:				return(current_speed == 0 ? 8 : 30) ;
+	}
+}
